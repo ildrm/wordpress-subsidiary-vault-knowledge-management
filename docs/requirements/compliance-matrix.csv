@@ -1,0 +1,6 @@
+control,applicability,jurisdiction,evidence,owner,exception
+OWASP ASVS 5.0,ASSESSMENT REQUIRED,UNDETERMINED,docs/security/threat-model.md; no certification or legal sign-off,Human owner unassigned,No compliance claim
+NIST SP 800-63-4,ASSESSMENT REQUIRED,UNDETERMINED,docs/security/threat-model.md; no certification or legal sign-off,Human owner unassigned,No compliance claim
+WCAG 2.2 AA,ASSESSMENT REQUIRED,UNDETERMINED,docs/security/threat-model.md; no certification or legal sign-off,Human owner unassigned,No compliance claim
+ISO 15489,ASSESSMENT REQUIRED,UNDETERMINED,docs/security/threat-model.md; no certification or legal sign-off,Human owner unassigned,No compliance claim
+Privacy law and eSignature obligations,ASSESSMENT REQUIRED,UNDETERMINED,docs/security/threat-model.md; no certification or legal sign-off,Human owner unassigned,No compliance claim

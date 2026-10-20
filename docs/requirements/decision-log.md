@@ -1,0 +1,26 @@
+# Decision log
+
+All decisions are internal development choices; legal and external assurance sign-offs remain open.
+
+- [D-01: What does a full WordPress compromise mean in threat model?](../decisions/D-01.md)
+- [D-02: How is Zero-Knowledge code delivered and authenticated?](../decisions/D-02.md)
+- [D-03: Which documents require Zero-Knowledge Mode?](../decisions/D-03.md)
+- [D-04: Is enterprise recovery permitted?](../decisions/D-04.md)
+- [D-05: Who is accountable for subsidiary data?](../decisions/D-05.md)
+- [D-06: What is the exact permission evaluation order?](../decisions/D-06.md)
+- [D-07: Which operations are eligible for break-glass?](../decisions/D-07.md)
+- [D-08: Which metadata remains visible to servers?](../decisions/D-08.md)
+- [D-09: How can confidential content be searched?](../decisions/D-09.md)
+- [D-10: What is E2EE malware assurance?](../decisions/D-10.md)
+- [D-11: What is the approach to external E2EE sharing?](../decisions/D-11.md)
+- [D-12: Who can authorize a document for legal discovery?](../decisions/D-12.md)
+- [D-13: When does retention outrank deletion?](../decisions/D-13.md)
+- [D-14: What are the 13 exact locale codes and variants?](../decisions/D-14.md)
+- [D-15: What is the definition of digital signing?](../decisions/D-15.md)
+- [D-16: How do group-wide dashboards preserve confidentiality?](../decisions/D-16.md)
+- [D-17: What are target SLO, RTO, RPO and tenant scale?](../decisions/D-17.md)
+- [D-18: Which connectors/cloud editor providers are allowed?](../decisions/D-18.md)
+- [D-19: What is the company merger/split procedure?](../decisions/D-19.md)
+- [D-20: When are AI functions permissible?](../decisions/D-20.md)
+- [D-21: What is the licensed deployment model?](../decisions/D-21.md)
+- [D-22: Who makes final production go/no-go decision?](../decisions/D-22.md)

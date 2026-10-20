@@ -1,0 +1,24 @@
+{
+  "mapping": {
+    "en": "en_US",
+    "fa": "fa_IR",
+    "fr": "fr_FR",
+    "tr": "tr_TR",
+    "ru": "ru_RU",
+    "zh-Hans": "zh_CN",
+    "de": "de_DE",
+    "pt": "pt_PT",
+    "es": "es_ES",
+    "hi": "hi_IN",
+    "ja": "ja",
+    "ar": "ar",
+    "hy": "hy"
+  },
+  "portuguese_default": "pt-PT",
+  "rtl": [
+    "fa",
+    "ar"
+  ],
+  "review_status": "DRAFT / native and accessibility review outstanding",
+  "coverage": "Navigation and status labels only; remaining forms and notices use English."
+}

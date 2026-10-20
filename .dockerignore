@@ -1,0 +1,7 @@
+.git
+var
+dist
+.env
+docs/source
+*.key
+*.pem

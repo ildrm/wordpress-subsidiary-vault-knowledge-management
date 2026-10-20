@@ -1,0 +1,26 @@
+# Threat model — local development profile
+
+Status: INTERNAL/AI REVIEW ONLY. No external penetration test, cryptographic protocol review or compliance certification has occurred. Use synthetic data only.
+
+| Adversary or failure | Implemented protection | Residual exposure / unperformed work |
+|---|---|---|
+| Compromised WordPress/plugin/theme/site administrator | Connector has only URL and consent; independent bearer authentication, membership and ACL checks; no decrypt proxy or token exchange | Redirect/phishing and social engineering; complete hostile WordPress runtime exercise still needed |
+| Malicious subsidiary or holding administrator | No implicit document grants; current tenant/resource checks; deny precedence; no self-grant APIs; content entitlement separate from administration | Collusion, identity compromise and future provisioning policies need external review |
+| Guessed document, version, comment, audit, hold or ACL IDs | Tenant-scoped lookups, membership checks, resource policy and text search trimming | Metadata/access-pattern timing; aggregate counts intentionally disclose posture |
+| Stolen encrypted object files | Fresh random per-version keys, XChaCha20-Poly1305 with bound tenant/document/version/classification; tenant key wrapping | Stolen keys or decrypting-service compromise defeats local managed protection |
+| Stolen metadata DB | File plaintext is encrypted; key directory separate; token hashes only | Titles, comments, identities, ACLs, size, timestamps, wrapped keys and plaintext equality digests are visible; metadata encryption unfinished |
+| Ciphertext/envelope/context tampering | Sodium AEAD fails closed; plaintext digest checked on fetch; error and minimal denial audit | Independent crypto review, key transparency, rotation and rollback defense unfinished |
+| Revoked/expired/suspended identity or membership | Every request checks current DB state; all versions use current ACLs; old sessions revoked by logout/rotation/restore | No recall of downloaded plaintext; OIDC logout/revocation remains provider work |
+| Self-approval/stale-version approval | Separate authorized actor, pinned version/digest, MFA, content immutability while in review, immutable decision rows | No qualified electronic signature, trustworthy external time or full workflow engine |
+| Hold/record destroyed by normal API paths | No purge API; holds/records/retention checked for disposition and deletion; DB content/preservation triggers; dual hold release and disposition approval | Raw storage/root control can defeat SQLite protections; production WORM/object lock required |
+| Malicious upload | 8 MiB cap, strict base64/UTF-8/text-only policy, control-byte rejection, EICAR marker rejection; download through JSON/base64, never inline rendering | No actual antivirus/quarantine, parser/converter sandbox or binary format support |
+| Audit tampering | Hash chain, immutable rows and atomic mutation/event transactions | Same-host privileged attacker can recompute/delete audit; independent immutable sink required |
+| Notification leaks after revocation | Worker and inbox recheck policy; events contain IDs and event names only | No notification retention/locale rules or external delivery pipeline |
+| Ransomware/key loss/service outage | Encrypted snapshot utility, integrity manifest, isolated restore; keys omitted, restored sessions revoked; missing keys fail closed | Separate offline tenant-key backups and recovery custody are operator obligations; no immutable backup provider, operational drill or RTO/RPO commitment |
+| Browser XSS/cross-origin reuse | DOM text nodes, no dynamic content HTML, CSP, no-store, no CORS, no cookies, no framing, generation checks on context changes | Existing browser/extension compromise and authorized malicious document content remain risks; full accessibility/browser matrix not tested |
+
+Production is rejected by `Config` for any `SV_ENV` other than `local`. The environment gate is an honest release restriction, not a control against someone editing the source. Deployment behind a public origin would require a hardened server, real identity/session controls, maintained dependencies, pinned supply chain, isolation, rate limiting, TLS, KMS and approved processing policies.
+
+The independent high-assurance client, signed update channel, recipient key verification/transparency, device enrollment, group/cross-entity envelope protocols, offline revocation and trustee quorum recovery are not implemented. The offline file tool uses Sodium secretstream primitives, but its file framing is a development format, not an externally reviewed vault protocol. No confidentiality claim against WordPress-origin malicious clients is made for that missing product.
+
+External review scope: BOLA across every endpoint and job; hostile WordPress pivot and phishing; identity/token confusion; ACL/group manager amplification and collusion; concurrency and version/preservation races; file parser/upload abuse; key lifecycle/rollback/backup custody; independent audit; restored-policy reconciliation; UI context switching and secret handling. Maintain findings with severity, owner, remediation and retest evidence. No simulated AI opinion substitutes for assessor sign-off.

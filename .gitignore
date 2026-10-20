@@ -1,0 +1,9 @@
+/var/
+/dist/
+/.env
+*.sqlite*
+*.pem
+*.key
+/vendor/
+.DS_Store
+__pycache__/

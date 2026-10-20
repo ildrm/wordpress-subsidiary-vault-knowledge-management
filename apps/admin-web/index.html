@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>SubsidiaryVault · Knowledge workspace</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to workspace</a>
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="/" aria-label="SubsidiaryVault home"><span class="brand-icon" aria-hidden="true">S</span><span>SubsidiaryVault<small>KNOWLEDGE &amp; GOVERNANCE</small></span></a>
+      <div class="workspace-label" data-i18n="workspace">WORKSPACE</div>
+      <label class="sr-only" for="tenant" data-i18n="tenant">Subsidiary</label>
+      <select id="tenant" disabled><option>Sign in to select a subsidiary</option></select>
+      <nav id="navigation" aria-label="Workspace navigation">
+        <button data-page="documents" class="active"><span aria-hidden="true">▤</span><span data-i18n="documents">Documents</span></button>
+        <button data-page="knowledge"><span aria-hidden="true">◇</span><span data-i18n="knowledge">Knowledge library</span></button>
+        <button data-page="notifications"><span aria-hidden="true">◷</span><span data-i18n="notifications">Activity inbox</span></button>
+        <div class="nav-rule"></div>
+        <button data-page="members"><span aria-hidden="true">♧</span><span data-i18n="members">People &amp; access</span></button>
+        <button data-page="roles"><span aria-hidden="true">⌘</span><span data-i18n="roles">Roles</span></button>
+        <button data-page="groups"><span aria-hidden="true">▦</span><span data-i18n="groups">Teams</span></button>
+        <button data-page="departments"><span aria-hidden="true">⌂</span><span data-i18n="departments">Departments</span></button>
+        <button data-page="audit"><span aria-hidden="true">◎</span><span data-i18n="audit">Audit trail</span></button>
+        <button data-page="settings"><span aria-hidden="true">⚙</span><span data-i18n="settings">Workspace settings</span></button>
+        <button data-page="posture"><span aria-hidden="true">◈</span><span data-i18n="posture">Group oversight</span></button>
+      </nav>
+      <div class="boundary"><span class="status-dot"></span><strong>Independent vault service</strong><p>Document access is checked separately from WordPress.</p></div>
+      <div class="profile"><span class="avatar" aria-hidden="true">SV</span><div><strong id="identity">Guest</strong><small id="role">Independent sign-in required</small></div><button id="logout" title="Sign out" aria-label="Sign out" hidden>↗</button></div>
+    </aside>
+    <div class="content">
+      <header class="topbar"><div class="breadcrumb"><span>Workspace</span><span aria-hidden="true">/</span><strong id="crumb">Documents</strong></div><div class="toolbar"><span class="profile-tag">LOCAL DEVELOPMENT</span><label class="sr-only" for="language">Interface language</label><select id="language"></select></div></header>
+      <div class="notice">Development testbed · synthetic data only · managed local encryption · production and zero-knowledge access are gated.</div>
+      <main id="main" tabindex="-1">
+        <section id="login" class="login-card">
+          <span class="eyebrow">YOUR ORGANIZATION’S KNOWLEDGE, GOVERNED.</span>
+          <h1>A clear home for<br>trusted information.</h1>
+          <p>Sign in directly to the independent vault. Your membership determines which subsidiary workspaces you can access.</p>
+          <form id="login-form"><label for="token" data-i18n="token">Development access token</label><input id="token" type="password" autocomplete="off" required placeholder="Paste your local development token"><button type="submit" class="primary" data-i18n="signin">Open workspace</button></form>
+          <p class="hint">Get a synthetic custodian token with <code>php tools/vault.php token tenant-01-custodian</code>. Tokens expire after 8 hours and remain only in this page’s memory.</p>
+        </section>
+        <section id="workspace" hidden>
+          <div class="page-heading"><div><span class="eyebrow" id="eyebrow">YOUR PRIVATE REPOSITORY</span><h1 id="page-title">Documents</h1><p id="page-description">Controlled versions. Explicit access. A reliable record.</p></div><div id="page-actions"></div></div>
+          <div id="page-body"></div>
+        </section>
+        <p id="message" role="status" aria-live="polite"></p>
+      </main>
+      <footer>SubsidiaryVault KMS <span>0.1.0-dev · Internal validation only</span></footer>
+    </div>
+  </div>
+  <dialog id="detail"><div class="dialog-heading"><h2 id="detail-title">Document</h2><button id="close-detail" aria-label="Close document">✕</button></div><div id="detail-body"></div></dialog>
+</body>
+</html>

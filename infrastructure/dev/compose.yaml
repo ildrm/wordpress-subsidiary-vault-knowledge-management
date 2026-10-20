@@ -1,0 +1,25 @@
+name: subsidiaryvault-local
+services:
+  vault:
+    build:
+      context: ../..
+      dockerfile: infrastructure/dev/Dockerfile
+    ports:
+      - "127.0.0.1:8088:8088"
+    environment:
+      SV_ENV: local
+      SV_AUTH_MODE: development
+      SV_DATA_DIR: /vault/data
+      SV_KEY_DIR: /vault/keys
+    volumes:
+      - local_data:/vault/data
+      - local_keys:/vault/keys
+    read_only: true
+    tmpfs:
+      - /tmp:mode=0700
+    cap_drop: [ALL]
+    security_opt:
+      - no-new-privileges:true
+volumes:
+  local_data:
+  local_keys:

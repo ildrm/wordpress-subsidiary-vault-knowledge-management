@@ -1,0 +1,991 @@
+ENTERPRISE INFORMATION GOVERNANCE
+Implementation Rolesand Cross-FunctionalProduct Assessment
+A role-led, threat-aware implementation review of the existing 346-feature Enterprise KMS blueprint.
+BASELINE
+REVIEW INVENTORY
+Existing scope
+22 modules  •  346 previously defined feature requirements
+Implementation structure
+44 specialist responsibilities  •  26 operational role templates
+Assurance and decisions
+35 tracked product risks  •  22 architecture decisions
+Change analysis
+14 conditional baseline-priority revisions  •  15 design conflicts
+Reference date
+20 October 2026  •  proposed requirements, not implemented software
+
+Prepared to accompany, not replace, the Enterprise KMS 346-Feature Requirements Blueprint and Tracker. This document does not constitute a security certification, compliance finding or software delivery.
+Role IDs, module IDs, decision IDs, risk IDs and gate IDs are reusable keys for procurement, staffing, engineering tickets, test cases and formal signoffs.
+1. Scope and interpretation
+The proposed product combines independent subsidiary governance, enterprise DMS/KMS functionality, optional Zero-Knowledge content, records controls, AI-assisted discovery and multilingual interfaces. Its trust model includes a WordPress integration boundary and an independent document/identity service. A WordPress administrator is NOT by default a repository administrator or decryption authority.
+Required interpretation: An implementation role is an accountable discipline, not necessarily a distinct full-time employee. A single team member may cover several compatible roles; independent assessors, key trustees, and conflict-of-interest checks must not be collapsed into the people they verify.
+Assessment method: Reviewed the 22 module headings and 346 feature IDs in the supplied blueprint; mapped required specialists to module ownership, cryptographic/authorization consequences, operating roles, evidence, and phase gates.
+Risk vocabulary: Blocker = cannot claim high-assurance production readiness until resolved. High = address before affected feature is enabled or formally govern residual risk. Medium = planned control and tracked verification. No software can be promised defect-free.
+Core architectural constraint: Zero-Knowledge contents cannot be meaningfully processed by ordinary server-side OCR, AI, converters or malware scanners without exposing plaintext or adopting a different threat model. The feature availability matrix must be enforced, not implied.
+Scope boundaries: Local regulatory regimes, deployment country, number and sensitivity of users, identity-provider choice, data volumes, hosting model, security certifications, procurement contracts, and numerical SLOs still require sponsor signoff.
+2. Implementation role catalog
+44 distinct responsibilities are grouped into strategy, business information governance, security/assurance and engineering. Prioritize the R07/R19/R20/R21/R28/R29/R31/R37 trust-boundary work before expanding AI or visual features.
+Strategy & delivery  (10)
+R01  EXECUTIVE SPONSOR
+Mission: Own business case, funding, risk appetite and final business authorization.
+Outputs: Approved charter; budget envelope; risk acceptance boundaries.     Engagement: Decision-maker; All.
+R02  HOLDING-COMPANY GOVERNANCE CHAIR
+Mission: Resolve conflicts between group oversight and subsidiary autonomy.
+Outputs: Group governance policy; escalation and veto process.     Engagement: Decision-maker; All.
+R03  PRODUCT OWNER / PRODUCT DIRECTOR
+Mission: Own roadmap, value hypotheses, scope, acceptance and product trade-offs.
+Outputs: Product vision; prioritization; signed acceptance criteria.     Engagement: Core; All.
+R04  PROGRAM / DELIVERY MANAGER
+Mission: Run dependencies, milestones, resourcing, delivery risks and release governance.
+Outputs: Integrated program plan; RAID log; gate evidence pack.     Engagement: Core; All.
+R05  BUSINESS ANALYST / REQUIREMENTS ENGINEER
+Mission: Convert workflows into detailed, testable specifications across entities.
+Outputs: Process maps; user stories; traceability; acceptance scenarios.     Engagement: Core; Discovery–release.
+R06  ENTERPRISE ARCHITECT
+Mission: Ensure integration with IT strategy, identity estate and governance framework.
+Outputs: Architecture principles; capability map; integration boundaries.     Engagement: Core / fractional; Discovery–design.
+R07  SOLUTION ARCHITECT / TECHNICAL LEAD
+Mission: Own system-wide design, architecture decision records and interfaces.
+Outputs: Threat-aware architecture; API boundaries; ADRs.     Engagement: Core; Design–release.
+R08  FINOPS / FINANCIAL ANALYST
+Mission: Model storage, compute, OCR, AI, network egress, keys and long-term cost.
+Outputs: TCO model; tenant chargeback and budget guardrails.     Engagement: Fractional; Planning–operations.
+R09  PROCUREMENT AND THIRD-PARTY RISK LEAD
+Mission: Assess IdP, hosting, KMS, converters, AI and signature vendors.
+Outputs: Vendor due diligence; DPAs; exit conditions and SLAs.     Engagement: Fractional; Design–operations.
+R10  CHANGE AND ADOPTION MANAGER
+Mission: Lead stakeholder engagement, phased rollout, communications and training.
+Outputs: Adoption plan; pilot feedback; organizational readiness.     Engagement: Core / fractional; Pilot–operations.
+Business & information  (8)
+R11  SUBSIDIARY REPRESENTATIVES / UAT LEADS
+Mission: Represent each company and validate delegated administration workflows.
+Outputs: 10-tenant UAT scenarios; local policy signoffs.     Engagement: Distributed business owners; Discovery–pilot.
+R12  RECORDS AND INFORMATION GOVERNANCE LEAD
+Mission: Own classification, controlled records, retention, legal holds and disposition.
+Outputs: File plan; schedules; disposition protocol; audit evidence.     Engagement: Required domain owner; Design–operations.
+R13  LEGAL COUNSEL AND EDISCOVERY SPECIALIST
+Mission: Define statutory records, electronic evidence and contractual sharing rights.
+Outputs: Jurisdiction matrix; legal holds; signature rules; disclosure playbooks.     Engagement: Specialist / legal signoff; Design–operations.
+R14  PRIVACY OFFICER / DPO
+Mission: Resolve controller/processor duties, minimization, transfers and subject requests.
+Outputs: DPIA; lawful-basis map; erasure and transfer procedures.     Engagement: Independent oversight; Design–operations.
+R15  KNOWLEDGE ARCHITECT / TAXONOMY SPECIALIST
+Mission: Structure wiki, canonical policy knowledge, metadata quality and ownership.
+Outputs: Taxonomy; editorial governance; content quality indicators.     Engagement: Core / fractional; Design–operations.
+R16  UX RESEARCHER / PRODUCT DESIGNER
+Mission: Design usable multi-tenant workflows and high-stakes warnings.
+Outputs: Journey maps; interaction prototypes; usability research.     Engagement: Core; Discovery–release.
+R17  LOCALIZATION LEAD AND 13-LANGUAGE REVIEWERS
+Mission: Own locale glossary, native review, RTL, linguistic correctness.
+Outputs: Locale specification; translation memory; signoff for 13 languages.     Engagement: Specialists; not 13 full-time staff; Design–release.
+R18  ACCESSIBILITY SPECIALIST
+Mission: Measure keyboard, screen-reader, cognitive and bidirectional usability.
+Outputs: WCAG 2.2 AA audit; manual assistive-technology reports.     Engagement: Specialist / independent test; Design–release.
+Security & assurance  (9)
+R19  APPLICATION SECURITY AND THREAT-MODEL ARCHITECT
+Mission: Threat-model every entry point, isolation boundary and document operation.
+Outputs: Threat model; abuse cases; ASVS verification mapping.     Engagement: Core / independent review; Design–operations.
+R20  CRYPTOGRAPHIC PROTOCOL ENGINEER
+Mission: Design E2EE, recipient identity, keys, recovery and algorithm agility.
+Outputs: Protocol design; test vectors; client integrity assumptions.     Engagement: Specialist; critical; Design–security acceptance.
+R21  IAM / PAM ARCHITECT
+Mission: Own SSO, SCIM, tenant memberships, policy evaluation and privilege boundaries.
+Outputs: Identity model; policy decision specification; SoD rules.     Engagement: Core / specialist; Design–operations.
+R22  CLOUD AND PLATFORM SECURITY ENGINEER
+Mission: Harden storage, KMS, network, secret handling, workloads and tenancy.
+Outputs: Least privilege policies; hardening baselines; attack-path tests.     Engagement: Core / specialist; Design–operations.
+R23  SOC AND INCIDENT-RESPONSE LEAD
+Mission: Define detection, triage, containment, evidence and breach notifications.
+Outputs: Detection rules; playbooks; response exercises.     Engagement: Operational owner; Pilot–operations.
+R24  INDEPENDENT PENETRATION TESTER / RED TEAM
+Mission: Attempt cross-tenant access, WordPress takeover and lateral movement.
+Outputs: Independent findings; retest attestation; exploit-based proof.     Engagement: Independent; release-blocking; Pre-release & periodic.
+R25  INDEPENDENT CRYPTOGRAPHY/SECURITY ASSESSOR
+Mission: Challenge protocol, device trust, key recovery and claims independently.
+Outputs: Assurance report; review of threat model and test vectors.     Engagement: Independent; release-blocking; Design & pre-release.
+R26  KEY RECOVERY TRUSTEE / CUSTODIAL COMMITTEE
+Mission: Approve exceptional key recovery with quorum and conflict-of-interest controls.
+Outputs: Trustee roster; dual-control runbook; recovery drill evidence.     Engagement: Operational; separate from engineering; Pilot–operations.
+R27  COMPLIANCE / INTERNAL AUDIT LEAD
+Mission: Assess control design and effectiveness, evidence and audit independence.
+Outputs: Control matrix; exception register; audit plan.     Engagement: Oversight / independent; Design–operations.
+Product engineering  (17)
+R28  WORDPRESS PLUGIN ENGINEER
+Mission: Build low-privilege integration, admin links, secure upgrades and REST bridge.
+Outputs: Signed plugin; WP capability boundaries; upgrade tests.     Engagement: Core; Build–operations.
+R29  BACKEND AND API ENGINEER
+Mission: Implement tenants, entitlements, document and lifecycle APIs.
+Outputs: Versioned API; authorization middleware; event flows.     Engagement: Core, multiple; Build–operations.
+R30  WEB FRONTEND ENGINEER
+Mission: Build dashboards, dialogs, document workflows and accessibility.
+Outputs: Responsive, internationalized web client and component library.     Engagement: Core, multiple; Build–operations.
+R31  DATA ARCHITECT / DATABASE ENGINEER
+Mission: Define tenant isolation, metadata evolution, transactions and query controls.
+Outputs: Logical model; isolation constraints; data lifecycle design.     Engagement: Core; Design–operations.
+R32  STORAGE, CONVERSION AND FILE-PROCESSING ENGINEER
+Mission: Build encrypted object paths, import pipeline and sandboxed previews.
+Outputs: Storage adapters; scanning/quarantine; conversion sandboxes.     Engagement: Core; Build–operations.
+R33  WORKFLOW / BUSINESS-PROCESS ENGINEER
+Mission: Implement state machines, approval delegation, retries and audit binding.
+Outputs: Versioned workflow engine; simulation and escalation tests.     Engagement: Core / specialist; Build–operations.
+R34  SEARCH / INFORMATION RETRIEVAL ENGINEER
+Mission: Handle metadata search, multilingual analyzers and mode-appropriate indexing.
+Outputs: Search design; relevance evaluation; index isolation tests.     Engagement: Specialist; Enterprise phase.
+R35  AI / ML ENGINEERING LEAD
+Mission: Build permission-trimmed retrieval, evaluation, output controls and provider policy.
+Outputs: AI risk tests; grounded retrieval; model and cost governance.     Engagement: Specialist; Enterprise phase.
+R36  INTEGRATION / CONNECTOR ENGINEER
+Mission: Build OIDC/SAML/SCIM, M365, webhooks and enterprise connectors.
+Outputs: Connector contracts; event replay; permission mapping tests.     Engagement: Core / specialist; Build–operations.
+R37  TRUSTED-CLIENT AND MOBILE/DESKTOP ENGINEER
+Mission: Build independent signed client, E2EE device enrollment, offline protection.
+Outputs: Trusted client; release signing; platform key storage and sync tests.     Engagement: Core; critical for E2EE; Design–operations.
+R38  DEVOPS / PLATFORM ENGINEER
+Mission: Build infrastructure-as-code, CI/CD, isolated environments and delivery chain.
+Outputs: IaC; provenance; scans; rollback and deployment pipelines.     Engagement: Core; Build–operations.
+R39  SRE / DISASTER-RECOVERY ENGINEER
+Mission: Engineer SLOs, backup recoverability, observability and controlled restoration.
+Outputs: SLO design; RTO/RPO drills; runbooks; capacity forecasts.     Engagement: Core / specialist; Build–operations.
+R40  QA AUTOMATION / TEST ARCHITECT
+Mission: Own unit, integration, security regression, contract and E2E coverage.
+Outputs: Test pyramid; requirement-to-test traceability; release reports.     Engagement: Core, multiple; Build–operations.
+R41  PERFORMANCE / CAPACITY ENGINEER
+Mission: Test upload, search, 10-tenant concurrency, worst-case workflows.
+Outputs: Load model; benchmarks; capacity limits and budgets.     Engagement: Specialist; Before pilot & scale.
+R42  MIGRATION AND DATA-QUALITY ENGINEER
+Mission: Move legacy documents, ACLs, versions and metadata without leakage.
+Outputs: Dry-run reports; integrity manifests; reconciliation.     Engagement: Specialist; Pilot–rollout.
+R43  TECHNICAL WRITER AND TRAINING DESIGNER
+Mission: Explain end-user actions, admin policies, supported security modes and limits.
+Outputs: Product documentation; API docs; localized training materials.     Engagement: Specialist; Build–operations.
+R44  SUPPORT / CUSTOMER SUCCESS ENGINEER
+Mission: Design safe diagnostics, support access and long-term service adoption.
+Outputs: Support playbooks; escalation; no-plaintext debug tools.     Engagement: Operational; Pilot–operations.
+3. Staffing model and accountability separation
+This program requires multiple concurrent workstreams, not 44 permanent employees. The roles above can be organized as the following teams; capacity depends on document volume, security assurance level, supported integrations, delivery timeline and implementation model.
+Workstream
+Lead and core disciplines
+Non-delegable decision / independent reviewer
+Product and governance
+R03, R04, R05, R11, R12, R13, R14
+R01 funds and accepts risk; R02 resolves group/subsidiary policy conflicts.
+Identity and isolation
+R07, R21, R29, R31
+Independent AppSec review by R19 and attack testing by R24.
+Cryptography and trusted clients
+R20, R37, R32
+R25 independently evaluates protocol; R26 separately governs recovery.
+Document, workflows and records
+R12, R29, R32, R33
+Counsel R13 signs legal holds and evidence semantics.
+Experience and localization
+R16, R17, R18, R30
+Native speakers and accessibility testers sign usability evidence.
+Cloud, security and assurance
+R19, R22, R23, R38, R39, R40
+R24 and R25 cannot self-certify code they implemented.
+Discovery, AI and integrations
+R34, R35, R36
+Privacy R14 and crypto R20 approve mode compatibility.
+Migration, rollout and support
+R10, R11, R42, R43, R44
+Subsidiary business owners sign access and records reconciliation.
+
+A practical initial core team has a dedicated product owner, technical architect, delivery manager, business analyst, backend/API engineers, WordPress engineer, web/client engineers, platform/DevOps, test automation, UX and security engineering. Records, legal, DPO, cryptography specialist, native-language reviewers and independent test teams contribute at specific gates. This is a work allocation recommendation, not a priced staffing forecast.
+Separation of duties must be operationally credible. In particular, (a) the person who implements cryptography does not issue the only cryptographic assurance report; (b) release engineers cannot unilaterally override security go/no-go; (c) the holding administrator is not a recovery trustee merely because of seniority; and (d) the document author cannot approve their own controlled publication.
+4. Roles inside the deployed system
+26 suggested operational role templates. These are capability bundles with explicit scopes, not immutable WordPress roles. A single person may have separate memberships and roles in different subsidiaries; the user interface and APIs must make the active tenant unambiguous.
+HOLDING GOVERNANCE ADMINISTRATOR
+Scope / allowed: Group control plane — Provision/suspend entities; set minimum policies.
+Denied by default: No default subsidiary-content read or decryption.
+Approval / SoD: Tenant owner + separate board approval for major changes
+HOLDING POLICY ADMINISTRATOR
+Scope / allowed: Group control plane — Manage mandatory security/retention configuration baselines.
+Denied by default: Cannot grant own document access; policy cannot defeat holds.
+Approval / SoD: Risk/records approval for exceptions
+HOLDING SECURITY OVERSIGHT
+Scope / allowed: Group security — View posture, incidents and scoped security events.
+Denied by default: No automatic content; sensitive tenant audit fields redacted.
+Approval / SoD: Separate from holder of recovery keys
+GROUP INTERNAL AUDITOR
+Scope / allowed: Group audit — Review approved controls/evidence and aggregates.
+Denied by default: No default business document access.
+Approval / SoD: Independence from admins and approvers
+PLATFORM OPERATOR / SRE
+Scope / allowed: Infrastructure only — Deploy, monitor, scale and restore infrastructure.
+Denied by default: No routine decrypted document content or user impersonation.
+Approval / SoD: Dual control on critical production changes
+SUBSIDIARY OWNER
+Scope / allowed: One subsidiary — Approve local governance/tenant closure and custodians.
+Denied by default: Cannot weaken global minimum controls.
+Approval / SoD: Cannot self-approve exceptional disclosure
+SUBSIDIARY ADMINISTRATOR
+Scope / allowed: One subsidiary — Invite users, create groups and configure libraries.
+Denied by default: No universal decrypt right; no cross-tenant reach.
+Approval / SoD: Role-grant approvals for high privileges
+USER AND GROUP ADMINISTRATOR
+Scope / allowed: One subsidiary — Manage memberships, employment-state updates.
+Denied by default: No content read via membership management alone.
+Approval / SoD: No self-privilege escalation
+ROLE / ACCESS POLICY MANAGER
+Scope / allowed: One subsidiary — Create custom roles and ACL templates.
+Denied by default: Cannot override legal holds and group hard-denies.
+Approval / SoD: Another approver for high-risk policy changes
+DEPARTMENT MANAGER
+Scope / allowed: Own department — Manage own teams and delegated workspaces.
+Denied by default: Delegation limited to preset domain and role subset.
+Approval / SoD: No grant beyond own authority
+RECORDS MANAGER
+Scope / allowed: One subsidiary / record set — Control classification, retention and disposition.
+Denied by default: Cannot unilaterally lift legal hold.
+Approval / SoD: Disposition reviewer separate from executor
+LEGAL-HOLD OFFICER
+Scope / allowed: Approved matters — Place/lift holds under legal process.
+Denied by default: No content access unless separately authorized.
+Approval / SoD: Counsel approval and dual-review on releases
+PRIVACY OFFICER
+Scope / allowed: Legal entity / approved scope — Process privacy requests, DPIAs and data mappings.
+Denied by default: No blanket document access for privacy role.
+Approval / SoD: Lawful hold/exemption review
+SUBSIDIARY SECURITY OFFICER
+Scope / allowed: One subsidiary — Monitor local access, incidents and classification alerts.
+Denied by default: No default access to protected documents.
+Approval / SoD: Independent security and incident review
+DOCUMENT CONTROLLER
+Scope / allowed: Assigned library — Register, classify, version and release controlled records.
+Denied by default: Cannot circumvent approval or holds.
+Approval / SoD: Separate approver for publication
+DOCUMENT CUSTODIAN
+Scope / allowed: Named document or collection — Own access, classification and retention contact.
+Denied by default: No unrestricted group-wide rights.
+Approval / SoD: Share approval for restricted documents
+CONTRIBUTOR / EDITOR
+Scope / allowed: Granted documents — Upload and edit working copies.
+Denied by default: Cannot approve own controlled release.
+Approval / SoD: Maker/checker on controlled documents
+REVIEWER / COMMENTATOR
+Scope / allowed: Assigned documents — Comment, request changes, review versions.
+Denied by default: No self-grant or release rights.
+Approval / SoD: Independent of author where required
+APPROVER / PUBLISHER
+Scope / allowed: Assigned workflow — Approve immutable hashes and publish approved revision.
+Denied by default: No edit of signed approved bytes.
+Approval / SoD: Must meet quorum / SoD
+KNOWLEDGE STEWARD
+Scope / allowed: Assigned KB space — Maintain canonical articles and scheduled reviews.
+Denied by default: No cross-entity search or publish beyond grants.
+Approval / SoD: Independent approval of controlled SOPs
+WORKFLOW DESIGNER
+Scope / allowed: Approved workflow domain — Configure versioned state machines/routing.
+Denied by default: Cannot approve by modifying live workflow.
+Approval / SoD: Change approval plus staging simulation
+READ-ONLY VIEWER
+Scope / allowed: Granted documents — View permitted content and acknowledge required reading.
+Denied by default: No editing, exports or shares unless explicitly granted.
+Approval / SoD: Document-specific authorization
+EXTERNAL GUEST / AUDITOR
+Scope / allowed: Specific collaboration — Review invited folders / evidence packages.
+Denied by default: No tenant enumeration or rights to other guests.
+Approval / SoD: Identity validation, expiry, NDA if needed
+SERVICE/WORKLOAD IDENTITY
+Scope / allowed: Specific tenant + API scopes — Execute narrow automation and connector jobs.
+Denied by default: No interactive login; no universal multi-tenant API key.
+Approval / SoD: Secret rotation and workload approval
+KEY-RECOVERY TRUSTEE
+Scope / allowed: Key domain + approved case — Participate in quorum recovery, never solo.
+Denied by default: No routine content access or invisible recovery.
+Approval / SoD: Quorum, legal basis, immutable event
+EMERGENCY INCIDENT RESPONDER
+Scope / allowed: Time-limited scope — Contain incidents and revoke sessions.
+Denied by default: No automatic plaintext/key bypass; only approved exceptional grants.
+Approval / SoD: Ticket, dual control and postmortem
+Authorization semantics to implement exactly
+Identifiers: Immutable principal_id, tenant_id, group_id, document_id and document_version_id, never guessed from a client-selected tenant alone.
+Evaluation order: Authentication + device status → tenant membership → mandatory group and legal holds → document classification and ACL/ABAC → context and token caveats → permit or deny; explicit deny wins.
+Policy timing: Authorization is re-evaluated for each sensitive operation, background export, preview, key-wrap issuance, restore and potentially long-running job.
+Administrator separation: Ability to manage a tenant or rotate a system certificate is not equivalent to ability to read documents, remove holds or reconstruct private keys.
+Impersonation and emergency access: No silent impersonation. Time-bounded emergency operations require approved reason, dual control, exact scope, independent logging and post-incident review.
+Revocation reality: Revoke future sessions, grants and key distribution, but disclose that earlier plaintext or keys copied outside the service may persist.
+5. Ownership map for the 22 modules
+ID / features
+Business accountable
+Build owners
+Mandatory reviewers
+TEN / 14
+R02
+R07, R29, R31
+R11, R12, R21, R19
+IAM / 17
+R21
+R29, R31, R30
+R02, R19, R11, R27
+AUT / 13
+R21
+R36, R37, R29
+R19, R22, R23, R14
+DOC / 22
+R03
+R32, R29, R31
+R12, R19, R20, R11
+MET / 16
+R15
+R34, R31, R29
+R20, R14, R17, R19
+COL / 16
+R03
+R30, R29, R37
+R20, R12, R19, R18
+KNO / 16
+R15
+R30, R29, R34
+R11, R12, R17, R18
+WFL / 19
+R03
+R33, R29, R30
+R21, R12, R13, R19
+REC / 18
+R12
+R29, R31, R32
+R13, R14, R20, R27
+ENC / 20
+R20
+R37, R32, R29
+R25, R19, R21, R26
+SEC / 16
+R19
+R22, R23, R28
+R24, R25, R27, R14
+EXT / 13
+R03
+R29, R37, R30
+R13, R14, R20, R21
+RPT / 14
+R27
+R29, R31, R23
+R14, R12, R19, R02
+AIX / 17
+R03
+R35, R34, R29
+R14, R20, R19, R13
+L10 / 15
+R17
+R30, R37, R43
+R18, R16, R11, R15
+API / 17
+R07
+R36, R29, R28
+R21, R19, R22, R09
+UX / 13
+R16
+R30, R37
+R18, R17, R11, R20
+MOB / 12
+R37
+R30, R36, R39
+R20, R21, R22, R18
+PRV / 14
+R14
+R29, R31, R39
+R13, R12, R27, R09
+OPS / 21
+R39
+R38, R22, R40
+R23, R25, R08, R27
+MIG / 13
+R10
+R42, R36, R40
+R11, R12, R14, R17
+VRP / 10
+R03
+R33, R29, R30
+R13, R12, R11, R20
+
+Accountable = owner of domain acceptance and policy decisions; Build owners = engineering workstream; Reviewers = specialties needed for approval and verification. R01 and R03 retain global business authorization. Assignment of individuals to these role IDs is a separate staffing decision.
+6. Role-led assessment of every feature module
+Each entry states the additional engineering design considerations that the specialist team must resolve beyond the existence of the named 346 baseline requirements. Modules marked Critical require an explicit pre-production demonstration, not only a feature walkthrough.
+TEN  |  Tenant governance / subsidiaries  (14 features)
+Risk: Critical. Accountable: R02. Build: R07, R29, R31. Consult: R11, R12, R21, R19.
+Design considerations: Model legal company boundaries, groups and project spaces separately; prohibit implicit holding-admin document access; apply group minimum policies without silent privilege expansion; isolate DB, object storage, queues, search, logs, backups, and caches; design mergers/splits as supervised migrations.
+Minimum acceptance evidence: A cross-tenant user, cache key, search request, export job or backup restore never reveals unauthorized tenant material.
+IAM  |  Membership, roles and policy  (17 features)
+Risk: Critical. Accountable: R21. Build: R29, R31, R30. Consult: R02, R19, R11, R27.
+Design considerations: Formalize RBAC + ABAC + ACL evaluation order, global hard-deny, explicit deny, inheritance and policy versioning; enforce separation of duties; prevent self-grants and delegation loops; invalidate permissions in jobs, URLs and offline clients; provide decision explanations without leaking titles.
+Minimum acceptance evidence: For each permission state, API, previews, exports, mobile, workers and search enforce the same decision after revocation.
+AUT  |  Authentication and devices  (13 features)
+Risk: Critical. Accountable: R21. Build: R36, R37, R29. Consult: R19, R22, R23, R14.
+Design considerations: Use enterprise IdP and phishing-resistant factors for privileged access; separate WordPress and document-service sessions; map IdP identity to immutable tenant memberships; lifecycle-sync join/move/leave; sign and verify E2EE device public keys; specify lost-device and IdP-outage handling.
+Minimum acceptance evidence: Compromised WordPress cookies cannot mint a document-system privileged identity or enroll an unapproved E2EE device.
+DOC  |  Document capture and lifecycle  (22 features)
+Risk: Critical. Accountable: R03. Build: R32, R29, R31. Consult: R12, R19, R20, R11.
+Design considerations: Version documents immutably with content integrity and provenance; quarantine new uploads; validate type by content; sandbox all converters; make document metadata, previews and exports classification-aware; guarantee idempotency and quota enforcement on resumable uploads.
+Minimum acceptance evidence: Malformed file, aborted upload, version race or failed scan cannot expose partially processed plaintext or bypass approval.
+MET  |  Metadata, taxonomy and search  (16 features)
+Risk: High. Accountable: R15. Build: R34, R31, R29. Consult: R20, R14, R17, R19.
+Design considerations: Version metadata schemas and taxonomies; specify encrypted/public fields and side-channel leakage budgets; tenant-scope autosuggest, indexes, caches and analytics; support locale-specific word segmentation; keep E2EE content search on trusted clients or explicitly approved leakage-limited protocols.
+Minimum acceptance evidence: Search returns only authorized resources and cannot reveal confidential filenames, snippets or existence through autocomplete.
+COL  |  Editing and collaboration  (16 features)
+Risk: High. Accountable: R03. Build: R30, R29, R37. Consult: R20, R12, R19, R18.
+Design considerations: Separate draft collaboration from immutable approved record; resolve locks, autosaves, failed merges and approvals; sandbox third-party editors; make E2EE collaborative editing a separate approved protocol; treat watermarks and screenshot controls as deterrents, not guarantees.
+Minimum acceptance evidence: Unauthorized reviewer cannot change an approved hash or gain editor plaintext through preview/editor callback.
+KNO  |  Knowledge management / wiki  (16 features)
+Risk: High. Accountable: R15. Build: R30, R29, R34. Consult: R11, R12, R17, R18.
+Design considerations: Assign content steward and periodic validation; separate canonical policies from discussion threads; enforce link traversal rights; maintain multilingual article versions and fallback markers; prove read-and-attest evidence binds a specific version and language.
+Minimum acceptance evidence: Users see only permitted linked knowledge; acknowledgment is linked to exact approved revision, not mutable draft.
+WFL  |  Workflow and approvals  (19 features)
+Risk: High. Accountable: R03. Build: R33, R29, R30. Consult: R21, R12, R13, R19.
+Design considerations: Design versioned state machines with explicit retry/idempotency semantics; enforce maker/checker, approval quorum and delegated-authority limits; bind approval to document hash/policy; protect confidential notification payload; distinguish internal approval from legally qualified e-signature.
+Minimum acceptance evidence: Workflow cannot be self-approved through race conditions, delegation cycles, replayed jobs or version swaps.
+REC  |  Records, holds, eDiscovery  (18 features)
+Risk: Critical. Accountable: R12. Build: R29, R31, R32. Consult: R13, R14, R20, R27.
+Design considerations: Capture jurisdictional retention rules, classification events, WORM scopes and legal hold precedence; define conflicts with subject erasure, backups and cryptographic deletion; assess whether E2EE discovery requires trustee-based access or custodian-driven client export.
+Minimum acceptance evidence: Hold blocks destructive operations across versions, exports, backup expiry and crypto-erasure until lawfully released.
+ENC  |  Encryption / keys / E2EE  (20 features)
+Risk: Critical. Accountable: R20. Build: R37, R32, R29. Consult: R25, R19, R21, R26.
+Design considerations: Independent trusted code distribution must withstand a WordPress breach; use reviewed AEAD and per-version keys, authenticated document context, verified recipient identities, rekey and recovery models; explicitly expose recovery-vs-zero-access trade-off; test WordPress takeover.
+Minimum acceptance evidence: External reviewers reproduce crypto vectors; simulated WordPress RCE cannot decrypt protected records or forge recipients.
+SEC  |  Threat prevention and detection  (16 features)
+Risk: Critical. Accountable: R19. Build: R22, R23, R28. Consult: R24, R25, R27, R14.
+Design considerations: Threat-model tenant enumeration, malicious file parsing, SSRF, DLP gaps, supply-chain compromise, secrets leakage and abuse; segregate malware scanners and audit pipelines; produce signed SBOM/release provenance and vulnerability response process.
+Minimum acceptance evidence: A full red-team sequence includes cross-tenant, malicious-file, compromised plug-in and service-credential compromise.
+EXT  |  Guests, sharing, data rooms  (13 features)
+Risk: High. Accountable: R03. Build: R29, R37, R30. Consult: R13, R14, R20, R21.
+Design considerations: Verify external key ownership and legal recipient identity; require source-tenant consent for intercompany disclosure; set expiry, purpose, review and download policy; prevent cross-bidder leakage; treat guest offboarding and past downloads separately.
+Minimum acceptance evidence: Sharing to Subsidiary B never creates blanket rights for B or leaks material via email or data-room logs.
+RPT  |  Audit, oversight and analytics  (14 features)
+Risk: Critical. Accountable: R27. Build: R29, R31, R23. Consult: R14, R12, R19, R02.
+Design considerations: Write independently retained and integrity-protected events; choose event schema, clock synchronization and redaction; separate subsidiary record-level audit from group aggregate reporting; limit queryable metadata to avoid inference; define audit retention and regulator access.
+Minimum acceptance evidence: Neither WordPress admin nor subsidiary admin can erase evidence of their access or infer confidential sibling tenants.
+AIX  |  AI and decision support  (17 features)
+Risk: High. Accountable: R03. Build: R35, R34, R29. Consult: R14, R20, R19, R13.
+Design considerations: Default deny on highly classified material and E2EE server inference; permission-check at retrieval and generation, not just indexing; protect embeddings, prompts and outputs; defend prompt injection, track models/providers, evaluate accuracy by language; require human approval for consequential decisions.
+Minimum acceptance evidence: Revoked document cannot appear in RAG retrieval, answer citations, embeddings or cached model responses.
+L10  |  13 languages and accessibility  (15 features)
+Risk: High. Accountable: R17. Build: R30, R37, R43. Consult: R18, R16, R11, R15.
+Design considerations: Native review for English, Persian, French, Turkish, Russian, Simplified Chinese, German, Portuguese, Spanish, Hindi, Japanese, Arabic and Armenian; define regional variants; handle Unicode normalization, RTL text mixing, calendars/time zones, plural forms, fonts and WCAG 2.2 AA.
+Minimum acceptance evidence: Every core journey passes native-speaker QA and keyboard/screen-reader testing in both RTL and LTR.
+API  |  External APIs and connectors  (17 features)
+Risk: Critical. Accountable: R07. Build: R36, R29, R28. Consult: R21, R19, R22, R09.
+Design considerations: Minimize WordPress bridge privileges; enforce tenant-scoped token audiences and expiry; sign webhooks with replay controls; make retries idempotent; version schemas; prohibit connectors from bypassing legal holds, classification or encryption mode.
+Minimum acceptance evidence: Forged webhook, compromised plugin, tenantless API key or connector replay cannot perform forbidden operations.
+UX  |  Experience and productivity  (13 features)
+Risk: High. Accountable: R16. Build: R30, R37. Consult: R18, R17, R11, R20.
+Design considerations: Use unmistakable tenant context and confidentiality-mode cues; explain why an action is denied without disclosing resources; support safe bulk operations, escape hatches, accessible approvals and reliable upload progress; ensure privacy of notifications and recent-item widgets.
+Minimum acceptance evidence: Usability sessions show administrators do not mistake group-wide authority for permission to view subsidiary content.
+MOB  |  Mobile, desktop and offline  (12 features)
+Risk: High. Accountable: R37. Build: R30, R36, R39. Consult: R20, R21, R22, R18.
+Design considerations: Implement signed app updates, hardware-backed local secrets where supported, lost-device offboarding, cache quotas, offline expiry, sync conflicts and remote wipe best-effort warnings; test independent trust from WordPress and 13-language UI.
+Minimum acceptance evidence: Offline user cannot access never-synced files or new versions after revocation; limitations for existing cached files are documented.
+PRV  |  Privacy, residency and compliance  (14 features)
+Risk: Critical. Accountable: R14. Build: R29, R31, R39. Consult: R13, R12, R27, R09.
+Design considerations: Identify controller/processor relationships per legal entity, data maps and subprocessors; configure regional storage and key access; reconcile privacy requests with holds; scope analytics; assess incident notification duties and lawful cross-border transfers before deployment.
+Minimum acceptance evidence: Requests for access, deletion, export and residency evidence complete with recorded lawful exceptions and approvals.
+OPS  |  Operations, backup and resilience  (21 features)
+Risk: Critical. Accountable: R39. Build: R38, R22, R40. Consult: R23, R25, R08, R27.
+Design considerations: Define measurable SLO/RTO/RPO by mode, region and tier; verify restoration of data plus recovery keys and permissions; apply infrastructure isolation, immutable backups, provenance signing and supply-chain scanning; run incident, disaster and tenant-departure drills.
+Minimum acceptance evidence: Restore 10-tenant representative backup without orphaning keys, violating residency, or resurrecting revoked access.
+MIG  |  Migration and rollout  (13 features)
+Risk: High. Accountable: R10. Build: R42, R36, R40. Consult: R11, R12, R14, R17.
+Design considerations: Inventory legacy records and ACLs, verify metadata semantics, create resumable staging, quarantine unsafe files and check chain of custody; reconcile identity conflicts; pilot at least two subsidiaries with different policies and a representative RTL language.
+Minimum acceptance evidence: Signed migration manifest shows all versions, records, holds and ACLs reconciled before cutover.
+VRP  |  Vertical enterprise modules  (10 features)
+Risk: Medium. Accountable: R03. Build: R33, R29, R30. Consult: R13, R12, R11, R20.
+Design considerations: Treat board, HR, contracts, quality and procurement as separate domain workflows with distinct legal policies and confidentiality needs; define modular extension API, isolation rules and independent threat review for each added module.
+Minimum acceptance evidence: A new vertical extension cannot change another tenant’s policies or obtain zero-knowledge plaintext by default.
+7. Architecture and policy conflicts requiring deliberate trade-offs
+The system cannot safely promise every capability in both encryption modes. These conflicts should become a published mode/feature compatibility matrix and explicit policy warnings in configuration screens.
+CONFLICT 01  ZERO-KNOWLEDGE FILES VS SERVER OCR/SEARCH/AI
+Design resolution: Use trusted-client processing; otherwise managed mode after explicit classification approval.
+Cross-functional owners: R20 / R34 / R35
+CONFLICT 02  ZERO-KNOWLEDGE MALWARE INSPECTION VS OPAQUE CIPHERTEXT
+Design resolution: Admit reduced server assurance; client scan, device posture, staging/quarantine and policy restrictions.
+Cross-functional owners: R19 / R32
+CONFLICT 03  STRONG CONFIDENTIALITY VS FORGOTTEN KEYS
+Design resolution: Choose no recovery (permanent loss possible) or independently governed quorum recovery (extra access path).
+Cross-functional owners: R20 / R26
+CONFLICT 04  AUTHORIZATION REVOCATION VS OFFLINE ACCESS
+Design resolution: Revoke future delivery; clearly disclose inability to erase previously copied plaintext or keys.
+Cross-functional owners: R21 / R37
+CONFLICT 05  GROUP CENTRAL OVERSIGHT VS SUBSIDIARY CONFIDENTIALITY
+Design resolution: Keep control-plane and document-key permissions separate; aggregated group reporting.
+Cross-functional owners: R02 / R21
+CONFLICT 06  LEGAL HOLD VS RIGHT TO ERASURE / CRYPTO ERASURE
+Design resolution: Apply jurisdiction-specific priority with recorded legal justification, review and execution gates.
+Cross-functional owners: R12 / R13 / R14
+CONFLICT 07  E2EE VS COURT-DIRECTED EDISCOVERY
+Design resolution: Adopt legal custodian export or trustee recovery procedure; do not imply invisible server decryption.
+Cross-functional owners: R13 / R20
+CONFLICT 08  BROWSER CLIENT E2EE VS COMPROMISED CODE DELIVERY
+Design resolution: Use independently hosted signed client and verification; do not trust JavaScript supplied by WordPress.
+Cross-functional owners: R20 / R37
+CONFLICT 09  ENTERPRISE COAUTHORING VS E2EE
+Design resolution: Use locally trusted E2EE editing protocol or classify as managed collaboration; do not silently downgrade.
+Cross-functional owners: R30 / R37
+CONFLICT 10  AI ANSWERS VS AUTHORIZATION CHANGES
+Design resolution: Re-evaluate permissions per source and at answer time, purge embeddings and caches, constrain outputs.
+Cross-functional owners: R35 / R21
+CONFLICT 11  AUDIT RICHNESS VS PRIVACY AND SUBSIDIARY SECRECY
+Design resolution: Redact/minimize payloads; permission-tiered logs; independent integrity and retention.
+Cross-functional owners: R27 / R14
+CONFLICT 12  DIGITAL APPROVAL VS LEGAL ELECTRONIC SIGNATURE
+Design resolution: Separate workflow acknowledgments from vendor-backed signature evidence and jurisdiction-specific requirements.
+Cross-functional owners: R13 / R33
+CONFLICT 13  THIRD-PARTY EDITOR VS CONTENT CONFIDENTIALITY
+Design resolution: Vet data handling and prevent plaintext transfer of protected files to unapproved editors.
+Cross-functional owners: R09 / R20
+CONFLICT 14  PUBLIC KB PUBLISHING VS HIDDEN TENANT CONTENT
+Design resolution: Use approved declassification with separate public projection and no anonymous backdoor queries.
+Cross-functional owners: R15 / R19
+CONFLICT 15  MIGRATION CONVENIENCE VS VERIFIED HISTORICAL ENTITLEMENTS
+Design resolution: Use signed dry-runs, least-privilege ACL mapping, dual approval and auditable exceptions.
+Cross-functional owners: R42 / R21
+8. Conditional revisions to the 346-feature baseline
+The existing inventory is substantial. The recommendations below are not claims that these features are absent; they identify cases where a prior Should/Enterprise label becomes a production prerequisite if the stated condition applies. Preserve original IDs, record the approval, and update the existing requirements tracker.
+ENC-08  |  SHOULD -> launch-blocking for high-assurance E2EE
+Reason and condition: Verified recipient key identity or equivalently strong external verification must exist before any sensitive cross-device/cross-company sharing.
+Accountable: R20
+RPT-04  |  SHOULD -> launch-blocking for regulated/auditable deployment
+Reason and condition: Integrity evidence must be tamper-evident and stored outside WordPress administration.
+Accountable: R27
+OPS-05  |  SHOULD -> operational go-live prerequisite
+Reason and condition: RTO/RPO targets and successful restorations are necessary to know whether production is supportable.
+Accountable: R39
+TEN-13  |  SHOULD -> mandated where contractual/legal residency applies
+Reason and condition: Residency must cover backups, caches, metrics, keys, support and subprocessors, not only primary objects.
+Accountable: R14
+PRV-03  |  SHOULD -> mandated if subsidiaries face distinct jurisdictional regimes
+Reason and condition: Tenant-specific legal profiles needed to avoid invalid uniform retention/disclosure rules.
+Accountable: R13
+AUT-04  |  SHOULD -> strongly recommended go-live control for enterprise employees
+Reason and condition: SCIM/event-driven provisioning and timely departure suspension reduce orphan accounts.
+Accountable: R21
+IAM-16  |  SHOULD -> mandatory for privileged and sensitive periodic reviews
+Reason and condition: Management needs auditable certifications of elevated access and stale external grants.
+Accountable: R27
+REC-09  |  SHOULD -> mandatory if a record class must be WORM/immutable
+Reason and condition: Must be technical rather than process-only where law/contract mandates immutability.
+Accountable: R12
+REC-13  |  SHOULD -> mandatory if eDiscovery obligations apply
+Reason and condition: Zero-Knowledge recovery/export plan must be chosen before regulated content is encrypted.
+Accountable: R13
+AIX-13  |  SHOULD -> mandatory before enabling AI
+Reason and condition: AI inputs, outputs, source access and provider actions must be auditable.
+Accountable: R14
+AIX-16  |  SHOULD -> mandatory before sending content to an external model
+Reason and condition: Provider retention, training exclusion, subprocessors and DPA must be enforceable.
+Accountable: R14
+MOB-02  |  SHOULD -> mandatory if an independent native client is the selected E2EE trust model
+Reason and condition: Strong separation from WordPress requires shipped, signed and independently verified client code.
+Accountable: R37
+SEC-07  |  SHOULD -> assess as mandatory under high ransomware threat
+Reason and condition: Immutable versions / offline restoration are necessary even if anomaly detection remains optional.
+Accountable: R23
+PRV-04  |  SHOULD -> mandatory when applicable personal-data rights are triggered
+Reason and condition: Subject-rights processes cannot be postponed merely because feature phase says Enterprise.
+Accountable: R14
+9. Risk and assurance register
+These are risk hypotheses to test, not evidence of vulnerabilities in an existing implementation. Every risk is tied to a responsible discipline and a concrete control test. Risk state starts Open pending architectural decisions and testing.
+K-01  |  BLOCKER  |  COMPROMISED WORDPRESS BYPASSES VAULT
+Failure scenario: Injected scripts or bridge tokens access plaintext or protected key material.
+Required control: Independently authenticated signed client; narrow WordPress bridge; hostile-WP tabletop.
+Accountable / modules: R20  •  ENC,API,SEC
+Evidence: WP full-RCE scenario cannot obtain private keys, plaintext or new recipients.
+K-02  |  BLOCKER  |  CROSS-TENANT OBJECT REFERENCE
+Failure scenario: Tenant A guesses tenant B document/version ID.
+Required control: Central authorization with immutable tenant binding, scoped storage, negative tests.
+Accountable / modules: R21  •  TEN,IAM,DOC
+Evidence: Fuzz IDs across every API, cache and export path; all blocked.
+K-03  |  BLOCKER  |  HOLDING ADMIN GETS IMPLICIT DECRYPTION
+Failure scenario: Group-level role maps to content access or recovery.
+Required control: Separate administrative plane, content grants and independent trustees.
+Accountable / modules: R02  •  TEN,IAM,ENC
+Evidence: Holding admin without explicit grant sees no protected content.
+K-04  |  BLOCKER  |  KEY-DIRECTORY SUBSTITUTION
+Failure scenario: Server silently replaces an intended recipient public key.
+Required control: Signed recipient identity, key-transparency or out-of-band device verification.
+Accountable / modules: R20  •  ENC,AUT,EXT
+Evidence: Unauthorized recipient enrollment and key swap detected and rejected.
+K-05  |  BLOCKER  |  LOSING KEYS MEANS LOSING RECORDS
+Failure scenario: E2EE users lose private keys without recovery plan.
+Required control: Choose no-recovery vs trustee quorum before roll-out; rehearsed recoveries.
+Accountable / modules: R26  •  ENC,REC,OPS
+Evidence: Recover permitted tenant with quorum; minority cannot recover.
+K-06  |  BLOCKER  |  E2EE MODE LEAKAGE THROUGH DERIVED CONTENT
+Failure scenario: Previews, thumbnails, search snippets or logs persist plaintext.
+Required control: Classify derivatives as documents; restrict processing to trusted client.
+Accountable / modules: R20  •  DOC,MET,RPT,SEC
+Evidence: DB, queue and object dump contain no protected derivative plaintext.
+K-07  |  BLOCKER  |  RETENTION AND DESTRUCTION CONFLICT
+Failure scenario: Legal hold ignored during crypto erasure or object expiration.
+Required control: Hold priority engine covering backups, versions, exported legal copies.
+Accountable / modules: R12  •  REC,ENC,OPS
+Evidence: Held record cannot be deleted by any supported destruction mechanism.
+K-08  |  BLOCKER  |  SERVER-SIDE MALWARE SCANNER BLIND IN E2EE
+Failure scenario: Ciphertext bypasses content inspection but labeled safe.
+Required control: Mode-specific ingestion/scanning policy, quarantine and residual risk disclosure.
+Accountable / modules: R19  •  SEC,DOC,ENC
+Evidence: Opaque E2EE files never get falsely labeled fully server-scanned.
+K-09  |  BLOCKER  |  APPROVAL BYPASS VIA WORKFLOW RACES
+Failure scenario: Reviewer approves one hash while different file is published.
+Required control: Immutable version/hash binding; maker/checker; idempotent transactional engine.
+Accountable / modules: R33  •  WFL,COL,REC
+Evidence: Swap, retry and concurrent approval tests fail closed.
+K-10  |  BLOCKER  |  COMPROMISED KEY TRUSTEE OR ESCROW ABUSE
+Failure scenario: Single trustee or platform operator recovers keys covertly.
+Required control: Independent quorum approvals, audit, dual control and restricted trustees.
+Accountable / modules: R26  •  ENC,IAM,RPT
+Evidence: No single account can recover; every approved recovery leaves evidence.
+K-11  |  BLOCKER  |  BROKEN RESTORE REINTRODUCES ACCESS
+Failure scenario: Backup restoration resurrects expired roles, tokens or deleted documents.
+Required control: Restore reconciliation; revalidate identity/holds; post-restore policy replay.
+Accountable / modules: R39  •  OPS,IAM,REC
+Evidence: Restored tenant honors current revocations and retention policy.
+K-12  |  BLOCKER  |  MALICIOUS CONVERSION PAYLOAD ESCAPES SANDBOX
+Failure scenario: Untrusted PDF/Office exploit reaches keys or tenant data.
+Required control: Isolated egress-denied workers, strict quotas and patching.
+Accountable / modules: R22  •  DOC,SEC
+Evidence: Exploit exercises cannot reach KMS, private networks or other tenants.
+K-13  |  HIGH  |  OFFLINE COPIES REMAIN ACCESSIBLE
+Failure scenario: User expects remote wipe or revocation to destroy previous files.
+Required control: Explicit revocation semantics; TTL for future refresh; endpoint management guidance.
+Accountable / modules: R37  •  MOB,ENC,IAM
+Evidence: UI and policy disclose unavoidable previously exported/cached copies.
+K-14  |  HIGH  |  CROSS-SUBSIDIARY SHARING LEAKS ROLES/METADATA
+Failure scenario: Group project accidentally exposes participant members or titles.
+Required control: Double consent, scoped keys, tenancy-aware notifications and audit.
+Accountable / modules: R21  •  TEN,EXT,RPT
+Evidence: Two buyers in a data room cannot discover each other.
+K-15  |  HIGH  |  SEARCH AND AUTOCOMPLETE EXISTENCE ORACLE
+Failure scenario: Guessable title, timing or counters reveal secret documents.
+Required control: Metadata classification, authorization at index/query layer and response controls.
+Accountable / modules: R34  •  MET,SEC
+Evidence: Search enumeration suite finds no unauthorized hits or suggest tokens.
+K-16  |  HIGH  |  AI READS UNAUTHORIZED PRIOR VECTORS
+Failure scenario: Revoked file still available to RAG, cached responses or embeddings.
+Required control: Entitlement at retrieval and generation, index invalidation and purge policy.
+Accountable / modules: R35  •  AIX,MET,IAM
+Evidence: Revoked source is absent from retriever, citation and cached answer.
+K-17  |  HIGH  |  PROMPT INJECTION TRIGGERS DANGEROUS WORKFLOW
+Failure scenario: Malicious document requests export or agent execution.
+Required control: No autonomous high-impact actions; tools permission-gated; human approval.
+Accountable / modules: R19  •  AIX,WFL,API
+Evidence: Prompt-injection tests cannot send data or elevate permissions.
+K-18  |  HIGH  |  GROUP ANALYTICS IDENTIFIES CONFIDENTIAL ACTIVITY
+Failure scenario: Small group size or filenames permit cross-tenant inference.
+Required control: Role-scoped aggregates, aggregation thresholds, suppress sensitive dimensions.
+Accountable / modules: R14  •  RPT,TEN
+Evidence: Holding reporting reveals no individual classified document history.
+K-19  |  HIGH  |  INCORRECT LEGAL JURISDICTION ASSUMPTION
+Failure scenario: System assumes one controller or retention rule fits all entities.
+Required control: Company-by-country processing inventory; counsel reviewed policy profiles.
+Accountable / modules: R13  •  PRV,REC,TEN
+Evidence: Each tenant jurisdiction has signed legal policy mapping.
+K-20  |  HIGH  |  PLUGIN/DEPENDENCY SUPPLY-CHAIN COMPROMISE
+Failure scenario: Signed build or third-party plugin can tamper with bridge or client.
+Required control: SBOM, provenance, dependency pinning, verified updates and sandboxed bridge.
+Accountable / modules: R38  •  SEC,API,OPS
+Evidence: Release artifacts verified and vulnerable dependencies blocked.
+K-21  |  HIGH  |  STALE ACCESS DECISION CACHE
+Failure scenario: Revoked membership retains long-lived download link or task access.
+Required control: Short-lived audience-bound grants, event invalidation, recheck at use.
+Accountable / modules: R21  •  IAM,API,EXT
+Evidence: Rapid revoke during download/export job fails closed at defined points.
+K-22  |  HIGH  |  PRIVILEGED SUPPORT IMPERSONATION
+Failure scenario: Support staff uses break-glass to open business documents silently.
+Required control: No-plaintext support diagnostics; dual approval and reason-scoped emergency grants.
+Accountable / modules: R27  •  IAM,OPS,RPT
+Evidence: Support session cannot see content without explicit reviewed access.
+K-23  |  HIGH  |  INACCURATE MULTILINGUAL PERMISSIONS
+Failure scenario: RTL labels reverse meaning or deny appears as allow.
+Required control: Native security-UI reviews, isolated tokens, locale-specific format tests.
+Accountable / modules: R17  •  L10,UX,IAM
+Evidence: 13-language action/permission translations tested with native reviewers.
+K-24  |  HIGH  |  UNVERIFIABLE DIGITAL SIGNATURE CLAIM
+Failure scenario: Internal approval labeled qualified/legal e-sign.
+Required control: Separate approval attestations from vendor/legal e-signature integration.
+Accountable / modules: R13  •  WFL,COL,REC
+Evidence: UI and audit distinguish approval log from legally certified signature.
+K-25  |  HIGH  |  E2EE PREVENTS LEGAL DISCOVERY
+Failure scenario: Records cannot be produced under lawful order or required audit.
+Required control: Jurisdiction-approved trustee recovery or documented custodian-produced export.
+Accountable / modules: R13  •  ENC,REC,PRV
+Evidence: Legal discovery drill produces permitted records with chain of custody.
+K-26  |  HIGH  |  UNAUTHORIZED TENANT MIGRATION
+Failure scenario: Subsidiary merge/export changes scope or key ownership without approval.
+Required control: Signed corporate transaction workflow, counsel hold checks, rollback.
+Accountable / modules: R02  •  TEN,MIG,ENC
+Evidence: Migration dry-run reconciles keys, content, holds and memberships.
+K-27  |  HIGH  |  THIRD-PARTY EDITOR RECEIVES CLASSIFIED PLAINTEXT
+Failure scenario: Office integration or preview vendor sees material unexpectedly.
+Required control: Mode compatibility matrix, vendor risk review, explicit scoped transfer.
+Accountable / modules: R09  •  COL,API,DOC
+Evidence: Zero-Knowledge files cannot open in unapproved cloud editor.
+K-28  |  HIGH  |  BROKEN OWNERSHIP FOR KNOWLEDGE ARTIFACTS
+Failure scenario: Policies go stale and employees attest wrong revision.
+Required control: Named steward, expiry/review, canonical version and attestation binding.
+Accountable / modules: R15  •  KNO,COL,WFL
+Evidence: Attestation tied to exact approved content hash and language.
+K-29  |  HIGH  |  MIGRATION BRINGS WRONG ACCESS
+Failure scenario: Source ACL mapping creates inappropriate grants in new system.
+Required control: Dry-run, least-privilege mapping, dual validation and exception resolution.
+Accountable / modules: R42  •  MIG,IAM,TEN
+Evidence: All privileged mappings signed off and exceptions resolved.
+K-30  |  HIGH  |  NO RELIABLE RTO/RPO / BACKUPS
+Failure scenario: Data restored but keys, policy or critical event log missing.
+Required control: Full restore drills with crypto trustee participation; per-mode SLOs.
+Accountable / modules: R39  •  OPS,ENC,RPT
+Evidence: Recover data, versions, permissions, keys and audit consistently.
+K-31  |  MEDIUM  |  LOCALIZATION LACKS REGIONAL DEFINITIONS
+Failure scenario: zh/pt/Arabic calendars and dates inconsistent.
+Required control: Define locale codes, calendars, plural rules and canonical UTC storage.
+Accountable / modules: R17  •  L10,UX,MET
+Evidence: Locale regression covers filenames, dates, search and notifications.
+K-32  |  MEDIUM  |  COST OF BROAD FEATURES EXCEEDS BUDGET
+Failure scenario: Coauthoring, OCR, vector search and 13-language review arrive prematurely.
+Required control: Dependency-driven release slices and FinOps metering.
+Accountable / modules: R03  •  AIX,COL,OPS
+Evidence: Phased roadmap has capacity and cost evidence before commitment.
+K-33  |  HIGH  |  INSECURE SERVICE ACCOUNT SCOPES
+Failure scenario: Connector token accesses all tenants or overprivileged storage.
+Required control: Workload identities with tenant+action restrictions and rotation.
+Accountable / modules: R21  •  IAM,API,OPS
+Evidence: Stolen test connector credential cannot read unrelated tenants.
+K-34  |  HIGH  |  PRIVACY REQUESTS CONFLICT WITH IMMUTABLE COPIES
+Failure scenario: Delete request not reconciled with legal holds or backup retention.
+Required control: Document lawful exceptions, selective deletion and retention flow.
+Accountable / modules: R14  •  PRV,REC,OPS
+Evidence: DPO process outputs decision, evidence and actionable execution state.
+K-35  |  HIGH  |  INADEQUATE INDEPENDENT ASSURANCE
+Failure scenario: Development team certifies its own crypto/tenant isolation.
+Required control: Contract independent crypto and red-team assessments; close blockers.
+Accountable / modules: R25  •  ENC,SEC,OPS
+Evidence: Independent retest attests all release blockers closed.
+10. Architecture decision register
+Before writing production code, decision owners should document alternatives, impact on encryption modes, data flows, failure states, security and legal review, and consequences for the feature scope.
+D-01  WHAT DOES A FULL WORDPRESS COMPROMISE MEAN IN THREAT MODEL?
+Recommended default: Assume arbitrary plugin/PHP execution and site administrator; vault remains a separate trust boundary.
+Accountable / related modules: R19  •  ENC,SEC,API
+D-02  HOW IS ZERO-KNOWLEDGE CODE DELIVERED AND AUTHENTICATED?
+Recommended default: Separate audited/signed client and independent origin; direct client login; no trust in WP script.
+Accountable / related modules: R20  •  ENC,MOB,AUT
+D-03  WHICH DOCUMENTS REQUIRE ZERO-KNOWLEDGE MODE?
+Recommended default: Default managed mode only when justified; mandate E2EE by classification / subsidiaries.
+Accountable / related modules: R02  •  ENC,SEC,PRV
+D-04  IS ENTERPRISE RECOVERY PERMITTED?
+Recommended default: Offer distinct no-recovery and trustee-quorum profiles; truthful assurance claim.
+Accountable / related modules: R26  •  ENC,REC,OPS
+D-05  WHO IS ACCOUNTABLE FOR SUBSIDIARY DATA?
+Recommended default: Record controller/processor + custodian per legal entity; holding has policy but no implicit decryption.
+Accountable / related modules: R14  •  TEN,PRV,IAM
+D-06  WHAT IS THE EXACT PERMISSION EVALUATION ORDER?
+Recommended default: Global immutable safety policy -> tenant boundary -> classification/legal hold -> RBAC/ABAC/ACL -> contextual restrictions; explicit deny wins.
+Accountable / related modules: R21  •  IAM,TEN,REC
+D-07  WHICH OPERATIONS ARE ELIGIBLE FOR BREAK-GLASS?
+Recommended default: Restrict to control-plane admin; no silent document/key recovery; dual authorization.
+Accountable / related modules: R27  •  IAM,AUT,ENC
+D-08  WHICH METADATA REMAINS VISIBLE TO SERVERS?
+Recommended default: Minimize: tenant, object token, ciphertext size/time where unavoidable; encrypt titles/comments/classification-specific fields.
+Accountable / related modules: R20  •  MET,DOC,ENC
+D-09  HOW CAN CONFIDENTIAL CONTENT BE SEARCHED?
+Recommended default: Managed: secured index; Zero-Knowledge: trusted-client index with explicitly bounded metadata leakage.
+Accountable / related modules: R34  •  MET,ENC,AIX
+D-10  WHAT IS E2EE MALWARE ASSURANCE?
+Recommended default: Never assert full server scanning; local scanning + recipient/device policy + quarantine risk disclosure.
+Accountable / related modules: R19  •  SEC,DOC,ENC
+D-11  WHAT IS THE APPROACH TO EXTERNAL E2EE SHARING?
+Recommended default: Verified recipient keys; origin approval; purpose, term and immutable share evidence.
+Accountable / related modules: R20  •  EXT,ENC,IAM
+D-12  WHO CAN AUTHORIZE A DOCUMENT FOR LEGAL DISCOVERY?
+Recommended default: Use counsel-directed custodian export or audited trustee protocol governed by jurisdiction.
+Accountable / related modules: R13  •  REC,ENC,PRV
+D-13  WHEN DOES RETENTION OUTRANK DELETION?
+Recommended default: Counsel-approved precedence; legal hold blocks disposition and key destruction.
+Accountable / related modules: R12  •  REC,PRV,OPS
+D-14  WHAT ARE THE 13 EXACT LOCALE CODES AND VARIANTS?
+Recommended default: Agree mapping: English, Persian, French, Turkish, Russian, zh-Hans, German, Portuguese variant, Spanish, Hindi, Japanese, Arabic, Armenian; regional options.
+Accountable / related modules: R17  •  L10,MET,UX
+D-15  WHAT IS THE DEFINITION OF DIGITAL SIGNING?
+Recommended default: Separate internal approvals from applicable qualified digital signature vendors/requirements.
+Accountable / related modules: R13  •  WFL,COL,REC
+D-16  HOW DO GROUP-WIDE DASHBOARDS PRESERVE CONFIDENTIALITY?
+Recommended default: Group sees posture aggregates; document audit requires legally/policy authorized scoped access.
+Accountable / related modules: R27  •  RPT,TEN,PRV
+D-17  WHAT ARE TARGET SLO, RTO, RPO AND TENANT SCALE?
+Recommended default: Benchmark agreed file mix, users, tenant data volumes and geography; publish per-mode targets.
+Accountable / related modules: R39  •  OPS,DOC,MET
+D-18  WHICH CONNECTORS/CLOUD EDITOR PROVIDERS ARE ALLOWED?
+Recommended default: Approved vendor matrix; prohibit unmanaged external document decryption; scope tokens by tenant.
+Accountable / related modules: R09  •  API,COL,DOC
+D-19  WHAT IS THE COMPANY MERGER/SPLIT PROCEDURE?
+Recommended default: Approvals from origin/recipient tenant custodians, counsel, security, key trustees as necessary.
+Accountable / related modules: R02  •  TEN,MIG,ENC
+D-20  WHEN ARE AI FUNCTIONS PERMISSIBLE?
+Recommended default: Opt-in by tenant/classification; managed-only or trusted client local; no training with company data by default.
+Accountable / related modules: R14  •  AIX,SEC,ENC
+D-21  WHAT IS THE LICENSED DEPLOYMENT MODEL?
+Recommended default: Private managed service, self-hosted, hybrid; define update chain, residency and customer responsibilities.
+Accountable / related modules: R03  •  OPS,API,PRV
+D-22  WHO MAKES FINAL PRODUCTION GO/NO-GO DECISION?
+Recommended default: Sponsor + PO after independent security, legal/privacy, records and DR gate sign-offs.
+Accountable / related modules: R01  •  OPS,SEC,PRV
+11. Release gates, evidence and signoff
+Gate
+Milestone
+Sign-off
+Definition of done / evidence
+G0
+Charter and authority
+R01
+Funding/risk appetite; 10 legal entities and operating jurisdictions; responsible data controllers named. Evidence: Approved charter, entity list, governance and decision log.
+G1
+Threat model and design
+R19
+Agree WordPress threat boundary, protection modes, data flows, abuse cases and legal constraints. Evidence: Reviewed diagrams; ADRs; product-mode compatibility matrix.
+G2
+Tenant and access proof
+R21
+Prove isolation and formal permission order, independent identity, limited WordPress bridge. Evidence: Policy test harness; API fuzzing results; negative tenant tests.
+G3
+Cryptographic assurance
+R25
+Confirm independent trusted-client distribution, E2EE protocol, key identity, recovery and trust limits. Evidence: Third-party crypto report; protocol vectors; WordPress-RCE red-team scenario.
+G4
+Core document lifecycle
+R03
+Upload, quarantine, immutable versions, approval, audit and download all tested end-to-end. Evidence: Traceability to core requirements; E2E automation; malicious-file tests.
+G5
+Governance and resilience
+R12
+Retention/holds/DSRs, 13 languages, WCAG, backup/keys/identity restore all validated. Evidence: Legal/privacy signoffs; translated UAT; DR and retention tabletop.
+G6
+Subsidiary pilot
+R11
+Test multiple separate subsidiaries (including RTL), different roles and cross-company share path. Evidence: Signed tenant UAT, support runbooks and resolved high-severity defects.
+G7
+Independent production go/no-go
+R01
+No unresolved critical vulnerabilities; approved exceptions; operations and incident readiness. Evidence: Independent pen-test, security signoff, restore results and release checklist.
+G8
+Enterprise expansion change gate
+R03
+New AI, coauthoring, mobile, and vertical modules receive mode-specific security/review tests. Evidence: Per-module ADR, impact assessment, signed regression and training.
+
+Launch veto: A release with an unresolved blocker (particularly WordPress trust isolation, cross-tenant authorization, key verification/recovery or records/backup integrity) cannot claim the agreed security posture. Business acceptance does not supersede independent technical evidence.
+12. High-value cross-functional acceptance tests
+TEST 01 — ISOLATION  [TEN,IAM,API,RPT]
+Attack or operational scenario: Tenant A admin guesses Tenant B document/version/metadata/queue ID
+Expected proof: All paths deny and independent audit has evidence.
+TEST 02 — E2EE CODE INTEGRITY  [ENC,API,MOB]
+Attack or operational scenario: WordPress administrator modifies WP theme/plugin to serve malicious JS
+Expected proof: Trusted client neither executes injected code nor releases keys or plaintext.
+TEST 03 — RECIPIENT AUTHENTICITY  [ENC,AUT,EXT]
+Attack or operational scenario: Attacker substitutes public key in key directory
+Expected proof: Trusted client blocks unverified recipient and alerts owner.
+TEST 04 — PRIVILEGE ESCALATION  [IAM,TEN]
+Attack or operational scenario: Subsidiary admin grants self group-wide auditor/escrow role
+Expected proof: Permission creation rejected; privileged change requires separate approval.
+TEST 05 — PERMISSION RACE  [IAM,DOC,WFL]
+Attack or operational scenario: Revoke user while export, preview, workflow and search requests run
+Expected proof: Defined consistency window enforced; no fresh unauthorized copy completed after final check.
+TEST 06 — MALICIOUS DOCUMENT  [DOC,SEC]
+Attack or operational scenario: Upload malformed Office/PDF designed to exploit converter
+Expected proof: Quarantine and isolated sandbox prevents network/file/key compromise.
+TEST 07 — CONFIDENTIAL PREVIEW  [ENC,DOC,UX]
+Attack or operational scenario: Request E2EE preview via ordinary WP dashboard
+Expected proof: System presents independent trusted viewer; no WP origin sees plaintext.
+TEST 08 — LEGAL HOLD  [REC,ENC,OPS]
+Attack or operational scenario: Place hold, then attempt deletion, retention expiry and crypto-erasure
+Expected proof: All destructive paths deny with preserved evidence.
+TEST 09 — KEY RECOVERY  [ENC,AUT]
+Attack or operational scenario: Lose device; request recovery with one trustee instead of quorum
+Expected proof: Fails until independently approved quorum, then audited recovery succeeds.
+TEST 10 — DEVICE COMPROMISE  [MOB,ENC,IAM]
+Attack or operational scenario: User loses previously synced phone and is deprovisioned
+Expected proof: New versions and future distribution denied; prior offline data limitation displayed.
+TEST 11 — CROSS-COMPANY PROJECT  [EXT,TEN,IAM]
+Attack or operational scenario: Tenant A shares selected file with Tenant B group
+Expected proof: Named members only, approvals and keys verified, no blanket B rights.
+TEST 12 — AUDIT TAMPERING  [RPT,SEC]
+Attack or operational scenario: WP admin tries to delete download and authorization failure events
+Expected proof: Independent audit continues to show original events and tampering alarm.
+TEST 13 — AI LEAKAGE  [AIX,MET,IAM]
+Attack or operational scenario: Revoked document exists in vector index and cached answer
+Expected proof: Retrieval, cache and output no longer expose that source.
+TEST 14 — PROMPT INJECTION  [AIX,WFL,SEC]
+Attack or operational scenario: Malicious document instructs AI agent to email private file
+Expected proof: No autonomous export, tool grant or workflow approval.
+TEST 15 — BACKUP RESTORE  [OPS,IAM,REC]
+Attack or operational scenario: Restore tenant from old snapshot including revoked roles
+Expected proof: Reconciles current policy/hold/revocations before opening restored tenant.
+TEST 16 — LOCALIZATION  [L10,UX]
+Attack or operational scenario: Persian and Arabic RTL document sharing, approval and permission UI
+Expected proof: Native validation finds no reversed affordances/IDs; screen-reader correct.
+TEST 17 — MIGRATION  [MIG,IAM]
+Attack or operational scenario: Import historic documents with mismatched identity and denied ACLs
+Expected proof: Dry run reports exceptions; no overly broad grants; provenance preserved.
+TEST 18 — COMPANY SEPARATION  [TEN,REC,ENC]
+Attack or operational scenario: Split one subsidiary into two while legal hold exists
+Expected proof: Approved custody, key rewrap, audit trail and retention remain valid.
+TEST 19 — CLOUD EDITOR  [COL,ENC,API]
+Attack or operational scenario: Attempt to open E2EE file in external online editor
+Expected proof: Blocked unless approved conversion and explicit authorized disclosure.
+TEST 20 — DISASTER RECOVERY  [OPS,ENC,RPT]
+Attack or operational scenario: Simulate regional outage with KMS outage and independent logs
+Expected proof: System follows declared RTO/RPO without fail-open; keys/audit recover.
+13. Recommended implementation sequence
+Discover and govern
+Resolve data ownership, tenant/legal structure, deployment jurisdiction, classification and data volumes. Select independent decision-makers and counsel.
+Prove boundaries before features
+Build a security spike: WordPress bridge, independent identity, ten separate tenants, formal authorization checks and secure trusted-client key envelope.
+Demonstrate protected document lifecycle
+Implement upload, quarantine, verified versions, document grants, separate modes, signed client, audit, key recovery decision, storage and restore.
+Implement records and guided user experience
+Add reliable legal holds, approvals, search restricted to mode, multilingual core UX, WCAG audits and operational runbooks.
+Pilot subsidiary independence
+Test two or more subsidiaries with different rules, then the remaining companies in waves; include an RTL pilot, cross-company collaboration and offboarding.
+Expand after independent assurance
+Add full-text/AI/advanced editing, mobile sync, integrations and vertical modules only with individual threat and privacy reviews.
+Do not present the full 140 baseline Core items as a small MVP. The first shippable slice should deliberately contain only the minimum working vertical flow plus the security and legal controls necessary for that flow; independent reviewers must approve expansion.
+14. Independent standards and source references
+References are design guidance and baseline material, not a certification statement. Jurisdiction-specific law requires counsel confirmation; security-standard versions must be frozen in the project's test plan at design signoff.
+OWASP ASVS 5.0.0
+Application security verification criteria
+https://owasp.org/www-project-application-security-verification-standard/
+OWASP MULTI-TENANT SECURITY CHEAT SHEET
+Tenant boundaries across storage, cache, queues, logs and APIs
+https://cheatsheetseries.owasp.org/cheatsheets/Multi_Tenant_Security_Cheat_Sheet.html
+OWASP AUTHORIZATION CHEAT SHEET
+Deny by default, least privilege, object authorization
+https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html
+OWASP CRYPTOGRAPHIC STORAGE CHEAT SHEET
+Key separation, authenticated encryption and key lifecycle
+https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html
+NIST SP 800-63-4 (FINAL, JULY 2025)
+Digital identity, authentication and federation
+https://csrc.nist.gov/pubs/sp/800/63/4/final
+NIST SP 800-57 PART 1 REV 5
+Cryptographic key management planning
+https://csrc.nist.gov/pubs/sp/800/57/pt1/r5/final
+NIST SP 800-218 V1.1 (FINAL); V1.2 IS DRAFT AS OF OCT 2026
+Secure software development / supply chain
+https://csrc.nist.gov/projects/ssdf/publications
+WORDPRESS REST API HANDBOOK
+Permission callback and endpoint security
+https://developer.wordpress.org/rest-api/extending-the-rest-api/adding-custom-endpoints/
+WORDPRESS SECURITY NONCES HANDBOOK
+Nonces are not authorization / identity
+https://developer.wordpress.org/apis/security/nonces/
+W3C WCAG 2.2
+Accessibility acceptance benchmark
+https://www.w3.org/TR/WCAG22/
+ISO 15489-1:2016
+Records governance principles
+https://www.iso.org/standard/62542.html
+UK ICO RIGHT TO ERASURE
+Lawful erasure may have applicable exceptions; determine jurisdiction
+https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/individual-rights/individual-rights/right-to-erasure/
+MOZILLA, TRUSTWORTHY JAVASCRIPT FOR THE OPEN WEB (2026)
+Server-supplied JavaScript integrity and E2EE delivery limitation
+https://hacks.mozilla.org/2026/05/trustworthy-javascript-for-the-open-web/
+15. Final design recommendation
+Use the original 346-feature catalog as product inventory; use this review as the ownership, architectural decision and release-assurance companion. Start by demonstrating that (1) a WordPress compromise cannot access Zero-Knowledge plaintext/keys, (2) subsidiary identities and policies never bypass tenant bounds, (3) legal holds/recovery/backup restore remain consistent, and (4) independent reviewers can verify claims using reproducible tests.
+Product differentiation should come from independently governed subsidiaries, transparent permission explanations, honest mode-specific capabilities, strong information-governance controls and accessible multilingual operations — not a claim of absolute security or an arbitrary feature count.

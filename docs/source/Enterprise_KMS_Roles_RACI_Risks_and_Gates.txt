@@ -1,0 +1,682 @@
+xl/worksheets/sheet1.xml
+TEAM ROLES  |  KMS DELIVERY REVIEW								
+								
+Responsibilities are organizational hats, not 44 required employees. Independently accountable reviewers and trustees cannot certify their own implementation.								
+Role ID	Family	Specialist responsibility	Mission / authority	Expected deliverable	Engagement	When needed	Named individual	Staffing status
+R01	Strategy & delivery	Executive sponsor	Own business case, funding, risk appetite and final business authorization.	Approved charter; budget envelope; risk acceptance boundaries.	Decision-maker	All		Unassigned
+R02	Strategy & delivery	Holding-company governance chair	Resolve conflicts between group oversight and subsidiary autonomy.	Group governance policy; escalation and veto process.	Decision-maker	All		Unassigned
+R03	Strategy & delivery	Product owner / product director	Own roadmap, value hypotheses, scope, acceptance and product trade-offs.	Product vision; prioritization; signed acceptance criteria.	Core	All		Unassigned
+R04	Strategy & delivery	Program / delivery manager	Run dependencies, milestones, resourcing, delivery risks and release governance.	Integrated program plan; RAID log; gate evidence pack.	Core	All		Unassigned
+R05	Strategy & delivery	Business analyst / requirements engineer	Convert workflows into detailed, testable specifications across entities.	Process maps; user stories; traceability; acceptance scenarios.	Core	Discovery–release		Unassigned
+R06	Strategy & delivery	Enterprise architect	Ensure integration with IT strategy, identity estate and governance framework.	Architecture principles; capability map; integration boundaries.	Core / fractional	Discovery–design		Unassigned
+R07	Strategy & delivery	Solution architect / technical lead	Own system-wide design, architecture decision records and interfaces.	Threat-aware architecture; API boundaries; ADRs.	Core	Design–release		Unassigned
+R08	Strategy & delivery	FinOps / financial analyst	Model storage, compute, OCR, AI, network egress, keys and long-term cost.	TCO model; tenant chargeback and budget guardrails.	Fractional	Planning–operations		Unassigned
+R09	Strategy & delivery	Procurement and third-party risk lead	Assess IdP, hosting, KMS, converters, AI and signature vendors.	Vendor due diligence; DPAs; exit conditions and SLAs.	Fractional	Design–operations		Unassigned
+R10	Strategy & delivery	Change and adoption manager	Lead stakeholder engagement, phased rollout, communications and training.	Adoption plan; pilot feedback; organizational readiness.	Core / fractional	Pilot–operations		Unassigned
+R11	Business & information	Subsidiary representatives / UAT leads	Represent each company and validate delegated administration workflows.	10-tenant UAT scenarios; local policy signoffs.	Distributed business owners	Discovery–pilot		Unassigned
+R12	Business & information	Records and information governance lead	Own classification, controlled records, retention, legal holds and disposition.	File plan; schedules; disposition protocol; audit evidence.	Required domain owner	Design–operations		Unassigned
+R13	Business & information	Legal counsel and eDiscovery specialist	Define statutory records, electronic evidence and contractual sharing rights.	Jurisdiction matrix; legal holds; signature rules; disclosure playbooks.	Specialist / legal signoff	Design–operations		Unassigned
+R14	Business & information	Privacy officer / DPO	Resolve controller/processor duties, minimization, transfers and subject requests.	DPIA; lawful-basis map; erasure and transfer procedures.	Independent oversight	Design–operations		Unassigned
+R15	Business & information	Knowledge architect / taxonomy specialist	Structure wiki, canonical policy knowledge, metadata quality and ownership.	Taxonomy; editorial governance; content quality indicators.	Core / fractional	Design–operations		Unassigned
+R16	Business & information	UX researcher / product designer	Design usable multi-tenant workflows and high-stakes warnings.	Journey maps; interaction prototypes; usability research.	Core	Discovery–release		Unassigned
+R17	Business & information	Localization lead and 13-language reviewers	Own locale glossary, native review, RTL, linguistic correctness.	Locale specification; translation memory; signoff for 13 languages.	Specialists; not 13 full-time staff	Design–release		Unassigned
+R18	Business & information	Accessibility specialist	Measure keyboard, screen-reader, cognitive and bidirectional usability.	WCAG 2.2 AA audit; manual assistive-technology reports.	Specialist / independent test	Design–release		Unassigned
+R19	Security & assurance	Application security and threat-model architect	Threat-model every entry point, isolation boundary and document operation.	Threat model; abuse cases; ASVS verification mapping.	Core / independent review	Design–operations		Unassigned
+R20	Security & assurance	Cryptographic protocol engineer	Design E2EE, recipient identity, keys, recovery and algorithm agility.	Protocol design; test vectors; client integrity assumptions.	Specialist; critical	Design–security acceptance		Unassigned
+R21	Security & assurance	IAM / PAM architect	Own SSO, SCIM, tenant memberships, policy evaluation and privilege boundaries.	Identity model; policy decision specification; SoD rules.	Core / specialist	Design–operations		Unassigned
+R22	Security & assurance	Cloud and platform security engineer	Harden storage, KMS, network, secret handling, workloads and tenancy.	Least privilege policies; hardening baselines; attack-path tests.	Core / specialist	Design–operations		Unassigned
+R23	Security & assurance	SOC and incident-response lead	Define detection, triage, containment, evidence and breach notifications.	Detection rules; playbooks; response exercises.	Operational owner	Pilot–operations		Unassigned
+R24	Security & assurance	Independent penetration tester / red team	Attempt cross-tenant access, WordPress takeover and lateral movement.	Independent findings; retest attestation; exploit-based proof.	Independent; release-blocking	Pre-release & periodic		Unassigned
+R25	Security & assurance	Independent cryptography/security assessor	Challenge protocol, device trust, key recovery and claims independently.	Assurance report; review of threat model and test vectors.	Independent; release-blocking	Design & pre-release		Unassigned
+R26	Security & assurance	Key recovery trustee / custodial committee	Approve exceptional key recovery with quorum and conflict-of-interest controls.	Trustee roster; dual-control runbook; recovery drill evidence.	Operational; separate from engineering	Pilot–operations		Unassigned
+R27	Security & assurance	Compliance / internal audit lead	Assess control design and effectiveness, evidence and audit independence.	Control matrix; exception register; audit plan.	Oversight / independent	Design–operations		Unassigned
+R28	Product engineering	WordPress plugin engineer	Build low-privilege integration, admin links, secure upgrades and REST bridge.	Signed plugin; WP capability boundaries; upgrade tests.	Core	Build–operations		Unassigned
+R29	Product engineering	Backend and API engineer	Implement tenants, entitlements, document and lifecycle APIs.	Versioned API; authorization middleware; event flows.	Core, multiple	Build–operations		Unassigned
+R30	Product engineering	Web frontend engineer	Build dashboards, dialogs, document workflows and accessibility.	Responsive, internationalized web client and component library.	Core, multiple	Build–operations		Unassigned
+R31	Product engineering	Data architect / database engineer	Define tenant isolation, metadata evolution, transactions and query controls.	Logical model; isolation constraints; data lifecycle design.	Core	Design–operations		Unassigned
+R32	Product engineering	Storage, conversion and file-processing engineer	Build encrypted object paths, import pipeline and sandboxed previews.	Storage adapters; scanning/quarantine; conversion sandboxes.	Core	Build–operations		Unassigned
+R33	Product engineering	Workflow / business-process engineer	Implement state machines, approval delegation, retries and audit binding.	Versioned workflow engine; simulation and escalation tests.	Core / specialist	Build–operations		Unassigned
+R34	Product engineering	Search / information retrieval engineer	Handle metadata search, multilingual analyzers and mode-appropriate indexing.	Search design; relevance evaluation; index isolation tests.	Specialist	Enterprise phase		Unassigned
+R35	Product engineering	AI / ML engineering lead	Build permission-trimmed retrieval, evaluation, output controls and provider policy.	AI risk tests; grounded retrieval; model and cost governance.	Specialist	Enterprise phase		Unassigned
+R36	Product engineering	Integration / connector engineer	Build OIDC/SAML/SCIM, M365, webhooks and enterprise connectors.	Connector contracts; event replay; permission mapping tests.	Core / specialist	Build–operations		Unassigned
+R37	Product engineering	Trusted-client and mobile/desktop engineer	Build independent signed client, E2EE device enrollment, offline protection.	Trusted client; release signing; platform key storage and sync tests.	Core; critical for E2EE	Design–operations		Unassigned
+R38	Product engineering	DevOps / platform engineer	Build infrastructure-as-code, CI/CD, isolated environments and delivery chain.	IaC; provenance; scans; rollback and deployment pipelines.	Core	Build–operations		Unassigned
+R39	Product engineering	SRE / disaster-recovery engineer	Engineer SLOs, backup recoverability, observability and controlled restoration.	SLO design; RTO/RPO drills; runbooks; capacity forecasts.	Core / specialist	Build–operations		Unassigned
+R40	Product engineering	QA automation / test architect	Own unit, integration, security regression, contract and E2E coverage.	Test pyramid; requirement-to-test traceability; release reports.	Core, multiple	Build–operations		Unassigned
+R41	Product engineering	Performance / capacity engineer	Test upload, search, 10-tenant concurrency, worst-case workflows.	Load model; benchmarks; capacity limits and budgets.	Specialist	Before pilot & scale		Unassigned
+R42	Product engineering	Migration and data-quality engineer	Move legacy documents, ACLs, versions and metadata without leakage.	Dry-run reports; integrity manifests; reconciliation.	Specialist	Pilot–rollout		Unassigned
+R43	Product engineering	Technical writer and training designer	Explain end-user actions, admin policies, supported security modes and limits.	Product documentation; API docs; localized training materials.	Specialist	Build–operations		Unassigned
+R44	Product engineering	Support / customer success engineer	Design safe diagnostics, support access and long-term service adoption.	Support playbooks; escalation; no-plaintext debug tools.	Operational	Pilot–operations		Unassigned
+
+xl/worksheets/sheet10.xml
+DESIGN CONFLICTS  |  KMS DELIVERY REVIEW				
+				
+Confidentiality trade-offs need explicit feature-mode behavior, consent and product disclosure rather than silent functionality fallback.				
+Conflict ID	Incompatible expectations	Required architecture / product trade-off	Joint owners	Decision status
+CF-01	Zero-Knowledge files vs server OCR/search/AI	Use trusted-client processing; otherwise managed mode after explicit classification approval.	R20 / R34 / R35	Open
+CF-02	Zero-Knowledge malware inspection vs opaque ciphertext	Admit reduced server assurance; client scan, device posture, staging/quarantine and policy restrictions.	R19 / R32	Open
+CF-03	Strong confidentiality vs forgotten keys	Choose no recovery (permanent loss possible) or independently governed quorum recovery (extra access path).	R20 / R26	Open
+CF-04	Authorization revocation vs offline access	Revoke future delivery; clearly disclose inability to erase previously copied plaintext or keys.	R21 / R37	Open
+CF-05	Group central oversight vs subsidiary confidentiality	Keep control-plane and document-key permissions separate; aggregated group reporting.	R02 / R21	Open
+CF-06	Legal hold vs right to erasure / crypto erasure	Apply jurisdiction-specific priority with recorded legal justification, review and execution gates.	R12 / R13 / R14	Open
+CF-07	E2EE vs court-directed eDiscovery	Adopt legal custodian export or trustee recovery procedure; do not imply invisible server decryption.	R13 / R20	Open
+CF-08	Browser client E2EE vs compromised code delivery	Use independently hosted signed client and verification; do not trust JavaScript supplied by WordPress.	R20 / R37	Open
+CF-09	Enterprise coauthoring vs E2EE	Use locally trusted E2EE editing protocol or classify as managed collaboration; do not silently downgrade.	R30 / R37	Open
+CF-10	AI answers vs authorization changes	Re-evaluate permissions per source and at answer time, purge embeddings and caches, constrain outputs.	R35 / R21	Open
+CF-11	Audit richness vs privacy and subsidiary secrecy	Redact/minimize payloads; permission-tiered logs; independent integrity and retention.	R27 / R14	Open
+CF-12	Digital approval vs legal electronic signature	Separate workflow acknowledgments from vendor-backed signature evidence and jurisdiction-specific requirements.	R13 / R33	Open
+CF-13	Third-party editor vs content confidentiality	Vet data handling and prevent plaintext transfer of protected files to unapproved editors.	R09 / R20	Open
+CF-14	Public KB publishing vs hidden tenant content	Use approved declassification with separate public projection and no anonymous backdoor queries.	R15 / R19	Open
+CF-15	Migration convenience vs verified historical entitlements	Use signed dry-runs, least-privilege ACL mapping, dual approval and auditable exceptions.	R42 / R21	Open
+
+xl/worksheets/sheet11.xml
+REFERENCES  |  KMS DELIVERY REVIEW		
+		
+Authoritative design references. Jurisdictional laws and standard versioning require explicit legal/security review.		
+Reference	Engineering use	Official / primary-source URL
+OWASP ASVS 5.0.0	Application security verification criteria	https://owasp.org/www-project-application-security-verification-standard/
+OWASP Multi-Tenant Security Cheat Sheet	Tenant boundaries across storage, cache, queues, logs and APIs	https://cheatsheetseries.owasp.org/cheatsheets/Multi_Tenant_Security_Cheat_Sheet.html
+OWASP Authorization Cheat Sheet	Deny by default, least privilege, object authorization	https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html
+OWASP Cryptographic Storage Cheat Sheet	Key separation, authenticated encryption and key lifecycle	https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html
+NIST SP 800-63-4 (Final, July 2025)	Digital identity, authentication and federation	https://csrc.nist.gov/pubs/sp/800/63/4/final
+NIST SP 800-57 Part 1 Rev 5	Cryptographic key management planning	https://csrc.nist.gov/pubs/sp/800/57/pt1/r5/final
+NIST SP 800-218 v1.1 (Final); v1.2 is draft as of Oct 2026	Secure software development / supply chain	https://csrc.nist.gov/projects/ssdf/publications
+WordPress REST API Handbook	Permission callback and endpoint security	https://developer.wordpress.org/rest-api/extending-the-rest-api/adding-custom-endpoints/
+WordPress Security Nonces Handbook	Nonces are not authorization / identity	https://developer.wordpress.org/apis/security/nonces/
+W3C WCAG 2.2	Accessibility acceptance benchmark	https://www.w3.org/TR/WCAG22/
+ISO 15489-1:2016	Records governance principles	https://www.iso.org/standard/62542.html
+UK ICO Right to Erasure	Lawful erasure may have applicable exceptions; determine jurisdiction	https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/individual-rights/individual-rights/right-to-erasure/
+Mozilla, Trustworthy JavaScript for the Open Web (2026)	Server-supplied JavaScript integrity and E2EE delivery limitation	https://hacks.mozilla.org/2026/05/trustworthy-javascript-for-the-open-web/
+
+xl/worksheets/sheet12.xml
+ENTERPRISE KMS  |  DELIVERY GOVERNANCE SNAPSHOT													
+													
+Companion to the existing 346-feature blueprint. Editable role assignments, traceability, risks, architectural decisions, module review and go-live evidence.													
+Implementation hats	COUNTA('Team Roles'!A5:A48)44	Risk profile	Count
+Operational personas	COUNTA('Operational Roles'!A5:A30)26	Blocker	COUNTIF('Risk Register'!B5:B39,D6)12
+Feature IDs	COUNTA('Feature Traceability'!A5:A350)346	High	COUNTIF('Risk Register'!B5:B39,D7)21
+Feature modules	COUNTA('Module Ownership'!A5:A26)22	Medium	COUNTIF('Risk Register'!B5:B39,D8)2
+Tracked risks	COUNTA('Risk Register'!A5:A39)35
+Architecture decisions	COUNTA('Architecture Decisions'!A5:A26)22
+Release evidence gates	COUNTA('Release Gates'!A5:A13)9	Requirement delivery state	Count
+Security scenarios	COUNTA('Acceptance Scenarios'!A5:A24)20	Not started	COUNTIF('Feature Traceability'!J5:J350,D12)346
+In design	COUNTIF('Feature Traceability'!J5:J350,D13)0
+In development	COUNTIF('Feature Traceability'!J5:J350,D14)0
+RELEASE RULES			In test	COUNTIF('Feature Traceability'!J5:J350,D15)0
+No WordPress admin automatically receives decryption privileges.			Accepted	COUNTIF('Feature Traceability'!J5:J350,D16)0
+Zero-Knowledge does not imply server-side OCR, full-text AI, or malware scanning.		
+A lost private key may be unrecoverable unless trustees are deliberately configured.		
+Blocker findings require independent verification before production go-live.		
+Priority promotions are conditional: adopt per jurisdiction and threat model.		
+WORKFLOW:  Assign team owners → resolve decisions → update 346 feature statuses → execute acceptance tests → close risks → sign release gates.					
+
+xl/worksheets/sheet13.xml
+MODE COMPATIBILITY  |  KMS DELIVERY REVIEW				
+				
+Two security modes have different permissible processing and guarantees. Product UX must communicate compatibility and prevent silent security downgrade.				
+Capability	Managed Secure Mode	Zero-Knowledge Mode	Implementation constraint	Linked feature IDs
+File upload / versioning	Available; service encrypts objects with external KMS	Available; trusted client encrypts before upload	Verified document version and per-version key	DOC-01, ENC-03
+Previews and thumbnails	Sandboxed conversion with controlled temporary plaintext	Only trusted client local rendering, no WordPress-served plaintext	Malicious file parser and derivative confidentiality	DOC-21, SEC-05, ENC-17
+Content OCR	Isolated server worker allowed by policy	Only trusted-client-side OCR or explicitly disclosed declassification	CPU/device limits, extracted text confidentiality	MET-08, ENC-14
+Full-text search	Permission-trimmed protected server index	Trusted-client local/private index; no ordinary server plaintext index	Encrypted metadata and authorization at search time	MET-06, MET-07
+Metadata and filenames	Encrypted storage with designated searchable fields	Encrypt sensitive fields; explicitly document minimum metadata leakage	Search existence or timing side channels	ENC-14, MET-01
+Virus/malware inspection	Pre-publication server sandbox scanner	Client checks and policy quarantine; not equivalent to server scan	Residual risk warning, device posture	SEC-04
+Data-loss prevention	Server + policy enforcement on content and exports	Client-local rules and metadata limits; cannot guarantee remote enforcement	Screen capture and prior exports remain out of reach	SEC-02, SEC-03
+AI summaries / Q&A	Optional policy-trimmed service; reviewed provider	Not by ordinary server; local trusted client/model only if independently reviewed	Prompts, embeddings, citations and model retention	AIX-02, AIX-03, AIX-16
+Semantic vector search	Secured index, re-authorize every retrieved item	Trusted-client model/index only or explicitly approved leakage-risk protocol	Vector reconstruction and revoked-source purge	AIX-04, IAM-17
+Editing and coauthoring	Approved cloud editors with contracts	Only reviewed E2EE-aware editor/protocol	No silent switch to managed mode	COL-05, COL-06
+Annotations and comments	Protected service data subject to ACLs	Encrypt client-side, recipient-access keys	Do not leak through activity notifications	COL-07, ENC-14
+Approval workflow	Server can verify hashes + route; no universal plaintext required	Server routes hashes/ACLs; client signs/countersigns without uploading plaintext	Signature and attestation legality separate	WFL-07, COL-14
+Digital legal signatures	Approved external eSignature vendor as legally required	Trusted client or explicit disclosed transfer with consent	Jurisdiction-specific evidence requirements	WFL-14
+External and cross-tenant shares	Recipient identity, scoped service grants and expiration	Client-verified recipient public key + rewrapping	Origin permission, guest identity and key authenticity	EXT-04, ENC-09
+Data rooms	Service-managed data room with granular roles	Trusted client data room for selected E2EE docs	Two-bidder isolation, forensic logging	EXT-03
+Legal holds / retention	Service immutability and retention engine	Hold ciphertext and wrap keys; discovery requires authorized client/trustee	Prevent accidental crypto-erasure of held content	REC-05, ENC-18
+Legal discovery exports	Counsel-approved auditable service export	Custodian client export / trustee governance if allowed	Chain of custody and justified access	REC-13
+Key backup and recovery	KMS/HSM separation with recoverable KEKs	Trustee-quorum or no recovery, explicitly labeled	Cannot simultaneously promise no recovery and enterprise escrow	ENC-12
+Revocation	Deny future token/API access and optionally protected re-encryption	Stop future distribution; rekey future versions; prior downloaded files persist	No impossible remote deletion guarantee	ENC-11, IAM-17
+Mobile / offline	Encrypted device cache, token expiry, remote best-effort wipe	Hardware-backed keys where possible and signed trusted app	Revocation cannot remove previously offline plaintext	MOB-04, MOB-06
+Backups / restore	Encrypt, restore data + keys + permissions + evidence	Back up ciphertext; separately protect trustees/key recovery material	Protect residency and current access state after restore	OPS-06, ENC-12
+Support diagnostics	Sanitized operational diagnostics; temporary privileged access reviewed	Ciphertext-only support; no plaintext from WordPress	No privileged impersonation without approvals	OPS-17, ENC-17
+Analytics and activity dashboards	Role-filtered events with limited content fields	Ciphertext-safe event metadata; do not infer secret titles	Confidentiality of small tenant aggregates	RPT-06, RPT-10
+
+xl/worksheets/sheet2.xml
+MODULE OWNERSHIP  |  KMS DELIVERY REVIEW									
+									
+One accountable domain role per module; delivery and independent review must be separated on high-assurance features. All 22 modules tie to the 346-feature baseline.									
+Module	Features	Module focus	Accountable	Build leads	Required reviewers	Incorporate into design	Release acceptance evidence	Risk tier	Review status
+TEN	14	Tenant governance / subsidiaries	R02	R07, R29, R31	R11, R12, R21, R19	Model legal company boundaries, groups and project spaces separately; prohibit implicit holding-admin document access; apply group minimum policies without silent privilege expansion; isolate DB, object storage, queues, search, logs, backups, and caches; design mergers/splits as supervised migrations.	A cross-tenant user, cache key, search request, export job or backup restore never reveals unauthorized tenant material.	Critical	Unreviewed
+IAM	17	Membership, roles and policy	R21	R29, R31, R30	R02, R19, R11, R27	Formalize RBAC + ABAC + ACL evaluation order, global hard-deny, explicit deny, inheritance and policy versioning; enforce separation of duties; prevent self-grants and delegation loops; invalidate permissions in jobs, URLs and offline clients; provide decision explanations without leaking titles.	For each permission state, API, previews, exports, mobile, workers and search enforce the same decision after revocation.	Critical	Unreviewed
+AUT	13	Authentication and devices	R21	R36, R37, R29	R19, R22, R23, R14	Use enterprise IdP and phishing-resistant factors for privileged access; separate WordPress and document-service sessions; map IdP identity to immutable tenant memberships; lifecycle-sync join/move/leave; sign and verify E2EE device public keys; specify lost-device and IdP-outage handling.	Compromised WordPress cookies cannot mint a document-system privileged identity or enroll an unapproved E2EE device.	Critical	Unreviewed
+DOC	22	Document capture and lifecycle	R03	R32, R29, R31	R12, R19, R20, R11	Version documents immutably with content integrity and provenance; quarantine new uploads; validate type by content; sandbox all converters; make document metadata, previews and exports classification-aware; guarantee idempotency and quota enforcement on resumable uploads.	Malformed file, aborted upload, version race or failed scan cannot expose partially processed plaintext or bypass approval.	Critical	Unreviewed
+MET	16	Metadata, taxonomy and search	R15	R34, R31, R29	R20, R14, R17, R19	Version metadata schemas and taxonomies; specify encrypted/public fields and side-channel leakage budgets; tenant-scope autosuggest, indexes, caches and analytics; support locale-specific word segmentation; keep E2EE content search on trusted clients or explicitly approved leakage-limited protocols.	Search returns only authorized resources and cannot reveal confidential filenames, snippets or existence through autocomplete.	High	Unreviewed
+COL	16	Editing and collaboration	R03	R30, R29, R37	R20, R12, R19, R18	Separate draft collaboration from immutable approved record; resolve locks, autosaves, failed merges and approvals; sandbox third-party editors; make E2EE collaborative editing a separate approved protocol; treat watermarks and screenshot controls as deterrents, not guarantees.	Unauthorized reviewer cannot change an approved hash or gain editor plaintext through preview/editor callback.	High	Unreviewed
+KNO	16	Knowledge management / wiki	R15	R30, R29, R34	R11, R12, R17, R18	Assign content steward and periodic validation; separate canonical policies from discussion threads; enforce link traversal rights; maintain multilingual article versions and fallback markers; prove read-and-attest evidence binds a specific version and language.	Users see only permitted linked knowledge; acknowledgment is linked to exact approved revision, not mutable draft.	High	Unreviewed
+WFL	19	Workflow and approvals	R03	R33, R29, R30	R21, R12, R13, R19	Design versioned state machines with explicit retry/idempotency semantics; enforce maker/checker, approval quorum and delegated-authority limits; bind approval to document hash/policy; protect confidential notification payload; distinguish internal approval from legally qualified e-signature.	Workflow cannot be self-approved through race conditions, delegation cycles, replayed jobs or version swaps.	High	Unreviewed
+REC	18	Records, holds, eDiscovery	R12	R29, R31, R32	R13, R14, R20, R27	Capture jurisdictional retention rules, classification events, WORM scopes and legal hold precedence; define conflicts with subject erasure, backups and cryptographic deletion; assess whether E2EE discovery requires trustee-based access or custodian-driven client export.	Hold blocks destructive operations across versions, exports, backup expiry and crypto-erasure until lawfully released.	Critical	Unreviewed
+ENC	20	Encryption / keys / E2EE	R20	R37, R32, R29	R25, R19, R21, R26	Independent trusted code distribution must withstand a WordPress breach; use reviewed AEAD and per-version keys, authenticated document context, verified recipient identities, rekey and recovery models; explicitly expose recovery-vs-zero-access trade-off; test WordPress takeover.	External reviewers reproduce crypto vectors; simulated WordPress RCE cannot decrypt protected records or forge recipients.	Critical	Unreviewed
+SEC	16	Threat prevention and detection	R19	R22, R23, R28	R24, R25, R27, R14	Threat-model tenant enumeration, malicious file parsing, SSRF, DLP gaps, supply-chain compromise, secrets leakage and abuse; segregate malware scanners and audit pipelines; produce signed SBOM/release provenance and vulnerability response process.	A full red-team sequence includes cross-tenant, malicious-file, compromised plug-in and service-credential compromise.	Critical	Unreviewed
+EXT	13	Guests, sharing, data rooms	R03	R29, R37, R30	R13, R14, R20, R21	Verify external key ownership and legal recipient identity; require source-tenant consent for intercompany disclosure; set expiry, purpose, review and download policy; prevent cross-bidder leakage; treat guest offboarding and past downloads separately.	Sharing to Subsidiary B never creates blanket rights for B or leaks material via email or data-room logs.	High	Unreviewed
+RPT	14	Audit, oversight and analytics	R27	R29, R31, R23	R14, R12, R19, R02	Write independently retained and integrity-protected events; choose event schema, clock synchronization and redaction; separate subsidiary record-level audit from group aggregate reporting; limit queryable metadata to avoid inference; define audit retention and regulator access.	Neither WordPress admin nor subsidiary admin can erase evidence of their access or infer confidential sibling tenants.	Critical	Unreviewed
+AIX	17	AI and decision support	R03	R35, R34, R29	R14, R20, R19, R13	Default deny on highly classified material and E2EE server inference; permission-check at retrieval and generation, not just indexing; protect embeddings, prompts and outputs; defend prompt injection, track models/providers, evaluate accuracy by language; require human approval for consequential decisions.	Revoked document cannot appear in RAG retrieval, answer citations, embeddings or cached model responses.	High	Unreviewed
+L10	15	13 languages and accessibility	R17	R30, R37, R43	R18, R16, R11, R15	Native review for English, Persian, French, Turkish, Russian, Simplified Chinese, German, Portuguese, Spanish, Hindi, Japanese, Arabic and Armenian; define regional variants; handle Unicode normalization, RTL text mixing, calendars/time zones, plural forms, fonts and WCAG 2.2 AA.	Every core journey passes native-speaker QA and keyboard/screen-reader testing in both RTL and LTR.	High	Unreviewed
+API	17	External APIs and connectors	R07	R36, R29, R28	R21, R19, R22, R09	Minimize WordPress bridge privileges; enforce tenant-scoped token audiences and expiry; sign webhooks with replay controls; make retries idempotent; version schemas; prohibit connectors from bypassing legal holds, classification or encryption mode.	Forged webhook, compromised plugin, tenantless API key or connector replay cannot perform forbidden operations.	Critical	Unreviewed
+UX	13	Experience and productivity	R16	R30, R37	R18, R17, R11, R20	Use unmistakable tenant context and confidentiality-mode cues; explain why an action is denied without disclosing resources; support safe bulk operations, escape hatches, accessible approvals and reliable upload progress; ensure privacy of notifications and recent-item widgets.	Usability sessions show administrators do not mistake group-wide authority for permission to view subsidiary content.	High	Unreviewed
+MOB	12	Mobile, desktop and offline	R37	R30, R36, R39	R20, R21, R22, R18	Implement signed app updates, hardware-backed local secrets where supported, lost-device offboarding, cache quotas, offline expiry, sync conflicts and remote wipe best-effort warnings; test independent trust from WordPress and 13-language UI.	Offline user cannot access never-synced files or new versions after revocation; limitations for existing cached files are documented.	High	Unreviewed
+PRV	14	Privacy, residency and compliance	R14	R29, R31, R39	R13, R12, R27, R09	Identify controller/processor relationships per legal entity, data maps and subprocessors; configure regional storage and key access; reconcile privacy requests with holds; scope analytics; assess incident notification duties and lawful cross-border transfers before deployment.	Requests for access, deletion, export and residency evidence complete with recorded lawful exceptions and approvals.	Critical	Unreviewed
+OPS	21	Operations, backup and resilience	R39	R38, R22, R40	R23, R25, R08, R27	Define measurable SLO/RTO/RPO by mode, region and tier; verify restoration of data plus recovery keys and permissions; apply infrastructure isolation, immutable backups, provenance signing and supply-chain scanning; run incident, disaster and tenant-departure drills.	Restore 10-tenant representative backup without orphaning keys, violating residency, or resurrecting revoked access.	Critical	Unreviewed
+MIG	13	Migration and rollout	R10	R42, R36, R40	R11, R12, R14, R17	Inventory legacy records and ACLs, verify metadata semantics, create resumable staging, quarantine unsafe files and check chain of custody; reconcile identity conflicts; pilot at least two subsidiaries with different policies and a representative RTL language.	Signed migration manifest shows all versions, records, holds and ACLs reconciled before cutover.	High	Unreviewed
+VRP	10	Vertical enterprise modules	R03	R33, R29, R30	R13, R12, R11, R20	Treat board, HR, contracts, quality and procurement as separate domain workflows with distinct legal policies and confidentiality needs; define modular extension API, isolation rules and independent threat review for each added module.	A new vertical extension cannot change another tenant’s policies or obtain zero-knowledge plaintext by default.	Medium	Unreviewed
+
+xl/worksheets/sheet3.xml
+FEATURE TRACEABILITY  |  KMS DELIVERY REVIEW											
+											
+346 original requirement IDs preserved from the existing Blueprint. Assign individual owners, attach tests and set implementation status without losing baseline priority.											
+Feature ID	Module	Existing feature	Baseline priority	Baseline release	Accountable role	Build responsible	QA lead	Review	Implementation state	Acceptance test link	Module risk
+TEN-01	TEN	Holding-company hierarchy	MUST	CORE	R02	R07, R29, R31	R40	R24	Not started		Critical
+TEN-02	TEN	Tenant provisioning	MUST	CORE	R02	R07, R29, R31	R40	R24	Not started		Critical
+TEN-03	TEN	Tenant suspension and closure	MUST	CORE	R02	R07, R29, R31	R40	R24	Not started		Critical
+TEN-04	TEN	Tenant-level quotas	SHOULD	ENTERPRISE	R02	R07, R29, R31	R40	R24	Not started		Critical
+TEN-05	TEN	Independent administration	MUST	CORE	R02	R07, R29, R31	R40	R24	Not started		Critical
+TEN-06	TEN	Central policy baselines	MUST	CORE	R02	R07, R29, R31	R40	R24	Not started		Critical
+TEN-07	TEN	Cross-subsidiary projects	SHOULD	ENTERPRISE	R02	R07, R29, R31	R40	R24	Not started		Critical
+TEN-08	TEN	Tenant context selector	MUST	CORE	R02	R07, R29, R31	R40	R24	Not started		Critical
+TEN-09	TEN	Tenant-specific storage partitions	MUST	CORE	R02	R07, R29, R31	R40	R24	Not started		Critical
+TEN-10	TEN	Tenant export and portability	SHOULD	ENTERPRISE	R02	R07, R29, R31	R40	R24	Not started		Critical
+TEN-11	TEN	Tenant-specific legal identity	SHOULD	ENTERPRISE	R02	R07, R29, R31	R40	R24	Not started		Critical
+TEN-12	TEN	Multi-company organizational reporting	SHOULD	ENTERPRISE	R02	R07, R29, R31	R40	R24	Not started		Critical
+TEN-13	TEN	Tenant residency and region selection	SHOULD	ENTERPRISE	R02	R07, R29, R31	R40	R24	Not started		Critical
+TEN-14	TEN	Corporate reorganizations	ADVANCED	EXPANSION	R02	R07, R29, R31	R40	R24	Not started		Critical
+IAM-01	IAM	Global identities with tenant memberships	MUST	CORE	R21	R29, R31, R30	R40	R24	Not started		Critical
+IAM-02	IAM	Subsidiary-defined custom roles	MUST	CORE	R21	R29, R31, R30	R40	R24	Not started		Critical
+IAM-03	IAM	Role hierarchies and constraints	SHOULD	ENTERPRISE	R21	R29, R31, R30	R40	R24	Not started		Critical
+IAM-04	IAM	Department and project groups	MUST	CORE	R21	R29, R31, R30	R40	R24	Not started		Critical
+IAM-05	IAM	Document-level ACLs	MUST	CORE	R21	R29, R31, R30	R40	R24	Not started		Critical
+IAM-06	IAM	Attribute-based rules	SHOULD	ENTERPRISE	R21	R29, R31, R30	R40	R24	Not started		Critical
+IAM-07	IAM	Folder permission inheritance	MUST	CORE	R21	R29, R31, R30	R40	R24	Not started		Critical
+IAM-08	IAM	Policy simulator	SHOULD	ENTERPRISE	R21	R29, R31, R30	R40	R24	Not started		Critical
+IAM-09	IAM	Access request and approval	SHOULD	ENTERPRISE	R21	R29, R31, R30	R40	R24	Not started		Critical
+IAM-10	IAM	Time-limited and conditional permissions	MUST	CORE	R21	R29, R31, R30	R40	R24	Not started		Critical
+IAM-11	IAM	Separation of duties	MUST	CORE	R21	R29, R31, R30	R40	R24	Not started		Critical
+IAM-12	IAM	Delegated administration	SHOULD	ENTERPRISE	R21	R29, R31, R30	R40	R24	Not started		Critical
+IAM-13	IAM	Emergency break-glass	SHOULD	ENTERPRISE	R21	R29, R31, R30	R40	R24	Not started		Critical
+IAM-14	IAM	Service accounts and workloads	MUST	CORE	R21	R29, R31, R30	R40	R24	Not started		Critical
+IAM-15	IAM	Group-wide permission inventory	SHOULD	ENTERPRISE	R21	R29, R31, R30	R40	R24	Not started		Critical
+IAM-16	IAM	Periodic access certification	SHOULD	ENTERPRISE	R21	R29, R31, R30	R40	R24	Not started		Critical
+IAM-17	IAM	Authorization race protection	MUST	CORE	R21	R29, R31, R30	R40	R24	Not started		Critical
+AUT-01	AUT	Enterprise SSO	MUST	CORE	R21	R36, R37, R29	R40	R24	Not started		Critical
+AUT-02	AUT	Passkeys and MFA	MUST	CORE	R21	R36, R37, R29	R40	R24	Not started		Critical
+AUT-03	AUT	Local account fallback	SHOULD	ENTERPRISE	R21	R36, R37, R29	R40	R24	Not started		Critical
+AUT-04	AUT	Lifecycle synchronization	SHOULD	ENTERPRISE	R21	R36, R37, R29	R40	R24	Not started		Critical
+AUT-05	AUT	Sessions and refresh token controls	MUST	CORE	R21	R36, R37, R29	R40	R24	Not started		Critical
+AUT-06	AUT	Trusted device policy	SHOULD	ENTERPRISE	R21	R36, R37, R29	R40	R24	Not started		Critical
+AUT-07	AUT	Session inventory	MUST	CORE	R21	R36, R37, R29	R40	R24	Not started		Critical
+AUT-08	AUT	Adaptive authentication	SHOULD	ENTERPRISE	R21	R36, R37, R29	R40	R24	Not started		Critical
+AUT-09	AUT	Privileged access controls	SHOULD	ENTERPRISE	R21	R36, R37, R29	R40	R24	Not started		Critical
+AUT-10	AUT	Account takeover defenses	MUST	CORE	R21	R36, R37, R29	R40	R24	Not started		Critical
+AUT-11	AUT	Trusted device enrollment for E2EE	MUST	CORE	R21	R36, R37, R29	R40	R24	Not started		Critical
+AUT-12	AUT	Credential and session recovery	MUST	CORE	R21	R36, R37, R29	R40	R24	Not started		Critical
+AUT-13	AUT	Guest identity federation	SHOULD	ENTERPRISE	R21	R36, R37, R29	R40	R24	Not started		Critical
+DOC-01	DOC	Upload and download	MUST	CORE	R03	R32, R29, R31	R40	R24	Not started		Critical
+DOC-02	DOC	Large and resumable uploads	SHOULD	ENTERPRISE	R03	R32, R29, R31	R40	R24	Not started		Critical
+DOC-03	DOC	Common business formats	MUST	CORE	R03	R32, R29, R31	R40	R24	Not started		Critical
+DOC-04	DOC	Folder hierarchy and libraries	MUST	CORE	R03	R32, R29, R31	R40	R24	Not started		Critical
+DOC-05	DOC	Document templates	SHOULD	ENTERPRISE	R03	R32, R29, R31	R40	R24	Not started		Critical
+DOC-06	DOC	Document registration	MUST	CORE	R03	R32, R29, R31	R40	R24	Not started		Critical
+DOC-07	DOC	Batch upload and tagging	SHOULD	ENTERPRISE	R03	R32, R29, R31	R40	R24	Not started		Critical
+DOC-08	DOC	Automated email ingestion	SHOULD	ENTERPRISE	R03	R32, R29, R31	R40	R24	Not started		Critical
+DOC-09	DOC	Scanner and capture integration	ADVANCED	EXPANSION	R03	R32, R29, R31	R40	R24	Not started		Critical
+DOC-10	DOC	Document status lifecycle	MUST	CORE	R03	R32, R29, R31	R40	R24	Not started		Critical
+DOC-11	DOC	Document ownership and custodian	MUST	CORE	R03	R32, R29, R31	R40	R24	Not started		Critical
+DOC-12	DOC	Move, copy and link	MUST	CORE	R03	R32, R29, R31	R40	R24	Not started		Critical
+DOC-13	DOC	Recycle bin and restoration	MUST	CORE	R03	R32, R29, R31	R40	R24	Not started		Critical
+DOC-14	DOC	Duplicates and fingerprinting	SHOULD	ENTERPRISE	R03	R32, R29, R31	R40	R24	Not started		Critical
+DOC-15	DOC	Integrity verification	MUST	CORE	R03	R32, R29, R31	R40	R24	Not started		Critical
+DOC-16	DOC	Metadata-only records	SHOULD	ENTERPRISE	R03	R32, R29, R31	R40	R24	Not started		Critical
+DOC-17	DOC	Document bundles and dossiers	SHOULD	ENTERPRISE	R03	R32, R29, R31	R40	R24	Not started		Critical
+DOC-18	DOC	Controlled document numbering	SHOULD	ENTERPRISE	R03	R32, R29, R31	R40	R24	Not started		Critical
+DOC-19	DOC	File size and type policy	MUST	CORE	R03	R32, R29, R31	R40	R24	Not started		Critical
+DOC-20	DOC	Document expiration and review	SHOULD	ENTERPRISE	R03	R32, R29, R31	R40	R24	Not started		Critical
+DOC-21	DOC	Protected previews	MUST	CORE	R03	R32, R29, R31	R40	R24	Not started		Critical
+DOC-22	DOC	Content redaction	SHOULD	ENTERPRISE	R03	R32, R29, R31	R40	R24	Not started		Critical
+MET-01	MET	Custom metadata schemas	MUST	CORE	R15	R34, R31, R29	R40	R19 / R40	Not started		High
+MET-02	MET	Required and conditional metadata	MUST	CORE	R15	R34, R31, R29	R40	R19 / R40	Not started		High
+MET-03	MET	Controlled vocabularies	SHOULD	ENTERPRISE	R15	R34, R31, R29	R40	R19 / R40	Not started		High
+MET-04	MET	Saved views and smart folders	SHOULD	ENTERPRISE	R15	R34, R31, R29	R40	R19 / R40	Not started		High
+MET-05	MET	Advanced metadata search	MUST	CORE	R15	R34, R31, R29	R40	R19 / R40	Not started		High
+MET-06	MET	Full-text indexing in managed mode	SHOULD	ENTERPRISE	R15	R34, R31, R29	R40	R19 / R40	Not started		High
+MET-07	MET	Zero-Knowledge discovery	MUST	CORE	R15	R34, R31, R29	R40	R19 / R40	Not started		High
+MET-08	MET	OCR and extraction	SHOULD	ENTERPRISE	R15	R34, R31, R29	R40	R19 / R40	Not started		High
+MET-09	MET	Multilingual search	SHOULD	ENTERPRISE	R15	R34, R31, R29	R40	R19 / R40	Not started		High
+MET-10	MET	Document relationships	SHOULD	ENTERPRISE	R15	R34, R31, R29	R40	R19 / R40	Not started		High
+MET-11	MET	Knowledge graph and lineage	ADVANCED	EXPANSION	R15	R34, R31, R29	R40	R19 / R40	Not started		High
+MET-12	MET	Duplicate topic detection	ADVANCED	EXPANSION	R15	R34, R31, R29	R40	R19 / R40	Not started		High
+MET-13	MET	Search relevance tuning	SHOULD	ENTERPRISE	R15	R34, R31, R29	R40	R19 / R40	Not started		High
+MET-14	MET	Search history and favorites	SHOULD	ENTERPRISE	R15	R34, R31, R29	R40	R19 / R40	Not started		High
+MET-15	MET	Content provenance	MUST	CORE	R15	R34, R31, R29	R40	R19 / R40	Not started		High
+MET-16	MET	Information-quality indicators	SHOULD	ENTERPRISE	R15	R34, R31, R29	R40	R19 / R40	Not started		High
+COL-01	COL	Immutable version history	MUST	CORE	R03	R30, R29, R37	R40	R19 / R40	Not started		High
+COL-02	COL	Major and minor revisions	SHOULD	ENTERPRISE	R03	R30, R29, R37	R40	R19 / R40	Not started		High
+COL-03	COL	Version comparison	SHOULD	ENTERPRISE	R03	R30, R29, R37	R40	R19 / R40	Not started		High
+COL-04	COL	File locking and checkout	MUST	CORE	R03	R30, R29, R37	R40	R19 / R40	Not started		High
+COL-05	COL	Browser editing	SHOULD	ENTERPRISE	R03	R30, R29, R37	R40	R19 / R40	Not started		High
+COL-06	COL	Real-time coauthoring	ADVANCED	EXPANSION	R03	R30, R29, R37	R40	R19 / R40	Not started		High
+COL-07	COL	Inline comments and replies	MUST	CORE	R03	R30, R29, R37	R40	R19 / R40	Not started		High
+COL-08	COL	Annotations and highlights	SHOULD	ENTERPRISE	R03	R30, R29, R37	R40	R19 / R40	Not started		High
+COL-09	COL	Suggested edits and change requests	SHOULD	ENTERPRISE	R03	R30, R29, R37	R40	R19 / R40	Not started		High
+COL-10	COL	Review assignments	MUST	CORE	R03	R30, R29, R37	R40	R19 / R40	Not started		High
+COL-11	COL	Document subscriptions	SHOULD	ENTERPRISE	R03	R30, R29, R37	R40	R19 / R40	Not started		High
+COL-12	COL	Watermarking and visual labels	SHOULD	ENTERPRISE	R03	R30, R29, R37	R40	R19 / R40	Not started		High
+COL-13	COL	Offline edit conflict handling	ADVANCED	EXPANSION	R03	R30, R29, R37	R40	R19 / R40	Not started		High
+COL-14	COL	Approval signatures	MUST	CORE	R03	R30, R29, R37	R40	R19 / R40	Not started		High
+COL-15	COL	Discussion and reactions	SHOULD	ENTERPRISE	R03	R30, R29, R37	R40	R19 / R40	Not started		High
+COL-16	COL	Collaborator presence	ADVANCED	EXPANSION	R03	R30, R29, R37	R40	R19 / R40	Not started		High
+KNO-01	KNO	Rich knowledge pages	MUST	CORE	R15	R30, R29, R34	R40	R19 / R40	Not started		High
+KNO-02	KNO	Knowledge spaces	MUST	CORE	R15	R30, R29, R34	R40	R19 / R40	Not started		High
+KNO-03	KNO	Standard knowledge templates	SHOULD	ENTERPRISE	R15	R30, R29, R34	R40	R19 / R40	Not started		High
+KNO-04	KNO	FAQs and troubleshooting	SHOULD	ENTERPRISE	R15	R30, R29, R34	R40	R19 / R40	Not started		High
+KNO-05	KNO	Subject-matter expert directory	SHOULD	ENTERPRISE	R15	R30, R29, R34	R40	R19 / R40	Not started		High
+KNO-06	KNO	Verified canonical articles	MUST	CORE	R15	R30, R29, R34	R40	R19 / R40	Not started		High
+KNO-07	KNO	Learning paths and reading lists	SHOULD	ENTERPRISE	R15	R30, R29, R34	R40	R19 / R40	Not started		High
+KNO-08	KNO	Required reading and attestations	SHOULD	ENTERPRISE	R15	R30, R29, R34	R40	R19 / R40	Not started		High
+KNO-09	KNO	Community contributions	SHOULD	ENTERPRISE	R15	R30, R29, R34	R40	R19 / R40	Not started		High
+KNO-10	KNO	Feedback and knowledge gaps	SHOULD	ENTERPRISE	R15	R30, R29, R34	R40	R19 / R40	Not started		High
+KNO-11	KNO	Decision register	SHOULD	ENTERPRISE	R15	R30, R29, R34	R40	R19 / R40	Not started		High
+KNO-12	KNO	Process and policy maps	ADVANCED	EXPANSION	R15	R30, R29, R34	R40	R19 / R40	Not started		High
+KNO-13	KNO	Knowledge lifecycle	MUST	CORE	R15	R30, R29, R34	R40	R19 / R40	Not started		High
+KNO-14	KNO	Multilingual knowledge variants	SHOULD	ENTERPRISE	R15	R30, R29, R34	R40	R19 / R40	Not started		High
+KNO-15	KNO	Audience-tailored homepages	SHOULD	ENTERPRISE	R15	R30, R29, R34	R40	R19 / R40	Not started		High
+KNO-16	KNO	Knowledge content health	SHOULD	ENTERPRISE	R15	R30, R29, R34	R40	R19 / R40	Not started		High
+WFL-01	WFL	Visual workflow builder	SHOULD	ENTERPRISE	R03	R33, R29, R30	R40	R19 / R40	Not started		High
+WFL-02	WFL	Sequential and parallel approvals	MUST	CORE	R03	R33, R29, R30	R40	R19 / R40	Not started		High
+WFL-03	WFL	Conditional routing	SHOULD	ENTERPRISE	R03	R33, R29, R30	R40	R19 / R40	Not started		High
+WFL-04	WFL	Approval policy templates	SHOULD	ENTERPRISE	R03	R33, R29, R30	R40	R19 / R40	Not started		High
+WFL-05	WFL	Task inbox and assignment	MUST	CORE	R03	R33, R29, R30	R40	R19 / R40	Not started		High
+WFL-06	WFL	Deadline, SLA and escalation	SHOULD	ENTERPRISE	R03	R33, R29, R30	R40	R19 / R40	Not started		High
+WFL-07	WFL	Approval evidence capture	MUST	CORE	R03	R33, R29, R30	R40	R19 / R40	Not started		High
+WFL-08	WFL	Workflow delegation and substitutes	SHOULD	ENTERPRISE	R03	R33, R29, R30	R40	R19 / R40	Not started		High
+WFL-09	WFL	Rejection and revision loops	MUST	CORE	R03	R33, R29, R30	R40	R19 / R40	Not started		High
+WFL-10	WFL	Automated metadata actions	SHOULD	ENTERPRISE	R03	R33, R29, R30	R40	R19 / R40	Not started		High
+WFL-11	WFL	Webhook and connector actions	SHOULD	ENTERPRISE	R03	R33, R29, R30	R40	R19 / R40	Not started		High
+WFL-12	WFL	Workflow monitoring	SHOULD	ENTERPRISE	R03	R33, R29, R30	R40	R19 / R40	Not started		High
+WFL-13	WFL	Bulk approval controls	ADVANCED	EXPANSION	R03	R33, R29, R30	R40	R19 / R40	Not started		High
+WFL-14	WFL	Digital signature integrations	SHOULD	ENTERPRISE	R03	R33, R29, R30	R40	R19 / R40	Not started		High
+WFL-15	WFL	Forms and intake portals	SHOULD	ENTERPRISE	R03	R33, R29, R30	R40	R19 / R40	Not started		High
+WFL-16	WFL	Case and project workflows	SHOULD	ENTERPRISE	R03	R33, R29, R30	R40	R19 / R40	Not started		High
+WFL-17	WFL	Process analytics and improvement	ADVANCED	EXPANSION	R03	R33, R29, R30	R40	R19 / R40	Not started		High
+WFL-18	WFL	Rule testing and simulation	SHOULD	ENTERPRISE	R03	R33, R29, R30	R40	R19 / R40	Not started		High
+WFL-19	WFL	Policy exception workflow	SHOULD	ENTERPRISE	R03	R33, R29, R30	R40	R19 / R40	Not started		High
+REC-01	REC	Records classification and file plan	MUST	CORE	R12	R29, R31, R32	R40	R25	Not started		Critical
+REC-02	REC	Record declaration and immutability	MUST	CORE	R12	R29, R31, R32	R40	R25	Not started		Critical
+REC-03	REC	Event-based retention	SHOULD	ENTERPRISE	R12	R29, R31, R32	R40	R25	Not started		Critical
+REC-04	REC	Multiple overlapping policies	MUST	CORE	R12	R29, R31, R32	R40	R25	Not started		Critical
+REC-05	REC	Litigation and investigation holds	MUST	CORE	R12	R29, R31, R32	R40	R25	Not started		Critical
+REC-06	REC	Legal hold notification and acknowledgment	SHOULD	ENTERPRISE	R12	R29, R31, R32	R40	R25	Not started		Critical
+REC-07	REC	Disposition review	MUST	CORE	R12	R29, R31, R32	R40	R25	Not started		Critical
+REC-08	REC	Disposition certificates	SHOULD	ENTERPRISE	R12	R29, R31, R32	R40	R25	Not started		Critical
+REC-09	REC	WORM or object-lock support	SHOULD	ENTERPRISE	R12	R29, R31, R32	R40	R25	Not started		Critical
+REC-10	REC	Retention clock simulation	SHOULD	ENTERPRISE	R12	R29, R31, R32	R40	R25	Not started		Critical
+REC-11	REC	Controlled archives	SHOULD	ENTERPRISE	R12	R29, R31, R32	R40	R25	Not started		Critical
+REC-12	REC	Legal case repository	SHOULD	ENTERPRISE	R12	R29, R31, R32	R40	R25	Not started		Critical
+REC-13	REC	Discovery search and exports	SHOULD	ENTERPRISE	R12	R29, R31, R32	R40	R25	Not started		Critical
+REC-14	REC	Chain of custody	SHOULD	ENTERPRISE	R12	R29, R31, R32	R40	R25	Not started		Critical
+REC-15	REC	Privacy deletion requests	SHOULD	ENTERPRISE	R12	R29, R31, R32	R40	R25	Not started		Critical
+REC-16	REC	Retention for comments, messages and AI artifacts	SHOULD	ENTERPRISE	R12	R29, R31, R32	R40	R25	Not started		Critical
+REC-17	REC	Paper and hybrid records	ADVANCED	EXPANSION	R12	R29, R31, R32	R40	R25	Not started		Critical
+REC-18	REC	Policy record registers	SHOULD	ENTERPRISE	R12	R29, R31, R32	R40	R25	Not started		Critical
+ENC-01	ENC	Two explicit confidentiality modes	MUST	CORE	R20	R37, R32, R29	R40	R25 + R24	Not started		Critical
+ENC-02	ENC	Trusted independent client	MUST	CORE	R20	R37, R32, R29	R40	R25 + R24	Not started		Critical
+ENC-03	ENC	Per-version data encryption keys	MUST	CORE	R20	R37, R32, R29	R40	R25 + R24	Not started		Critical
+ENC-04	ENC	Client-side encryption and decryption	MUST	CORE	R20	R37, R32, R29	R40	R25 + R24	Not started		Critical
+ENC-05	ENC	Envelope encryption in managed mode	MUST	CORE	R20	R37, R32, R29	R40	R25 + R24	Not started		Critical
+ENC-06	ENC	Tenant-separated root trust	MUST	CORE	R20	R37, R32, R29	R40	R25 + R24	Not started		Critical
+ENC-07	ENC	Recipient and group key wrapping	MUST	CORE	R20	R37, R32, R29	R40	R25 + R24	Not started		Critical
+ENC-08	ENC	Key identity transparency	SHOULD	ENTERPRISE	R20	R37, R32, R29	R40	R25 + R24	Not started		Critical
+ENC-09	ENC	Key sharing across subsidiaries	SHOULD	ENTERPRISE	R20	R37, R32, R29	R40	R25 + R24	Not started		Critical
+ENC-10	ENC	Key rotation and compromise response	MUST	CORE	R20	R37, R32, R29	R40	R25 + R24	Not started		Critical
+ENC-11	ENC	Zero-knowledge revocation semantics	MUST	CORE	R20	R37, R32, R29	R40	R25 + R24	Not started		Critical
+ENC-12	ENC	Key backup and trustee recovery	MUST	CORE	R20	R37, R32, R29	R40	R25 + R24	Not started		Critical
+ENC-13	ENC	Key lifecycle inventory	MUST	CORE	R20	R37, R32, R29	R40	R25 + R24	Not started		Critical
+ENC-14	ENC	Metadata and filename encryption	MUST	CORE	R20	R37, R32, R29	R40	R25 + R24	Not started		Critical
+ENC-15	ENC	Encrypted audit confidentiality	SHOULD	ENTERPRISE	R20	R37, R32, R29	R40	R25 + R24	Not started		Critical
+ENC-16	ENC	Encryption migration and agility	SHOULD	ENTERPRISE	R20	R37, R32, R29	R40	R25 + R24	Not started		Critical
+ENC-17	ENC	Secure temporary data handling	MUST	CORE	R20	R37, R32, R29	R40	R25 + R24	Not started		Critical
+ENC-18	ENC	Cryptographic deletion policy	SHOULD	ENTERPRISE	R20	R37, R32, R29	R40	R25 + R24	Not started		Critical
+ENC-19	ENC	Independent crypto review and test vectors	MUST	CORE	R20	R37, R32, R29	R40	R25 + R24	Not started		Critical
+ENC-20	ENC	Key availability and outage behavior	MUST	CORE	R20	R37, R32, R29	R40	R25 + R24	Not started		Critical
+SEC-01	SEC	Data classification model	MUST	CORE	R19	R22, R23, R28	R40	R24 + R25	Not started		Critical
+SEC-02	SEC	Data loss prevention rules	SHOULD	ENTERPRISE	R19	R22, R23, R28	R40	R24 + R25	Not started		Critical
+SEC-03	SEC	Download, print and clipboard rules	SHOULD	ENTERPRISE	R19	R22, R23, R28	R40	R24 + R25	Not started		Critical
+SEC-04	SEC	Malware scanning and quarantine	MUST	CORE	R19	R22, R23, R28	R40	R24 + R25	Not started		Critical
+SEC-05	SEC	Secure content conversion isolation	MUST	CORE	R19	R22, R23, R28	R40	R24 + R25	Not started		Critical
+SEC-06	SEC	Anomaly and insider-risk detection	SHOULD	ENTERPRISE	R19	R22, R23, R28	R40	R24 + R25	Not started		Critical
+SEC-07	SEC	Ransomware detection and rollback	SHOULD	ENTERPRISE	R19	R22, R23, R28	R40	R24 + R25	Not started		Critical
+SEC-08	SEC	External sharing restrictions	MUST	CORE	R19	R22, R23, R28	R40	R24 + R25	Not started		Critical
+SEC-09	SEC	Policy-aware watermark and labels	SHOULD	ENTERPRISE	R19	R22, R23, R28	R40	R24 + R25	Not started		Critical
+SEC-10	SEC	Network and IP policy	SHOULD	ENTERPRISE	R19	R22, R23, R28	R40	R24 + R25	Not started		Critical
+SEC-11	SEC	Content security and input hardening	MUST	CORE	R19	R22, R23, R28	R40	R24 + R25	Not started		Critical
+SEC-12	SEC	Supply-chain integrity	MUST	CORE	R19	R22, R23, R28	R40	R24 + R25	Not started		Critical
+SEC-13	SEC	Security alert operations	MUST	CORE	R19	R22, R23, R28	R40	R24 + R25	Not started		Critical
+SEC-14	SEC	Tenant security posture dashboard	SHOULD	ENTERPRISE	R19	R22, R23, R28	R40	R24 + R25	Not started		Critical
+SEC-15	SEC	Abuse-resistant search and APIs	MUST	CORE	R19	R22, R23, R28	R40	R24 + R25	Not started		Critical
+SEC-16	SEC	Vulnerability disclosure and response	MUST	CORE	R19	R22, R23, R28	R40	R24 + R25	Not started		Critical
+EXT-01	EXT	Invitation-based guest access	MUST	CORE	R03	R29, R37, R30	R40	R19 / R40	Not started		High
+EXT-02	EXT	Expiring share links	SHOULD	ENTERPRISE	R03	R29, R37, R30	R40	R19 / R40	Not started		High
+EXT-03	EXT	External data rooms	SHOULD	ENTERPRISE	R03	R29, R37, R30	R40	R19 / R40	Not started		High
+EXT-04	EXT	Recipient-side encryption	MUST	CORE	R03	R29, R37, R30	R40	R19 / R40	Not started		High
+EXT-05	EXT	File requests and inbound portals	SHOULD	ENTERPRISE	R03	R29, R37, R30	R40	R19 / R40	Not started		High
+EXT-06	EXT	External collaboration expiration	MUST	CORE	R03	R29, R37, R30	R40	R19 / R40	Not started		High
+EXT-07	EXT	Controlled outbound packages	SHOULD	ENTERPRISE	R03	R29, R37, R30	R40	R19 / R40	Not started		High
+EXT-08	EXT	Inter-subsidiary disclosure agreements	SHOULD	ENTERPRISE	R03	R29, R37, R30	R40	R19 / R40	Not started		High
+EXT-09	EXT	Negotiation and external review	ADVANCED	EXPANSION	R03	R29, R37, R30	R40	R19 / R40	Not started		High
+EXT-10	EXT	Public knowledge portal	ADVANCED	EXPANSION	R03	R29, R37, R30	R40	R19 / R40	Not started		High
+EXT-11	EXT	Secure outbound notifications	MUST	CORE	R03	R29, R37, R30	R40	R19 / R40	Not started		High
+EXT-12	EXT	Partner audit and attestations	SHOULD	ENTERPRISE	R03	R29, R37, R30	R40	R19 / R40	Not started		High
+EXT-13	EXT	Cross-tenant collaboration reviews	SHOULD	ENTERPRISE	R03	R29, R37, R30	R40	R19 / R40	Not started		High
+RPT-01	RPT	Independent append-only audit events	MUST	CORE	R27	R29, R31, R23	R40	R19 / R40	Not started		Critical
+RPT-02	RPT	Auditable policy decision traces	MUST	CORE	R27	R29, R31, R23	R40	R19 / R40	Not started		Critical
+RPT-03	RPT	Download and view access records	MUST	CORE	R27	R29, R31, R23	R40	R19 / R40	Not started		Critical
+RPT-04	RPT	Tamper-evident event chains	SHOULD	ENTERPRISE	R27	R29, R31, R23	R40	R19 / R40	Not started		Critical
+RPT-05	RPT	Subsidiary dashboards	MUST	CORE	R27	R29, R31, R23	R40	R19 / R40	Not started		Critical
+RPT-06	RPT	Holding oversight dashboard	MUST	CORE	R27	R29, R31, R23	R40	R19 / R40	Not started		Critical
+RPT-07	RPT	Custom report designer	SHOULD	ENTERPRISE	R27	R29, R31, R23	R40	R19 / R40	Not started		Critical
+RPT-08	RPT	Scheduled reporting	SHOULD	ENTERPRISE	R27	R29, R31, R23	R40	R19 / R40	Not started		Critical
+RPT-09	RPT	Security event SIEM export	SHOULD	ENTERPRISE	R27	R29, R31, R23	R40	R19 / R40	Not started		Critical
+RPT-10	RPT	Privacy access ledger	SHOULD	ENTERPRISE	R27	R29, R31, R23	R40	R19 / R40	Not started		Critical
+RPT-11	RPT	Process performance analytics	SHOULD	ENTERPRISE	R27	R29, R31, R23	R40	R19 / R40	Not started		Critical
+RPT-12	RPT	Search and knowledge analytics	SHOULD	ENTERPRISE	R27	R29, R31, R23	R40	R19 / R40	Not started		Critical
+RPT-13	RPT	Compliance evidence package	SHOULD	ENTERPRISE	R27	R29, R31, R23	R40	R19 / R40	Not started		Critical
+RPT-14	RPT	Access anomaly visualization	ADVANCED	EXPANSION	R27	R29, R31, R23	R40	R19 / R40	Not started		Critical
+AIX-01	AIX	AI feature policy center	MUST	CORE	R03	R35, R34, R29	R40	R19 / R40	Not started		High
+AIX-02	AIX	Permission-trimmed enterprise Q&A	SHOULD	ENTERPRISE	R03	R35, R34, R29	R40	R19 / R40	Not started		High
+AIX-03	AIX	Summarization and document briefs	SHOULD	ENTERPRISE	R03	R35, R34, R29	R40	R19 / R40	Not started		High
+AIX-04	AIX	Semantic and vector search	SHOULD	ENTERPRISE	R03	R35, R34, R29	R40	R19 / R40	Not started		High
+AIX-05	AIX	AI-assisted classification	SHOULD	ENTERPRISE	R03	R35, R34, R29	R40	R19 / R40	Not started		High
+AIX-06	AIX	Entity and obligation extraction	SHOULD	ENTERPRISE	R03	R35, R34, R29	R40	R19 / R40	Not started		High
+AIX-07	AIX	Translation assistance	ADVANCED	EXPANSION	R03	R35, R34, R29	R40	R19 / R40	Not started		High
+AIX-08	AIX	Knowledge article drafting	SHOULD	ENTERPRISE	R03	R35, R34, R29	R40	R19 / R40	Not started		High
+AIX-09	AIX	Duplicate and conflict detection	ADVANCED	EXPANSION	R03	R35, R34, R29	R40	R19 / R40	Not started		High
+AIX-10	AIX	Document question answering	SHOULD	ENTERPRISE	R03	R35, R34, R29	R40	R19 / R40	Not started		High
+AIX-11	AIX	Model and prompt registry	SHOULD	ENTERPRISE	R03	R35, R34, R29	R40	R19 / R40	Not started		High
+AIX-12	AIX	Prompt injection defense	MUST	CORE	R03	R35, R34, R29	R40	R19 / R40	Not started		High
+AIX-13	AIX	AI usage audit	SHOULD	ENTERPRISE	R03	R35, R34, R29	R40	R19 / R40	Not started		High
+AIX-14	AIX	Human-in-the-loop guardrails	MUST	CORE	R03	R35, R34, R29	R40	R19 / R40	Not started		High
+AIX-15	AIX	Sensitive content redaction before AI	SHOULD	ENTERPRISE	R03	R35, R34, R29	R40	R19 / R40	Not started		High
+AIX-16	AIX	No-training and provider control	SHOULD	ENTERPRISE	R03	R35, R34, R29	R40	R19 / R40	Not started		High
+AIX-17	AIX	AI accuracy and evaluation suite	SHOULD	ENTERPRISE	R03	R35, R34, R29	R40	R19 / R40	Not started		High
+L10-01	L10	Thirteen-language interface coverage	MUST	CORE	R17	R30, R37, R43	R40	R18	Not started		High
+L10-02	L10	Explicit regional locales	MUST	CORE	R17	R30, R37, R43	R40	R18	Not started		High
+L10-03	L10	Persian RTL layout	MUST	CORE	R17	R30, R37, R43	R40	R18	Not started		High
+L10-04	L10	Arabic RTL layout	MUST	CORE	R17	R30, R37, R43	R40	R18	Not started		High
+L10-05	L10	Unicode and filename handling	MUST	CORE	R17	R30, R37, R43	R40	R18	Not started		High
+L10-06	L10	Translated system notifications	MUST	CORE	R17	R30, R37, R43	R40	R18	Not started		High
+L10-07	L10	Date, number and calendar localization	MUST	CORE	R17	R30, R37, R43	R40	R18	Not started		High
+L10-08	L10	Localized metadata labels	SHOULD	ENTERPRISE	R17	R30, R37, R43	R40	R18	Not started		High
+L10-09	L10	Language-specific content versions	SHOULD	ENTERPRISE	R17	R30, R37, R43	R40	R18	Not started		High
+L10-10	L10	Full text direction testing	MUST	CORE	R17	R30, R37, R43	R40	R18	Not started		High
+L10-11	L10	Screen-reader and keyboard access	MUST	CORE	R17	R30, R37, R43	R40	R18	Not started		High
+L10-12	L10	Font and script fallback	MUST	CORE	R17	R30, R37, R43	R40	R18	Not started		High
+L10-13	L10	Translation workflow	MUST	CORE	R17	R30, R37, R43	R40	R18	Not started		High
+L10-14	L10	Localized search behavior	SHOULD	ENTERPRISE	R17	R30, R37, R43	R40	R18	Not started		High
+L10-15	L10	Multi-script document production	SHOULD	ENTERPRISE	R17	R30, R37, R43	R40	R18	Not started		High
+API-01	API	Versioned REST API	MUST	CORE	R07	R36, R29, R28	R40	R24	Not started		Critical
+API-02	API	Webhook subscriptions	SHOULD	ENTERPRISE	R07	R36, R29, R28	R40	R24	Not started		Critical
+API-03	API	OIDC and SAML integration	MUST	CORE	R07	R36, R29, R28	R40	R24	Not started		Critical
+API-04	API	SCIM provisioning	SHOULD	ENTERPRISE	R07	R36, R29, R28	R40	R24	Not started		Critical
+API-05	API	Microsoft 365 integrations	SHOULD	ENTERPRISE	R07	R36, R29, R28	R40	R24	Not started		Critical
+API-06	API	Google Workspace integrations	ADVANCED	EXPANSION	R07	R36, R29, R28	R40	R24	Not started		Critical
+API-07	API	Business platform connectors	SHOULD	ENTERPRISE	R07	R36, R29, R28	R40	R24	Not started		Critical
+API-08	API	Messaging connectors	SHOULD	ENTERPRISE	R07	R36, R29, R28	R40	R24	Not started		Critical
+API-09	API	Document editor adapters	SHOULD	ENTERPRISE	R07	R36, R29, R28	R40	R24	Not started		Critical
+API-10	API	Storage adapter abstraction	SHOULD	ENTERPRISE	R07	R36, R29, R28	R40	R24	Not started		Critical
+API-11	API	Enterprise search connectors	ADVANCED	EXPANSION	R07	R36, R29, R28	R40	R24	Not started		Critical
+API-12	API	Event-driven integration bus	SHOULD	ENTERPRISE	R07	R36, R29, R28	R40	R24	Not started		Critical
+API-13	API	Import and export formats	SHOULD	ENTERPRISE	R07	R36, R29, R28	R40	R24	Not started		Critical
+API-14	API	Integration marketplace governance	ADVANCED	EXPANSION	R07	R36, R29, R28	R40	R24	Not started		Critical
+API-15	API	API throttling and metering	MUST	CORE	R07	R36, R29, R28	R40	R24	Not started		Critical
+API-16	API	Developer sandbox and test identities	SHOULD	ENTERPRISE	R07	R36, R29, R28	R40	R24	Not started		Critical
+API-17	API	WordPress bridge API	MUST	CORE	R07	R36, R29, R28	R40	R24	Not started		Critical
+UX-01	UX	Role-specific dashboard	MUST	CORE	R16	R30, R37	R40	R19 / R40	Not started		High
+UX-02	UX	Tenant-branded workspace	SHOULD	ENTERPRISE	R16	R30, R37	R40	R19 / R40	Not started		High
+UX-03	UX	Responsive file explorer	MUST	CORE	R16	R30, R37	R40	R19 / R40	Not started		High
+UX-04	UX	Unified task and notification center	MUST	CORE	R16	R30, R37	R40	R19 / R40	Not started		High
+UX-05	UX	Custom dashboard widgets	SHOULD	ENTERPRISE	R16	R30, R37	R40	R19 / R40	Not started		High
+UX-06	UX	Advanced table and bulk actions	SHOULD	ENTERPRISE	R16	R30, R37	R40	R19 / R40	Not started		High
+UX-07	UX	Contextual permissions explanation	SHOULD	ENTERPRISE	R16	R30, R37	R40	R19 / R40	Not started		High
+UX-08	UX	Universal command and quick navigation	SHOULD	ENTERPRISE	R16	R30, R37	R40	R19 / R40	Not started		High
+UX-09	UX	Accessible notification preferences	SHOULD	ENTERPRISE	R16	R30, R37	R40	R19 / R40	Not started		High
+UX-10	UX	Inline help and interactive onboarding	SHOULD	ENTERPRISE	R16	R30, R37	R40	R19 / R40	Not started		High
+UX-11	UX	Personalized saved workspaces	SHOULD	ENTERPRISE	R16	R30, R37	R40	R19 / R40	Not started		High
+UX-12	UX	Keyboard shortcuts and efficiency	ADVANCED	EXPANSION	R16	R30, R37	R40	R19 / R40	Not started		High
+UX-13	UX	Guided error handling	MUST	CORE	R16	R30, R37	R40	R19 / R40	Not started		High
+MOB-01	MOB	Mobile-responsive secure web application	MUST	CORE	R37	R30, R36, R39	R40	R19 / R40	Not started		High
+MOB-02	MOB	Dedicated trusted desktop client	SHOULD	ENTERPRISE	R37	R30, R36, R39	R40	R19 / R40	Not started		High
+MOB-03	MOB	Native mobile applications	SHOULD	ENTERPRISE	R37	R30, R36, R39	R40	R19 / R40	Not started		High
+MOB-04	MOB	Secure offline access	SHOULD	ENTERPRISE	R37	R30, R36, R39	R40	R19 / R40	Not started		High
+MOB-05	MOB	Selective sync and pinning	SHOULD	ENTERPRISE	R37	R30, R36, R39	R40	R19 / R40	Not started		High
+MOB-06	MOB	Remote session revocation	MUST	CORE	R37	R30, R36, R39	R40	R19 / R40	Not started		High
+MOB-07	MOB	Mobile document capture	SHOULD	ENTERPRISE	R37	R30, R36, R39	R40	R19 / R40	Not started		High
+MOB-08	MOB	Push notifications	SHOULD	ENTERPRISE	R37	R30, R36, R39	R40	R19 / R40	Not started		High
+MOB-09	MOB	Desktop productivity integrations	ADVANCED	EXPANSION	R37	R30, R36, R39	R40	R19 / R40	Not started		High
+MOB-10	MOB	Certificate and device enrollment	MUST	CORE	R37	R30, R36, R39	R40	R19 / R40	Not started		High
+MOB-11	MOB	Low-bandwidth modes	SHOULD	ENTERPRISE	R37	R30, R36, R39	R40	R19 / R40	Not started		High
+MOB-12	MOB	Mobile accessibility and language coverage	MUST	CORE	R37	R30, R36, R39	R40	R19 / R40	Not started		High
+PRV-01	PRV	Privacy by design defaults	MUST	CORE	R14	R29, R31, R39	R40	R27	Not started		Critical
+PRV-02	PRV	Data processing inventory	SHOULD	ENTERPRISE	R14	R29, R31, R39	R40	R27	Not started		Critical
+PRV-03	PRV	Jurisdiction-specific policy profiles	SHOULD	ENTERPRISE	R14	R29, R31, R39	R40	R27	Not started		Critical
+PRV-04	PRV	Subject-access and portability requests	SHOULD	ENTERPRISE	R14	R29, R31, R39	R40	R27	Not started		Critical
+PRV-05	PRV	Privacy-preserving analytics	SHOULD	ENTERPRISE	R14	R29, R31, R39	R40	R27	Not started		Critical
+PRV-06	PRV	Consent and notices	SHOULD	ENTERPRISE	R14	R29, R31, R39	R40	R27	Not started		Critical
+PRV-07	PRV	Data residency verification	MUST	CORE	R14	R29, R31, R39	R40	R27	Not started		Critical
+PRV-08	PRV	Subprocessor and vendor controls	SHOULD	ENTERPRISE	R14	R29, R31, R39	R40	R27	Not started		Critical
+PRV-09	PRV	Retention-versus-erasure resolution	MUST	CORE	R14	R29, R31, R39	R40	R27	Not started		Critical
+PRV-10	PRV	Data classification and impact assessments	SHOULD	ENTERPRISE	R14	R29, R31, R39	R40	R27	Not started		Critical
+PRV-11	PRV	Accessibility and inclusion governance	SHOULD	ENTERPRISE	R14	R29, R31, R39	R40	R27	Not started		Critical
+PRV-12	PRV	Records of administrator instructions	SHOULD	ENTERPRISE	R14	R29, R31, R39	R40	R27	Not started		Critical
+PRV-13	PRV	Document sovereignty and portability	SHOULD	ENTERPRISE	R14	R29, R31, R39	R40	R27	Not started		Critical
+PRV-14	PRV	Data breach readiness	MUST	CORE	R14	R29, R31, R39	R40	R27	Not started		Critical
+OPS-01	OPS	Independent secure service deployment	MUST	CORE	R39	R38, R22, R40	R40	R24	Not started		Critical
+OPS-02	OPS	Tenant-aware database architecture	MUST	CORE	R39	R38, R22, R40	R40	R24	Not started		Critical
+OPS-03	OPS	Object-store durability	MUST	CORE	R39	R38, R22, R40	R40	R24	Not started		Critical
+OPS-04	OPS	Availability service-level objectives	SHOULD	ENTERPRISE	R39	R38, R22, R40	R40	R24	Not started		Critical
+OPS-05	OPS	Recovery time and point objectives	SHOULD	ENTERPRISE	R39	R38, R22, R40	R40	R24	Not started		Critical
+OPS-06	OPS	Encrypted backup strategy	MUST	CORE	R39	R38, R22, R40	R40	R24	Not started		Critical
+OPS-07	OPS	Immutable and offline backups	MUST	CORE	R39	R38, R22, R40	R40	R24	Not started		Critical
+OPS-08	OPS	Continuous monitoring and alerting	MUST	CORE	R39	R38, R22, R40	R40	R24	Not started		Critical
+OPS-09	OPS	Log correlation and tracing	SHOULD	ENTERPRISE	R39	R38, R22, R40	R40	R24	Not started		Critical
+OPS-10	OPS	Infrastructure as code	MUST	CORE	R39	R38, R22, R40	R40	R24	Not started		Critical
+OPS-11	OPS	CI/CD security gates	MUST	CORE	R39	R38, R22, R40	R40	R24	Not started		Critical
+OPS-12	OPS	Penetration testing and red teams	MUST	CORE	R39	R38, R22, R40	R40	R24	Not started		Critical
+OPS-13	OPS	Cryptographic threat-model reviews	MUST	CORE	R39	R38, R22, R40	R40	R24	Not started		Critical
+OPS-14	OPS	Performance and load testing	MUST	CORE	R39	R38, R22, R40	R40	R24	Not started		Critical
+OPS-15	OPS	Safe application updates	MUST	CORE	R39	R38, R22, R40	R40	R24	Not started		Critical
+OPS-16	OPS	Configuration and feature flags	SHOULD	ENTERPRISE	R39	R38, R22, R40	R40	R24	Not started		Critical
+OPS-17	OPS	Support diagnostics	MUST	CORE	R39	R38, R22, R40	R40	R24	Not started		Critical
+OPS-18	OPS	Operations runbooks	MUST	CORE	R39	R38, R22, R40	R40	R24	Not started		Critical
+OPS-19	OPS	Scalability and partitioning	SHOULD	ENTERPRISE	R39	R38, R22, R40	R40	R24	Not started		Critical
+OPS-20	OPS	Data restoration and selective recovery	SHOULD	ENTERPRISE	R39	R38, R22, R40	R40	R24	Not started		Critical
+OPS-21	OPS	Service continuity and exit plan	ADVANCED	EXPANSION	R39	R38, R22, R40	R40	R24	Not started		Critical
+MIG-01	MIG	Tenant onboarding wizard	MUST	CORE	R10	R42, R36, R40	R40	R19 / R40	Not started		High
+MIG-02	MIG	Legacy file-share import	SHOULD	ENTERPRISE	R10	R42, R36, R40	R40	R19 / R40	Not started		High
+MIG-03	MIG	SharePoint and cloud migration	SHOULD	ENTERPRISE	R10	R42, R36, R40	R40	R19 / R40	Not started		High
+MIG-04	MIG	Confluence and wiki import	SHOULD	ENTERPRISE	R10	R42, R36, R40	R40	R19 / R40	Not started		High
+MIG-05	MIG	Migration dry-run	MUST	CORE	R10	R42, R36, R40	R40	R19 / R40	Not started		High
+MIG-06	MIG	User/role mapping review	MUST	CORE	R10	R42, R36, R40	R40	R19 / R40	Not started		High
+MIG-07	MIG	Migration integrity manifest	MUST	CORE	R10	R42, R36, R40	R40	R19 / R40	Not started		High
+MIG-08	MIG	Pilot and phased rollout	MUST	CORE	R10	R42, R36, R40	R40	R19 / R40	Not started		High
+MIG-09	MIG	User training and certification	SHOULD	ENTERPRISE	R10	R42, R36, R40	R40	R19 / R40	Not started		High
+MIG-10	MIG	Knowledge migration cleanup	SHOULD	ENTERPRISE	R10	R42, R36, R40	R40	R19 / R40	Not started		High
+MIG-11	MIG	Support and help desk integration	SHOULD	ENTERPRISE	R10	R42, R36, R40	R40	R19 / R40	Not started		High
+MIG-12	MIG	Documentation and API guides	MUST	CORE	R10	R42, R36, R40	R40	R19 / R40	Not started		High
+MIG-13	MIG	Training sandbox	SHOULD	ENTERPRISE	R10	R42, R36, R40	R40	R19 / R40	Not started		High
+VRP-01	VRP	Contract lifecycle management	ADVANCED	EXPANSION	R03	R33, R29, R30	R40	R19 / R40	Not started		Medium
+VRP-02	VRP	Board and committee portal	ADVANCED	EXPANSION	R03	R33, R29, R30	R40	R19 / R40	Not started		Medium
+VRP-03	VRP	Policy and SOP control center	SHOULD	ENTERPRISE	R03	R33, R29, R30	R40	R19 / R40	Not started		Medium
+VRP-04	VRP	Quality management and CAPA	ADVANCED	EXPANSION	R03	R33, R29, R30	R40	R19 / R40	Not started		Medium
+VRP-05	VRP	Risk and compliance register	ADVANCED	EXPANSION	R03	R33, R29, R30	R40	R19 / R40	Not started		Medium
+VRP-06	VRP	Project document control	ADVANCED	EXPANSION	R03	R33, R29, R30	R40	R19 / R40	Not started		Medium
+VRP-07	VRP	HR document vault	ADVANCED	EXPANSION	R03	R33, R29, R30	R40	R19 / R40	Not started		Medium
+VRP-08	VRP	Procurement and vendor dossiers	ADVANCED	EXPANSION	R03	R33, R29, R30	R40	R19 / R40	Not started		Medium
+VRP-09	VRP	Secure data-room analytics	ADVANCED	EXPANSION	R03	R33, R29, R30	R40	R19 / R40	Not started		Medium
+VRP-10	VRP	Industry modules SDK	ADVANCED	EXPANSION	R03	R33, R29, R30	R40	R19 / R40	Not started		Medium
+
+xl/worksheets/sheet4.xml
+RISK REGISTER  |  KMS DELIVERY REVIEW									
+									
+Risk hypotheses for a product not yet built; Blockers prohibit high-assurance launch. Track validation evidence and residual risk review.									
+Risk ID	Severity	Failure category	Scenario / impact	Mitigation / decision	Accountable	Affected modules	Required acceptance evidence	Risk state	Evidence / owner notes
+K-01	Blocker	Compromised WordPress bypasses vault	Injected scripts or bridge tokens access plaintext or protected key material.	Independently authenticated signed client; narrow WordPress bridge; hostile-WP tabletop.	R20	ENC,API,SEC	WP full-RCE scenario cannot obtain private keys, plaintext or new recipients.	Open	
+K-02	Blocker	Cross-tenant object reference	Tenant A guesses tenant B document/version ID.	Central authorization with immutable tenant binding, scoped storage, negative tests.	R21	TEN,IAM,DOC	Fuzz IDs across every API, cache and export path; all blocked.	Open	
+K-03	Blocker	Holding admin gets implicit decryption	Group-level role maps to content access or recovery.	Separate administrative plane, content grants and independent trustees.	R02	TEN,IAM,ENC	Holding admin without explicit grant sees no protected content.	Open	
+K-04	Blocker	Key-directory substitution	Server silently replaces an intended recipient public key.	Signed recipient identity, key-transparency or out-of-band device verification.	R20	ENC,AUT,EXT	Unauthorized recipient enrollment and key swap detected and rejected.	Open	
+K-05	Blocker	Losing keys means losing records	E2EE users lose private keys without recovery plan.	Choose no-recovery vs trustee quorum before roll-out; rehearsed recoveries.	R26	ENC,REC,OPS	Recover permitted tenant with quorum; minority cannot recover.	Open	
+K-06	Blocker	E2EE mode leakage through derived content	Previews, thumbnails, search snippets or logs persist plaintext.	Classify derivatives as documents; restrict processing to trusted client.	R20	DOC,MET,RPT,SEC	DB, queue and object dump contain no protected derivative plaintext.	Open	
+K-07	Blocker	Retention and destruction conflict	Legal hold ignored during crypto erasure or object expiration.	Hold priority engine covering backups, versions, exported legal copies.	R12	REC,ENC,OPS	Held record cannot be deleted by any supported destruction mechanism.	Open	
+K-08	Blocker	Server-side malware scanner blind in E2EE	Ciphertext bypasses content inspection but labeled safe.	Mode-specific ingestion/scanning policy, quarantine and residual risk disclosure.	R19	SEC,DOC,ENC	Opaque E2EE files never get falsely labeled fully server-scanned.	Open	
+K-09	Blocker	Approval bypass via workflow races	Reviewer approves one hash while different file is published.	Immutable version/hash binding; maker/checker; idempotent transactional engine.	R33	WFL,COL,REC	Swap, retry and concurrent approval tests fail closed.	Open	
+K-10	Blocker	Compromised key trustee or escrow abuse	Single trustee or platform operator recovers keys covertly.	Independent quorum approvals, audit, dual control and restricted trustees.	R26	ENC,IAM,RPT	No single account can recover; every approved recovery leaves evidence.	Open	
+K-11	Blocker	Broken restore reintroduces access	Backup restoration resurrects expired roles, tokens or deleted documents.	Restore reconciliation; revalidate identity/holds; post-restore policy replay.	R39	OPS,IAM,REC	Restored tenant honors current revocations and retention policy.	Open	
+K-12	Blocker	Malicious conversion payload escapes sandbox	Untrusted PDF/Office exploit reaches keys or tenant data.	Isolated egress-denied workers, strict quotas and patching.	R22	DOC,SEC	Exploit exercises cannot reach KMS, private networks or other tenants.	Open	
+K-13	High	Offline copies remain accessible	User expects remote wipe or revocation to destroy previous files.	Explicit revocation semantics; TTL for future refresh; endpoint management guidance.	R37	MOB,ENC,IAM	UI and policy disclose unavoidable previously exported/cached copies.	Open	
+K-14	High	Cross-subsidiary sharing leaks roles/metadata	Group project accidentally exposes participant members or titles.	Double consent, scoped keys, tenancy-aware notifications and audit.	R21	TEN,EXT,RPT	Two buyers in a data room cannot discover each other.	Open	
+K-15	High	Search and autocomplete existence oracle	Guessable title, timing or counters reveal secret documents.	Metadata classification, authorization at index/query layer and response controls.	R34	MET,SEC	Search enumeration suite finds no unauthorized hits or suggest tokens.	Open	
+K-16	High	AI reads unauthorized prior vectors	Revoked file still available to RAG, cached responses or embeddings.	Entitlement at retrieval and generation, index invalidation and purge policy.	R35	AIX,MET,IAM	Revoked source is absent from retriever, citation and cached answer.	Open	
+K-17	High	Prompt injection triggers dangerous workflow	Malicious document requests export or agent execution.	No autonomous high-impact actions; tools permission-gated; human approval.	R19	AIX,WFL,API	Prompt-injection tests cannot send data or elevate permissions.	Open	
+K-18	High	Group analytics identifies confidential activity	Small group size or filenames permit cross-tenant inference.	Role-scoped aggregates, aggregation thresholds, suppress sensitive dimensions.	R14	RPT,TEN	Holding reporting reveals no individual classified document history.	Open	
+K-19	High	Incorrect legal jurisdiction assumption	System assumes one controller or retention rule fits all entities.	Company-by-country processing inventory; counsel reviewed policy profiles.	R13	PRV,REC,TEN	Each tenant jurisdiction has signed legal policy mapping.	Open	
+K-20	High	Plugin/dependency supply-chain compromise	Signed build or third-party plugin can tamper with bridge or client.	SBOM, provenance, dependency pinning, verified updates and sandboxed bridge.	R38	SEC,API,OPS	Release artifacts verified and vulnerable dependencies blocked.	Open	
+K-21	High	Stale access decision cache	Revoked membership retains long-lived download link or task access.	Short-lived audience-bound grants, event invalidation, recheck at use.	R21	IAM,API,EXT	Rapid revoke during download/export job fails closed at defined points.	Open	
+K-22	High	Privileged support impersonation	Support staff uses break-glass to open business documents silently.	No-plaintext support diagnostics; dual approval and reason-scoped emergency grants.	R27	IAM,OPS,RPT	Support session cannot see content without explicit reviewed access.	Open	
+K-23	High	Inaccurate multilingual permissions	RTL labels reverse meaning or deny appears as allow.	Native security-UI reviews, isolated tokens, locale-specific format tests.	R17	L10,UX,IAM	13-language action/permission translations tested with native reviewers.	Open	
+K-24	High	Unverifiable digital signature claim	Internal approval labeled qualified/legal e-sign.	Separate approval attestations from vendor/legal e-signature integration.	R13	WFL,COL,REC	UI and audit distinguish approval log from legally certified signature.	Open	
+K-25	High	E2EE prevents legal discovery	Records cannot be produced under lawful order or required audit.	Jurisdiction-approved trustee recovery or documented custodian-produced export.	R13	ENC,REC,PRV	Legal discovery drill produces permitted records with chain of custody.	Open	
+K-26	High	Unauthorized tenant migration	Subsidiary merge/export changes scope or key ownership without approval.	Signed corporate transaction workflow, counsel hold checks, rollback.	R02	TEN,MIG,ENC	Migration dry-run reconciles keys, content, holds and memberships.	Open	
+K-27	High	Third-party editor receives classified plaintext	Office integration or preview vendor sees material unexpectedly.	Mode compatibility matrix, vendor risk review, explicit scoped transfer.	R09	COL,API,DOC	Zero-Knowledge files cannot open in unapproved cloud editor.	Open	
+K-28	High	Broken ownership for knowledge artifacts	Policies go stale and employees attest wrong revision.	Named steward, expiry/review, canonical version and attestation binding.	R15	KNO,COL,WFL	Attestation tied to exact approved content hash and language.	Open	
+K-29	High	Migration brings wrong access	Source ACL mapping creates inappropriate grants in new system.	Dry-run, least-privilege mapping, dual validation and exception resolution.	R42	MIG,IAM,TEN	All privileged mappings signed off and exceptions resolved.	Open	
+K-30	High	No reliable RTO/RPO / backups	Data restored but keys, policy or critical event log missing.	Full restore drills with crypto trustee participation; per-mode SLOs.	R39	OPS,ENC,RPT	Recover data, versions, permissions, keys and audit consistently.	Open	
+K-31	Medium	Localization lacks regional definitions	zh/pt/Arabic calendars and dates inconsistent.	Define locale codes, calendars, plural rules and canonical UTC storage.	R17	L10,UX,MET	Locale regression covers filenames, dates, search and notifications.	Open	
+K-32	Medium	Cost of broad features exceeds budget	Coauthoring, OCR, vector search and 13-language review arrive prematurely.	Dependency-driven release slices and FinOps metering.	R03	AIX,COL,OPS	Phased roadmap has capacity and cost evidence before commitment.	Open	
+K-33	High	Insecure service account scopes	Connector token accesses all tenants or overprivileged storage.	Workload identities with tenant+action restrictions and rotation.	R21	IAM,API,OPS	Stolen test connector credential cannot read unrelated tenants.	Open	
+K-34	High	Privacy requests conflict with immutable copies	Delete request not reconciled with legal holds or backup retention.	Document lawful exceptions, selective deletion and retention flow.	R14	PRV,REC,OPS	DPO process outputs decision, evidence and actionable execution state.	Open	
+K-35	High	Inadequate independent assurance	Development team certifies its own crypto/tenant isolation.	Contract independent crypto and red-team assessments; close blockers.	R25	ENC,SEC,OPS	Independent retest attests all release blockers closed.	Open	
+
+xl/worksheets/sheet5.xml
+ARCHITECTURE DECISIONS  |  KMS DELIVERY REVIEW							
+							
+Decisions require alternatives, threat/permission impact, sponsor signoff, and immutable ADR before production work on affected modules.							
+ADR ID	Decision to freeze	Recommended starting direction	Accountable	Module IDs	Decision status	Formal ADR link	Approval date
+D-01	What does a full WordPress compromise mean in threat model?	Assume arbitrary plugin/PHP execution and site administrator; vault remains a separate trust boundary.	R19	ENC,SEC,API	Open		
+D-02	How is Zero-Knowledge code delivered and authenticated?	Separate audited/signed client and independent origin; direct client login; no trust in WP script.	R20	ENC,MOB,AUT	Open		
+D-03	Which documents require Zero-Knowledge Mode?	Default managed mode only when justified; mandate E2EE by classification / subsidiaries.	R02	ENC,SEC,PRV	Open		
+D-04	Is enterprise recovery permitted?	Offer distinct no-recovery and trustee-quorum profiles; truthful assurance claim.	R26	ENC,REC,OPS	Open		
+D-05	Who is accountable for subsidiary data?	Record controller/processor + custodian per legal entity; holding has policy but no implicit decryption.	R14	TEN,PRV,IAM	Open		
+D-06	What is the exact permission evaluation order?	Global immutable safety policy -> tenant boundary -> classification/legal hold -> RBAC/ABAC/ACL -> contextual restrictions; explicit deny wins.	R21	IAM,TEN,REC	Open		
+D-07	Which operations are eligible for break-glass?	Restrict to control-plane admin; no silent document/key recovery; dual authorization.	R27	IAM,AUT,ENC	Open		
+D-08	Which metadata remains visible to servers?	Minimize: tenant, object token, ciphertext size/time where unavoidable; encrypt titles/comments/classification-specific fields.	R20	MET,DOC,ENC	Open		
+D-09	How can confidential content be searched?	Managed: secured index; Zero-Knowledge: trusted-client index with explicitly bounded metadata leakage.	R34	MET,ENC,AIX	Open		
+D-10	What is E2EE malware assurance?	Never assert full server scanning; local scanning + recipient/device policy + quarantine risk disclosure.	R19	SEC,DOC,ENC	Open		
+D-11	What is the approach to external E2EE sharing?	Verified recipient keys; origin approval; purpose, term and immutable share evidence.	R20	EXT,ENC,IAM	Open		
+D-12	Who can authorize a document for legal discovery?	Use counsel-directed custodian export or audited trustee protocol governed by jurisdiction.	R13	REC,ENC,PRV	Open		
+D-13	When does retention outrank deletion?	Counsel-approved precedence; legal hold blocks disposition and key destruction.	R12	REC,PRV,OPS	Open		
+D-14	What are the 13 exact locale codes and variants?	Agree mapping: English, Persian, French, Turkish, Russian, zh-Hans, German, Portuguese variant, Spanish, Hindi, Japanese, Arabic, Armenian; regional options.	R17	L10,MET,UX	Open		
+D-15	What is the definition of digital signing?	Separate internal approvals from applicable qualified digital signature vendors/requirements.	R13	WFL,COL,REC	Open		
+D-16	How do group-wide dashboards preserve confidentiality?	Group sees posture aggregates; document audit requires legally/policy authorized scoped access.	R27	RPT,TEN,PRV	Open		
+D-17	What are target SLO, RTO, RPO and tenant scale?	Benchmark agreed file mix, users, tenant data volumes and geography; publish per-mode targets.	R39	OPS,DOC,MET	Open		
+D-18	Which connectors/cloud editor providers are allowed?	Approved vendor matrix; prohibit unmanaged external document decryption; scope tokens by tenant.	R09	API,COL,DOC	Open		
+D-19	What is the company merger/split procedure?	Approvals from origin/recipient tenant custodians, counsel, security, key trustees as necessary.	R02	TEN,MIG,ENC	Open		
+D-20	When are AI functions permissible?	Opt-in by tenant/classification; managed-only or trusted client local; no training with company data by default.	R14	AIX,SEC,ENC	Open		
+D-21	What is the licensed deployment model?	Private managed service, self-hosted, hybrid; define update chain, residency and customer responsibilities.	R03	OPS,API,PRV	Open		
+D-22	Who makes final production go/no-go decision?	Sponsor + PO after independent security, legal/privacy, records and DR gate sign-offs.	R01	OPS,SEC,PRV	Open		
+
+xl/worksheets/sheet6.xml
+OPERATIONAL ROLES  |  KMS DELIVERY REVIEW						
+						
+System-level personas with scope, expressly prohibited access, and segregation of duties. Do not directly equate them to WordPress administrator/editor roles.						
+Role template	Authorization scope	Powers	Must not grant by default	Conflict-of-duties control	Bounded scope	Role readiness
+Holding governance administrator	Group control plane	Provision/suspend entities; set minimum policies.	No default subsidiary-content read or decryption.	Tenant owner + separate board approval for major changes	Yes, unless expressly group/platform scope	Proposed
+Holding policy administrator	Group control plane	Manage mandatory security/retention configuration baselines.	Cannot grant own document access; policy cannot defeat holds.	Risk/records approval for exceptions	Yes, unless expressly group/platform scope	Proposed
+Holding security oversight	Group security	View posture, incidents and scoped security events.	No automatic content; sensitive tenant audit fields redacted.	Separate from holder of recovery keys	Yes, unless expressly group/platform scope	Proposed
+Group internal auditor	Group audit	Review approved controls/evidence and aggregates.	No default business document access.	Independence from admins and approvers	Yes, unless expressly group/platform scope	Proposed
+Platform operator / SRE	Infrastructure only	Deploy, monitor, scale and restore infrastructure.	No routine decrypted document content or user impersonation.	Dual control on critical production changes	Yes, unless expressly group/platform scope	Proposed
+Subsidiary owner	One subsidiary	Approve local governance/tenant closure and custodians.	Cannot weaken global minimum controls.	Cannot self-approve exceptional disclosure	Yes, unless expressly group/platform scope	Proposed
+Subsidiary administrator	One subsidiary	Invite users, create groups and configure libraries.	No universal decrypt right; no cross-tenant reach.	Role-grant approvals for high privileges	Yes, unless expressly group/platform scope	Proposed
+User and group administrator	One subsidiary	Manage memberships, employment-state updates.	No content read via membership management alone.	No self-privilege escalation	Yes, unless expressly group/platform scope	Proposed
+Role / access policy manager	One subsidiary	Create custom roles and ACL templates.	Cannot override legal holds and group hard-denies.	Another approver for high-risk policy changes	Yes, unless expressly group/platform scope	Proposed
+Department manager	Own department	Manage own teams and delegated workspaces.	Delegation limited to preset domain and role subset.	No grant beyond own authority	Yes, unless expressly group/platform scope	Proposed
+Records manager	One subsidiary / record set	Control classification, retention and disposition.	Cannot unilaterally lift legal hold.	Disposition reviewer separate from executor	Yes, unless expressly group/platform scope	Proposed
+Legal-hold officer	Approved matters	Place/lift holds under legal process.	No content access unless separately authorized.	Counsel approval and dual-review on releases	Yes, unless expressly group/platform scope	Proposed
+Privacy officer	Legal entity / approved scope	Process privacy requests, DPIAs and data mappings.	No blanket document access for privacy role.	Lawful hold/exemption review	Yes, unless expressly group/platform scope	Proposed
+Subsidiary security officer	One subsidiary	Monitor local access, incidents and classification alerts.	No default access to protected documents.	Independent security and incident review	Yes, unless expressly group/platform scope	Proposed
+Document controller	Assigned library	Register, classify, version and release controlled records.	Cannot circumvent approval or holds.	Separate approver for publication	Yes, unless expressly group/platform scope	Proposed
+Document custodian	Named document or collection	Own access, classification and retention contact.	No unrestricted group-wide rights.	Share approval for restricted documents	Yes, unless expressly group/platform scope	Proposed
+Contributor / editor	Granted documents	Upload and edit working copies.	Cannot approve own controlled release.	Maker/checker on controlled documents	Yes, unless expressly group/platform scope	Proposed
+Reviewer / commentator	Assigned documents	Comment, request changes, review versions.	No self-grant or release rights.	Independent of author where required	Yes, unless expressly group/platform scope	Proposed
+Approver / publisher	Assigned workflow	Approve immutable hashes and publish approved revision.	No edit of signed approved bytes.	Must meet quorum / SoD	Yes, unless expressly group/platform scope	Proposed
+Knowledge steward	Assigned KB space	Maintain canonical articles and scheduled reviews.	No cross-entity search or publish beyond grants.	Independent approval of controlled SOPs	Yes, unless expressly group/platform scope	Proposed
+Workflow designer	Approved workflow domain	Configure versioned state machines/routing.	Cannot approve by modifying live workflow.	Change approval plus staging simulation	Yes, unless expressly group/platform scope	Proposed
+Read-only viewer	Granted documents	View permitted content and acknowledge required reading.	No editing, exports or shares unless explicitly granted.	Document-specific authorization	Yes, unless expressly group/platform scope	Proposed
+External guest / auditor	Specific collaboration	Review invited folders / evidence packages.	No tenant enumeration or rights to other guests.	Identity validation, expiry, NDA if needed	Yes, unless expressly group/platform scope	Proposed
+Service/workload identity	Specific tenant + API scopes	Execute narrow automation and connector jobs.	No interactive login; no universal multi-tenant API key.	Secret rotation and workload approval	Yes, unless expressly group/platform scope	Proposed
+Key-recovery trustee	Key domain + approved case	Participate in quorum recovery, never solo.	No routine content access or invisible recovery.	Quorum, legal basis, immutable event	Yes, unless expressly group/platform scope	Proposed
+Emergency incident responder	Time-limited scope	Contain incidents and revoke sessions.	No automatic plaintext/key bypass; only approved exceptional grants.	Ticket, dual control and postmortem	Yes, unless expressly group/platform scope	Proposed
+
+xl/worksheets/sheet7.xml
+RELEASE GATES  |  KMS DELIVERY REVIEW						
+						
+Go/no-go requires independent crypto and penetration evidence. Business or schedule pressure cannot override unresolved security blockers.						
+Gate	Definition / milestone	Signoff role	Exit criteria	Evidence required	Gate status	Evidence link
+G0	Charter and authority	R01	Funding/risk appetite; 10 legal entities and operating jurisdictions; responsible data controllers named.	Approved charter, entity list, governance and decision log.	Not started	
+G1	Threat model and design	R19	Agree WordPress threat boundary, protection modes, data flows, abuse cases and legal constraints.	Reviewed diagrams; ADRs; product-mode compatibility matrix.	Not started	
+G2	Tenant and access proof	R21	Prove isolation and formal permission order, independent identity, limited WordPress bridge.	Policy test harness; API fuzzing results; negative tenant tests.	Not started	
+G3	Cryptographic assurance	R25	Confirm independent trusted-client distribution, E2EE protocol, key identity, recovery and trust limits.	Third-party crypto report; protocol vectors; WordPress-RCE red-team scenario.	Not started	
+G4	Core document lifecycle	R03	Upload, quarantine, immutable versions, approval, audit and download all tested end-to-end.	Traceability to core requirements; E2E automation; malicious-file tests.	Not started	
+G5	Governance and resilience	R12	Retention/holds/DSRs, 13 languages, WCAG, backup/keys/identity restore all validated.	Legal/privacy signoffs; translated UAT; DR and retention tabletop.	Not started	
+G6	Subsidiary pilot	R11	Test multiple separate subsidiaries (including RTL), different roles and cross-company share path.	Signed tenant UAT, support runbooks and resolved high-severity defects.	Not started	
+G7	Independent production go/no-go	R01	No unresolved critical vulnerabilities; approved exceptions; operations and incident readiness.	Independent pen-test, security signoff, restore results and release checklist.	Not started	
+G8	Enterprise expansion change gate	R03	New AI, coauthoring, mobile, and vertical modules receive mode-specific security/review tests.	Per-module ADR, impact assessment, signed regression and training.	Not started	
+
+xl/worksheets/sheet8.xml
+BASELINE REVISIONS  |  KMS DELIVERY REVIEW					
+					
+Escalations are conditional, not claims that prior features were missing. Update the original 346-feature catalog after architecture/legal approval.					
+Existing ID	Conditional priority change	Reason for change	Accountable	Review status	Decision/evidence
+ENC-08	SHOULD -> launch-blocking for high-assurance E2EE	Verified recipient key identity or equivalently strong external verification must exist before any sensitive cross-device/cross-company sharing.	R20	Open	
+RPT-04	SHOULD -> launch-blocking for regulated/auditable deployment	Integrity evidence must be tamper-evident and stored outside WordPress administration.	R27	Open	
+OPS-05	SHOULD -> operational go-live prerequisite	RTO/RPO targets and successful restorations are necessary to know whether production is supportable.	R39	Open	
+TEN-13	SHOULD -> mandated where contractual/legal residency applies	Residency must cover backups, caches, metrics, keys, support and subprocessors, not only primary objects.	R14	Open	
+PRV-03	SHOULD -> mandated if subsidiaries face distinct jurisdictional regimes	Tenant-specific legal profiles needed to avoid invalid uniform retention/disclosure rules.	R13	Open	
+AUT-04	SHOULD -> strongly recommended go-live control for enterprise employees	SCIM/event-driven provisioning and timely departure suspension reduce orphan accounts.	R21	Open	
+IAM-16	SHOULD -> mandatory for privileged and sensitive periodic reviews	Management needs auditable certifications of elevated access and stale external grants.	R27	Open	
+REC-09	SHOULD -> mandatory if a record class must be WORM/immutable	Must be technical rather than process-only where law/contract mandates immutability.	R12	Open	
+REC-13	SHOULD -> mandatory if eDiscovery obligations apply	Zero-Knowledge recovery/export plan must be chosen before regulated content is encrypted.	R13	Open	
+AIX-13	SHOULD -> mandatory before enabling AI	AI inputs, outputs, source access and provider actions must be auditable.	R14	Open	
+AIX-16	SHOULD -> mandatory before sending content to an external model	Provider retention, training exclusion, subprocessors and DPA must be enforceable.	R14	Open	
+MOB-02	SHOULD -> mandatory if an independent native client is the selected E2EE trust model	Strong separation from WordPress requires shipped, signed and independently verified client code.	R37	Open	
+SEC-07	SHOULD -> assess as mandatory under high ransomware threat	Immutable versions / offline restoration are necessary even if anomaly detection remains optional.	R23	Open	
+PRV-04	SHOULD -> mandatory when applicable personal-data rights are triggered	Subject-rights processes cannot be postponed merely because feature phase says Enterprise.	R14	Open	
+
+xl/worksheets/sheet9.xml
+ACCEPTANCE SCENARIOS  |  KMS DELIVERY REVIEW						
+						
+Threat-model-driven and cross-role acceptance tests. Add automated test URLs, external assessment evidence and release gate mapping.						
+Test ID	Test family	Scenario	Required evidence	Affected modules	Status	Test artifact
+T-01	Isolation	Tenant A admin guesses Tenant B document/version/metadata/queue ID	All paths deny and independent audit has evidence.	TEN,IAM,API,RPT	Not run	
+T-02	E2EE code integrity	WordPress administrator modifies WP theme/plugin to serve malicious JS	Trusted client neither executes injected code nor releases keys or plaintext.	ENC,API,MOB	Not run	
+T-03	Recipient authenticity	Attacker substitutes public key in key directory	Trusted client blocks unverified recipient and alerts owner.	ENC,AUT,EXT	Not run	
+T-04	Privilege escalation	Subsidiary admin grants self group-wide auditor/escrow role	Permission creation rejected; privileged change requires separate approval.	IAM,TEN	Not run	
+T-05	Permission race	Revoke user while export, preview, workflow and search requests run	Defined consistency window enforced; no fresh unauthorized copy completed after final check.	IAM,DOC,WFL	Not run	
+T-06	Malicious document	Upload malformed Office/PDF designed to exploit converter	Quarantine and isolated sandbox prevents network/file/key compromise.	DOC,SEC	Not run	
+T-07	Confidential preview	Request E2EE preview via ordinary WP dashboard	System presents independent trusted viewer; no WP origin sees plaintext.	ENC,DOC,UX	Not run	
+T-08	Legal hold	Place hold, then attempt deletion, retention expiry and crypto-erasure	All destructive paths deny with preserved evidence.	REC,ENC,OPS	Not run	
+T-09	Key recovery	Lose device; request recovery with one trustee instead of quorum	Fails until independently approved quorum, then audited recovery succeeds.	ENC,AUT	Not run	
+T-10	Device compromise	User loses previously synced phone and is deprovisioned	New versions and future distribution denied; prior offline data limitation displayed.	MOB,ENC,IAM	Not run	
+T-11	Cross-company project	Tenant A shares selected file with Tenant B group	Named members only, approvals and keys verified, no blanket B rights.	EXT,TEN,IAM	Not run	
+T-12	Audit tampering	WP admin tries to delete download and authorization failure events	Independent audit continues to show original events and tampering alarm.	RPT,SEC	Not run	
+T-13	AI leakage	Revoked document exists in vector index and cached answer	Retrieval, cache and output no longer expose that source.	AIX,MET,IAM	Not run	
+T-14	Prompt injection	Malicious document instructs AI agent to email private file	No autonomous export, tool grant or workflow approval.	AIX,WFL,SEC	Not run	
+T-15	Backup restore	Restore tenant from old snapshot including revoked roles	Reconciles current policy/hold/revocations before opening restored tenant.	OPS,IAM,REC	Not run	
+T-16	Localization	Persian and Arabic RTL document sharing, approval and permission UI	Native validation finds no reversed affordances/IDs; screen-reader correct.	L10,UX	Not run	
+T-17	Migration	Import historic documents with mismatched identity and denied ACLs	Dry run reports exceptions; no overly broad grants; provenance preserved.	MIG,IAM	Not run	
+T-18	Company separation	Split one subsidiary into two while legal hold exists	Approved custody, key rewrap, audit trail and retention remain valid.	TEN,REC,ENC	Not run	
+T-19	Cloud editor	Attempt to open E2EE file in external online editor	Blocked unless approved conversion and explicit authorized disclosure.	COL,ENC,API	Not run	
+T-20	Disaster recovery	Simulate regional outage with KMS outage and independent logs	System follows declared RTO/RPO without fail-open; keys/audit recover.	OPS,ENC,RPT	Not run	
