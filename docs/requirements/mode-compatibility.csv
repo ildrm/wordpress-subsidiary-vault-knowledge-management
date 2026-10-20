@@ -1,347 +1,347 @@
 id,managed_local,managed_kms,zero_knowledge,offline,external_share,reason,alternative
-TEN-01,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-TEN-02,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-TEN-03,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-TEN-04,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-TEN-05,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-TEN-06,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-TEN-07,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-TEN-08,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-TEN-09,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-TEN-10,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-TEN-11,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-TEN-12,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-TEN-13,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-TEN-14,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-IAM-01,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-IAM-02,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-IAM-03,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-IAM-04,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-IAM-05,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-IAM-06,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-IAM-07,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-IAM-08,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-IAM-09,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-IAM-10,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-IAM-11,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-IAM-12,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-IAM-13,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-IAM-14,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-IAM-15,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-IAM-16,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-IAM-17,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-AUT-01,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-AUT-02,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-AUT-03,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-AUT-04,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-AUT-05,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-AUT-06,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-AUT-07,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-AUT-08,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-AUT-09,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-AUT-10,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-AUT-11,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-AUT-12,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-AUT-13,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-DOC-01,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-DOC-02,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-DOC-03,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-DOC-04,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-DOC-05,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-DOC-06,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-DOC-07,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-DOC-08,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-DOC-09,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-DOC-10,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-DOC-11,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-DOC-12,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-DOC-13,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-DOC-14,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-DOC-15,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-DOC-16,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-DOC-17,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-DOC-18,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-DOC-19,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-DOC-20,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-DOC-21,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-DOC-22,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-MET-01,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-MET-02,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-MET-03,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-MET-04,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-MET-05,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-MET-06,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-MET-07,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-MET-08,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-MET-09,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-MET-10,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-MET-11,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-MET-12,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-MET-13,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-MET-14,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-MET-15,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-MET-16,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-COL-01,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-COL-02,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-COL-03,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-COL-04,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-COL-05,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-COL-06,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-COL-07,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-COL-08,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-COL-09,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-COL-10,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-COL-11,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-COL-12,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-COL-13,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-COL-14,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-COL-15,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-COL-16,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-KNO-01,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-KNO-02,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-KNO-03,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-KNO-04,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-KNO-05,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-KNO-06,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-KNO-07,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-KNO-08,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-KNO-09,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-KNO-10,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-KNO-11,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-KNO-12,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-KNO-13,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-KNO-14,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-KNO-15,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-KNO-16,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-WFL-01,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-WFL-02,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-WFL-03,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-WFL-04,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-WFL-05,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-WFL-06,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-WFL-07,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-WFL-08,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-WFL-09,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-WFL-10,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-WFL-11,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-WFL-12,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-WFL-13,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-WFL-14,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-WFL-15,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-WFL-16,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-WFL-17,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-WFL-18,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-WFL-19,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-REC-01,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-REC-02,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-REC-03,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-REC-04,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-REC-05,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-REC-06,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-REC-07,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-REC-08,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-REC-09,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-REC-10,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-REC-11,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-REC-12,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-REC-13,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-REC-14,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-REC-15,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-REC-16,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-REC-17,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-REC-18,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-ENC-01,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-ENC-02,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-ENC-03,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-ENC-04,PARTIAL,UNAVAILABLE,UNAVAILABLE,file utility only,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-ENC-05,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-ENC-06,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-ENC-07,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-ENC-08,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-ENC-09,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-ENC-10,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-ENC-11,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-ENC-12,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-ENC-13,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-ENC-14,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-ENC-15,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-ENC-16,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-ENC-17,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-ENC-18,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-ENC-19,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-ENC-20,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-SEC-01,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-SEC-02,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-SEC-03,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-SEC-04,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-SEC-05,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-SEC-06,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-SEC-07,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-SEC-08,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-SEC-09,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-SEC-10,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-SEC-11,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-SEC-12,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-SEC-13,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-SEC-14,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-SEC-15,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-SEC-16,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-EXT-01,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-EXT-02,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-EXT-03,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-EXT-04,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-EXT-05,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-EXT-06,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-EXT-07,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-EXT-08,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-EXT-09,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-EXT-10,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-EXT-11,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-EXT-12,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-EXT-13,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-RPT-01,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-RPT-02,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-RPT-03,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-RPT-04,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-RPT-05,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-RPT-06,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-RPT-07,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-RPT-08,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-RPT-09,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-RPT-10,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-RPT-11,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-RPT-12,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-RPT-13,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-RPT-14,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-AIX-01,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-AIX-02,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-AIX-03,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-AIX-04,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-AIX-05,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-AIX-06,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-AIX-07,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-AIX-08,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-AIX-09,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-AIX-10,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-AIX-11,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-AIX-12,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-AIX-13,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-AIX-14,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-AIX-15,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-AIX-16,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-AIX-17,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-L10-01,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-L10-02,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-L10-03,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-L10-04,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-L10-05,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-L10-06,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-L10-07,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-L10-08,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-L10-09,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-L10-10,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-L10-11,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-L10-12,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-L10-13,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-L10-14,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-L10-15,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-API-01,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-API-02,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-API-03,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-API-04,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-API-05,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-API-06,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-API-07,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-API-08,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-API-09,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-API-10,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-API-11,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-API-12,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-API-13,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-API-14,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-API-15,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-API-16,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-API-17,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-UX-01,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-UX-02,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-UX-03,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-UX-04,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-UX-05,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-UX-06,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-UX-07,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-UX-08,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-UX-09,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-UX-10,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-UX-11,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-UX-12,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-UX-13,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-MOB-01,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-MOB-02,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-MOB-03,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-MOB-04,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-MOB-05,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-MOB-06,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-MOB-07,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-MOB-08,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-MOB-09,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-MOB-10,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-MOB-11,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-MOB-12,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-PRV-01,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-PRV-02,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-PRV-03,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-PRV-04,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-PRV-05,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-PRV-06,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-PRV-07,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-PRV-08,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-PRV-09,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-PRV-10,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-PRV-11,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-PRV-12,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-PRV-13,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-PRV-14,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-OPS-01,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-OPS-02,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-OPS-03,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-OPS-04,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-OPS-05,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-OPS-06,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-OPS-07,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-OPS-08,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-OPS-09,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-OPS-10,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-OPS-11,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-OPS-12,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-OPS-13,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-OPS-14,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-OPS-15,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-OPS-16,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-OPS-17,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-OPS-18,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-OPS-19,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-OPS-20,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-OPS-21,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-MIG-01,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-MIG-02,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-MIG-03,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-MIG-04,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-MIG-05,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-MIG-06,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-MIG-07,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-MIG-08,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-MIG-09,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-MIG-10,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-MIG-11,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-MIG-12,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-MIG-13,PARTIAL,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-VRP-01,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-VRP-02,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-VRP-03,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-VRP-04,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-VRP-05,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-VRP-06,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-VRP-07,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-VRP-08,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-VRP-09,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
-VRP-10,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Development profile only; no claim of full feature support,See canonical contract and gap register
+TEN-01,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+TEN-02,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+TEN-03,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+TEN-04,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+TEN-05,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+TEN-06,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+TEN-07,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+TEN-08,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+TEN-09,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+TEN-10,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+TEN-11,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+TEN-12,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+TEN-13,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+TEN-14,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+IAM-01,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+IAM-02,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+IAM-03,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+IAM-04,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+IAM-05,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+IAM-06,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+IAM-07,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+IAM-08,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+IAM-09,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+IAM-10,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+IAM-11,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+IAM-12,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+IAM-13,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+IAM-14,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+IAM-15,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+IAM-16,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+IAM-17,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+AUT-01,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+AUT-02,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+AUT-03,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+AUT-04,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+AUT-05,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+AUT-06,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+AUT-07,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+AUT-08,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+AUT-09,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+AUT-10,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+AUT-11,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+AUT-12,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+AUT-13,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+DOC-01,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+DOC-02,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+DOC-03,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+DOC-04,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+DOC-05,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+DOC-06,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+DOC-07,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+DOC-08,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+DOC-09,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+DOC-10,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+DOC-11,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+DOC-12,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+DOC-13,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+DOC-14,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+DOC-15,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+DOC-16,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+DOC-17,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+DOC-18,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+DOC-19,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+DOC-20,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+DOC-21,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+DOC-22,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+MET-01,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+MET-02,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+MET-03,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+MET-04,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+MET-05,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+MET-06,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+MET-07,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+MET-08,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+MET-09,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+MET-10,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+MET-11,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+MET-12,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+MET-13,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+MET-14,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+MET-15,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+MET-16,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+COL-01,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+COL-02,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+COL-03,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+COL-04,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+COL-05,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+COL-06,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+COL-07,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+COL-08,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+COL-09,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+COL-10,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+COL-11,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+COL-12,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+COL-13,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+COL-14,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+COL-15,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+COL-16,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+KNO-01,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+KNO-02,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+KNO-03,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+KNO-04,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+KNO-05,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+KNO-06,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+KNO-07,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+KNO-08,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+KNO-09,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+KNO-10,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+KNO-11,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+KNO-12,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+KNO-13,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+KNO-14,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+KNO-15,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+KNO-16,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+WFL-01,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+WFL-02,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+WFL-03,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+WFL-04,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+WFL-05,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+WFL-06,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+WFL-07,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+WFL-08,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+WFL-09,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+WFL-10,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+WFL-11,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+WFL-12,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+WFL-13,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+WFL-14,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+WFL-15,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+WFL-16,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+WFL-17,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+WFL-18,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+WFL-19,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+REC-01,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+REC-02,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+REC-03,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+REC-04,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+REC-05,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+REC-06,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+REC-07,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+REC-08,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+REC-09,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+REC-10,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+REC-11,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+REC-12,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+REC-13,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+REC-14,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+REC-15,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+REC-16,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+REC-17,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+REC-18,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+ENC-01,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+ENC-02,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+ENC-03,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+ENC-04,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,file utility only,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+ENC-05,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+ENC-06,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+ENC-07,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+ENC-08,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+ENC-09,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+ENC-10,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+ENC-11,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+ENC-12,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+ENC-13,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+ENC-14,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+ENC-15,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+ENC-16,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+ENC-17,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+ENC-18,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+ENC-19,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+ENC-20,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+SEC-01,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+SEC-02,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+SEC-03,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+SEC-04,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+SEC-05,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+SEC-06,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+SEC-07,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+SEC-08,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+SEC-09,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+SEC-10,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+SEC-11,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+SEC-12,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+SEC-13,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+SEC-14,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+SEC-15,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+SEC-16,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+EXT-01,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+EXT-02,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+EXT-03,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+EXT-04,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+EXT-05,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+EXT-06,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+EXT-07,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+EXT-08,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+EXT-09,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+EXT-10,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+EXT-11,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+EXT-12,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+EXT-13,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+RPT-01,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+RPT-02,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+RPT-03,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+RPT-04,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+RPT-05,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+RPT-06,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+RPT-07,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+RPT-08,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+RPT-09,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+RPT-10,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+RPT-11,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+RPT-12,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+RPT-13,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+RPT-14,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+AIX-01,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+AIX-02,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+AIX-03,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+AIX-04,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+AIX-05,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+AIX-06,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+AIX-07,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+AIX-08,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+AIX-09,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+AIX-10,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+AIX-11,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+AIX-12,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+AIX-13,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+AIX-14,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+AIX-15,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+AIX-16,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+AIX-17,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+L10-01,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+L10-02,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+L10-03,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+L10-04,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+L10-05,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+L10-06,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+L10-07,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+L10-08,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+L10-09,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+L10-10,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+L10-11,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+L10-12,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+L10-13,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+L10-14,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+L10-15,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+API-01,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+API-02,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+API-03,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+API-04,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+API-05,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+API-06,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+API-07,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+API-08,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+API-09,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+API-10,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+API-11,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+API-12,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+API-13,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+API-14,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+API-15,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+API-16,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+API-17,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+UX-01,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+UX-02,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+UX-03,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+UX-04,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+UX-05,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+UX-06,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+UX-07,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+UX-08,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+UX-09,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+UX-10,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+UX-11,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+UX-12,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+UX-13,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+MOB-01,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+MOB-02,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+MOB-03,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+MOB-04,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+MOB-05,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+MOB-06,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+MOB-07,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+MOB-08,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+MOB-09,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+MOB-10,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+MOB-11,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+MOB-12,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+PRV-01,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+PRV-02,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+PRV-03,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+PRV-04,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+PRV-05,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+PRV-06,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+PRV-07,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+PRV-08,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+PRV-09,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+PRV-10,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+PRV-11,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+PRV-12,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+PRV-13,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+PRV-14,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+OPS-01,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+OPS-02,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+OPS-03,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+OPS-04,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+OPS-05,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+OPS-06,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+OPS-07,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+OPS-08,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+OPS-09,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+OPS-10,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+OPS-11,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+OPS-12,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+OPS-13,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+OPS-14,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+OPS-15,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+OPS-16,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+OPS-17,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+OPS-18,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+OPS-19,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+OPS-20,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+OPS-21,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+MIG-01,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+MIG-02,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+MIG-03,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+MIG-04,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+MIG-05,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+MIG-06,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+MIG-07,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+MIG-08,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+MIG-09,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+MIG-10,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+MIG-11,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+MIG-12,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+MIG-13,PARTIAL,PARTIAL REFERENCE ONLY,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+VRP-01,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+VRP-02,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+VRP-03,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+VRP-04,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+VRP-05,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+VRP-06,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+VRP-07,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+VRP-08,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+VRP-09,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register
+VRP-10,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,UNAVAILABLE,Synthetic local/reference profiles only; no claim of full feature support or production assurance,See canonical contract and gap register

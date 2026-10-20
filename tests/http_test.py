@@ -12,7 +12,7 @@ import urllib.request
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 with tempfile.TemporaryDirectory(prefix='svkms-http-') as tmp:
-    env={**os.environ,'SV_ENV':'local','SV_AUTH_MODE':'development','SV_DATA_DIR':tmp+'/data','SV_KEY_DIR':tmp+'/keys'}
+    env={**{k:v for k,v in os.environ.items() if not k.startswith('SV_')},'SV_ENV':'local','SV_AUTH_MODE':'development','SV_DATA_DIR':tmp+'/data','SV_KEY_DIR':tmp+'/keys'}
     for command in ['migrate','seed']:
         subprocess.run(['php','tools/vault.php',command],cwd=ROOT,env=env,check=True,stdout=subprocess.DEVNULL)
     tokens=json.loads(Path(tmp+'/data/demo-credentials.json').read_text())['tokens']

@@ -18,3 +18,7 @@ Reconciliation found no missing canonical ID in the blueprint, requirements trac
 The reference topology is adapted through [D-21](../decisions/D-21.md): extension-only PHP and a vanilla independent console allow immediate reproducible local tests without installing a framework or JavaScript supply chain. SQLite and filesystem key custody are development adapters. They do not fulfill the proposed PostgreSQL/RLS, private object-store, KMS/HSM, independent audit and signed-client enterprise architecture.
 
 The user's final README instruction is handled after implementation and verification. Its structure follows the researched GitHub/Google guidance: explain purpose/status first, give a reproducible quick start, describe architecture/configuration/use, then verification, security, limitations, operations, contribution, support and license, with links to detailed project records. See [research references](../architecture/references.md).
+
+## Self-hosted reference follow-up — 0.2.0-rc.1
+
+The user selected the self-hosted reference stack. Actual PostgreSQL/RLS, OIDC/PKCE/session protocols, transit roots, S3, ClamAV and WordPress lifecycle are now implemented/exercised as documented in the current verification evidence. These improve the initial local adapters without silently changing the canonical 346 contracts, claiming independent reviews or authorizing go-live. The README is updated after this implementation/evidence batch; remaining engineering and external gates remain explicit.

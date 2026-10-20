@@ -1,9 +1,9 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "SubsidiaryVault local development API",
-    "version": "0.1.0-dev",
-    "description": "Independent bearer identity, active membership, RBAC/ABAC/ACL, deny precedence. Local text-only profile; production and zero-knowledge are unavailable. Response schemas are intentionally generic; this is a reference, not a generated SDK contract."
+    "title": "SubsidiaryVault release candidate API",
+    "version": "0.2.0-rc.1",
+    "description": "Independent bearer identity, active membership, RBAC/ABAC/ACL, deny precedence. Local text profile or external managed/scanned reference profile; production and zero-knowledge are unavailable. Response schemas are intentionally generic; this is a reference, not a generated SDK contract."
   },
   "servers": [
     {
@@ -18,8 +18,138 @@
   "paths": {
     "/healthz": {
       "get": {
-        "summary": "Local service liveness",
+        "summary": "Service liveness with environment, providers and release approval status",
         "operationId": "get_healthz",
+        "responses": {
+          "200": {
+            "description": "Operation succeeded; see API guide for response semantics",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Malformed JSON",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Independent authentication required",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Policy denied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Resource or route unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict or protection gate",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Quota or request size exceeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "415": {
+            "description": "Unsupported content type",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Invalid input",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Tenant rate limit",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Unexpected failure, no sensitive details",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Dependency or integrity failure",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [],
+        "security": []
+      }
+    },
+    "/v1/auth/config": {
+      "get": {
+        "summary": "Public independent OIDC discovery configuration; no secrets",
+        "operationId": "get_v1_auth_config",
         "responses": {
           "200": {
             "description": "Operation succeeded; see API guide for response semantics",
@@ -277,7 +407,7 @@
     },
     "/v1/session": {
       "delete": {
-        "summary": "Revoke current development token; OIDC must revoke at provider",
+        "summary": "Revoke current access credential locally; browser also revokes provider refresh token",
         "operationId": "delete_v1_session",
         "responses": {
           "200": {
@@ -3148,7 +3278,7 @@
     },
     "/v1/tenants/{tenant}/documents": {
       "get": {
-        "summary": "List authorized documents or create encrypted UTF-8 text content",
+        "summary": "List authorized documents or create encrypted content permitted by the configured upload profile",
         "operationId": "get_v1_tenants_tenant_documents",
         "responses": {
           "200": {
@@ -3301,7 +3431,7 @@
         ]
       },
       "post": {
-        "summary": "List authorized documents or create encrypted UTF-8 text content",
+        "summary": "List authorized documents or create encrypted content permitted by the configured upload profile",
         "operationId": "post_v1_tenants_tenant_documents",
         "responses": {
           "200": {
@@ -3466,7 +3596,10 @@
                     "maxLength": 11184812
                   },
                   "mode": {
-                    "const": "managed-local"
+                    "enum": [
+                      "managed-local",
+                      "managed-external"
+                    ]
                   }
                 },
                 "required": [
@@ -4308,7 +4441,7 @@
     },
     "/v1/tenants/{tenant}/documents/{document}/versions/{number}": {
       "get": {
-        "summary": "Authorize current rights and return decrypted text as base64",
+        "summary": "Authorize current rights and return decrypted bytes as base64",
         "operationId": "get_v1_tenants_tenant_documents_document_versions_number",
         "responses": {
           "200": {
@@ -6905,7 +7038,7 @@
     },
     "/v1/tenants/{tenant}/knowledge": {
       "get": {
-        "summary": "List authorized knowledge or create encrypted UTF-8 text content",
+        "summary": "List authorized knowledge or create encrypted content permitted by the configured upload profile",
         "operationId": "get_v1_tenants_tenant_knowledge",
         "responses": {
           "200": {
@@ -7058,7 +7191,7 @@
         ]
       },
       "post": {
-        "summary": "List authorized knowledge or create encrypted UTF-8 text content",
+        "summary": "List authorized knowledge or create encrypted content permitted by the configured upload profile",
         "operationId": "post_v1_tenants_tenant_knowledge",
         "responses": {
           "200": {
@@ -7223,7 +7356,10 @@
                     "maxLength": 11184812
                   },
                   "mode": {
-                    "const": "managed-local"
+                    "enum": [
+                      "managed-local",
+                      "managed-external"
+                    ]
                   }
                 },
                 "required": [
@@ -8065,7 +8201,7 @@
     },
     "/v1/tenants/{tenant}/knowledge/{document}/versions/{number}": {
       "get": {
-        "summary": "Authorize current rights and return decrypted text as base64",
+        "summary": "Authorize current rights and return decrypted bytes as base64",
         "operationId": "get_v1_tenants_tenant_knowledge_document_versions_number",
         "responses": {
           "200": {
@@ -10666,7 +10802,7 @@
       "VaultBearer": {
         "type": "http",
         "scheme": "bearer",
-        "description": "Development opaque token or pinned-key RS256 adapter selected by server configuration. WordPress cookies, nonces and roles are not accepted."
+        "description": "Development opaque token, legacy pinned RS256 adapter, or live OIDC introspection selected by server configuration. WordPress cookies, nonces and roles are not accepted."
       }
     },
     "schemas": {

@@ -1,5 +1,6 @@
 <?php
 declare(strict_types=1);
+require __DIR__ . '/local_environment.php';
 require dirname(__DIR__) . '/services/core-api/src/bootstrap.php';
 require dirname(__DIR__) . '/apps/trusted-vault-client/FileCipher.php';
 use SubsidiaryVault\{Application,Config,Database};

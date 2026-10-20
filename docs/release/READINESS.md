@@ -1,21 +1,25 @@
 # Release readiness
 
-Version: 0.1.0-dev. Decision: **INCOMPLETE DEVELOPMENT BUILD — DO NOT USE FOR COMPANY DATA**.
+Version: **0.2.0-rc.1**. Decision: **UNSIGNED ENGINEERING RELEASE CANDIDATE — NOT APPROVED FOR PRODUCTION**. Synthetic data only. The requested complete 346-feature product remains unfinished: 116 partial, 227 not started, 3 blocked and 0 fully verified canonical contracts. `SV_ENV=production` still rejects startup; enabling staging does not grant production approval.
 
-The whole product is not implemented. All 346 requirements remain in the registry; 0 have full canonical acceptance. Passing local component tests establish the stated local behaviors only. The application rejects production mode in code. The independent high-assurance zero-knowledge repository mode is unavailable.
+This batch implements and exercises actual PostgreSQL/RLS, Keycloak PKCE/refresh/revocation/introspection, OpenBao transit, S3 conditional objects, ClamAV scanning and live WordPress lifecycle. It also adds signed audit-head checkpoints, immutable CI/image pins, source secret scanning and evidence-bound candidate packaging. These replace specific local-only prototype limitations. They do not complete the missing product, persistent hardened deployment, managed recovery or independently signed zero-knowledge client.
 
-| Source gate | State | Evidence or missing action |
+| Source gate | State | Evidence and remaining action |
 |---|---|---|
-| G0 Charter and authority | OPEN | Source review and internal ADRs exist; actual sponsors, owners, legal jurisdictions and signatories unassigned |
-| G1 Threat model and design | PARTIAL INTERNAL | Threat/data flow and 22 ADRs exist; enterprise design, protocol and independent review incomplete |
-| G2 Tenant and access proof | PARTIAL INTERNAL | Executed ten-tenant local negative tests and policy checks; full enterprise paths/personas/identity/data plane incomplete |
-| G3 Cryptographic assurance | BLOCKED | Local Sodium/envelope/stream tests pass; recipient protocol, signed native client and external assessment missing |
-| G4 Core document lifecycle | PARTIAL INTERNAL | Text versions, metadata, review, records/holds/disposition and connector work; binary ingestion, previews, folder hierarchy and broader lifecycle incomplete |
-| G5 Governance and resilience | PARTIAL INTERNAL | Local snapshot/isolated restoration and minimal runbooks; production custody, WORM, monitoring and measured drills missing |
-| G6 Subsidiary pilot | NOT RUN | Synthetic fixtures are not human UAT or an actual customer pilot |
-| G7 Independent production go/no-go | DENIED | Engineering gaps plus security/crypto/legal/privacy/records/accessibility/DR evidence and accountable signatures outstanding |
-| G8 Enterprise expansion | NOT READY | Enterprise/expansion requirements remain tracked, mostly not started |
+| G0 Charter and authority | OPEN | All sources/contracts reconciled; actual accountable sponsors, jurisdiction and signatories remain unassigned |
+| G1 Threat model and design | PARTIAL INTERNAL | 22 ADRs and updated boundaries; full enterprise/client protocol and independent design review incomplete |
+| G2 Tenant and access proof | PARTIAL INTERNAL | Ten-tenant local and real restricted PostgreSQL/RLS negative tests; live OIDC protocol and current-membership checks. Full personas, folder inheritance, directory lifecycle and privileged MFA acceptance incomplete |
+| G3 Cryptographic assurance | BLOCKED | Sodium vectors, real non-exportable transit wrapping/rotation/outages and audit-checkpoint tamper tests; signed client, recipient/device/recovery protocol and external assessment missing |
+| G4 Core document lifecycle | PARTIAL INTERNAL | Encrypted versions/metadata, limited scanned formats, review, records/holds/disposition and actual WordPress lifecycle work; folders, resumable capture, quarantine, previews, schedules and broader lifecycle incomplete |
+| G5 Governance and resilience | PARTIAL INTERNAL | Local isolated restore and checkpoint tooling; independent WORM audit, persistent sealed production services, managed coordinated backups, monitored recovery/failover and measured capacity/DR missing |
+| G6 Subsidiary pilot | NOT RUN | Synthetic fixtures and protocol harnesses are not human UAT, browser acceptance or a customer pilot |
+| G7 Independent production go/no-go | DENIED | Unfinished software plus independent security/crypto/legal/privacy/records/a11y/DR evidence and named human approvals remain |
+| G8 Enterprise expansion | NOT READY | All enterprise/expansion contracts remain tracked; most are not started |
 
-`python3 tools/release_gate.py` exits nonzero and reports missing gates. `--development` validates only the local distributable package; it does not approve production. No full security-scan pipeline, signed artifact provenance, penetration test, professional translation certification or legal compliance claim is made.
+The [verification report](verification.json) binds executed checks to the application/tooling fingerprint; [test results](../implementation/TEST-RESULTS.md) explain their scope. Candidate artifacts are generated by `make release-candidate` only from current passing evidence. The manifest states `production_approved:false`; the component inventory is not a complete transitive/OS SBOM. Artifacts are unsigned and are not a published release.
 
-Docker configuration and CI definitions are supplied but have not run in this environment. The host Docker daemon was inaccessible. WordPress connector logic and packaging are tested in a small API harness; live WordPress activation, multisite, WP REST integration, Plugin Check and WordPress coding-standard checks remain unperformed. Local test logs and precise scope appear in [TEST-RESULTS](../implementation/TEST-RESULTS.md).
+`python3 tools/release_gate.py --development` checks the connector ZIP only. `python3 tools/release_gate.py` intentionally exits 1 with production DENIED. It must not be bypassed or mistaken for an attestation validator; real production approval and its validation mechanism remain future work.
+
+Docker build and actual reference services now run in this environment. Live WordPress activation/settings/capabilities/REST/deactivation/uninstall ran; multisite, browser nonce/form coverage, Plugin Check and WPCS did not. A pinned source-worktree Gitleaks scan is provided; full SAST/SCA/image/DAST, signed provenance and remote GitHub Actions execution are not claimed.
+
+Use the [self-hosted reference guide](../operations/self-hosted-reference.md) for exact fixture topology/configuration and the [production exit criteria](production-exit-criteria.md) for remaining engineering and accountable evidence. The [gap register](../requirements/gap-register.md) and [traceability ledger](../requirements/traceability.csv) remain the full work queue. No source requirement has been silently removed or marked complete to obtain a release label.

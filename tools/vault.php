@@ -7,19 +7,13 @@ use SubsidiaryVault\{Application,Config,Database,Policy};
 umask(0077);
 $command=$argv[1]??'help';
 $config=new Config();
-$db=new Database($config->dataDir . '/vault.sqlite');
+$db=new Database($config->database);
 if ($command==='migrate') {
-    $current=$db->one("SELECT name FROM sqlite_master WHERE type='table' AND name='schema_migrations'")?(int)$db->one('SELECT MAX(version) AS version FROM schema_migrations')['version']:0;
-    foreach(glob(dirname(__DIR__) . '/services/core-api/migrations/*.sql') as $migration){
-        $number=(int)basename($migration);
-        if($number<=$current){continue;}
-        $db->begin();
-        try{$db->pdo->exec(file_get_contents($migration));$db->commit();}catch(Throwable $e){$db->rollback();throw $e;}
-        $current=$number;echo "Applied migration $number.\n";
-    }
+    $current=\SubsidiaryVault\Migrations::run($db);
     echo "Schema at version $current.\n";exit;
 }
 if ($command==='seed') {
+    if (!in_array($config->environment,['local','integration'],true)) { throw new RuntimeException('seed_forbidden_outside_test_environment'); }
     if ($config->authMode!=='development') { throw new RuntimeException('seed_requires_development_auth'); }
     if ($db->one('SELECT id FROM tenants LIMIT 1')) { echo "Seed already exists; no identities, tokens or keys replaced.\n"; exit; }
     $app=new Application($config); $tokens=[]; $db=$app->db;

@@ -8,6 +8,7 @@ final class Application
     public readonly Policy $policy;
     public readonly Crypto $crypto;
     public readonly Audit $audit;
+    public readonly ObjectStore $objects;
     private ?array $actor = null;
     private ?string $tenant = null;
     private string $requestId = '';
@@ -15,23 +16,30 @@ final class Application
 
     public function __construct(public readonly Config $config)
     {
-        $this->db = new Database($config->dataDir . '/vault.sqlite');
+        $this->db = new Database($config->database);
         $this->policy = new Policy($this->db);
         $this->crypto = new Crypto($config->keyDir);
         $this->audit = new Audit($this->db);
+        $this->objects = new ObjectStore($config);
     }
 
     /** Shared HTTP/CLI test boundary; every domain route uses the same policy engine. */
     public function handle(string $method, string $path, string $authorization = '', array $body = [], array $query = []): array
     {
         $this->actor = null; $this->tenant = null; $this->newObjects = []; $this->requestId = Database::id();
-        if ($method === 'GET' && $path === '/healthz') { return [200, ['status'=>'ok','profile'=>'local-development','version'=>'0.1.0-dev']]; }
+        if ($method === 'GET' && $path === '/healthz') { return [200, ['status'=>'ok','profile'=>$this->config->environment,'version'=>Version::CURRENT,'mode'=>$this->config->managedMode(),'release_approved'=>false]]; }
+        if ($method === 'GET' && $path === '/v1/auth/config') {
+            try { return [200,[...($this->config->authMode==='oidc-introspection'?(new Oidc($this->db,$this->config))->configuration():['enabled'=>false]),'upload_profile'=>getenv('SV_UPLOAD_PROFILE')?:'text','max_file_bytes'=>Config::MAX_FILE_BYTES,'mode'=>$this->config->managedMode()]]; }
+            catch (\Throwable) { return [503,['error'=>'identity_configuration_unavailable']]; }
+        }
         try {
             $this->db->begin();
             $this->actor = (new Auth($this->db,$this->config))->authenticate($authorization);
+            $this->db->context($this->actor['id']);
             $parts = explode('/', trim($path,'/'));
             if (count($parts)>=3 && $parts[0]==='v1' && $parts[1]==='tenants') {
                 $this->tenant = self::id($parts[2]);
+                $this->db->context($this->actor['id'],$this->tenant);
                 $this->policy->membership($this->actor,$this->tenant);
                 $this->rateLimit();
             }
@@ -43,13 +51,14 @@ final class Application
             return [200,$result];
         } catch (\Throwable $e) {
             $this->db->rollback();
-            foreach ($this->newObjects as $file) { @unlink($file); }
+            foreach ($this->newObjects as $object) { $this->objects->rollbackLocal($object); }
             $error = $e instanceof ApiError ? $e : new ApiError(500,'internal_error');
             // No request bodies, tokens, titles, file data or key material in logs.
             if (!$e instanceof ApiError) { error_log('svkms_failure request=' . $this->requestId . ' class=' . get_class($e)); }
             if ($this->actor && $this->tenant && $this->db->one('SELECT id FROM tenants WHERE id=?',[$this->tenant])) {
                 try {
                     $this->db->begin();
+                    $this->db->context($this->actor['id'],$this->tenant);
                     $this->countRequest();
                     $this->audit->append($this->tenant,$this->actor['id'],'request.denied','', 'denied',$error->reason,$this->requestId);
                     $this->db->commit();
@@ -68,6 +77,10 @@ final class Application
             return $u;
         }
         if ($p === ['v1','session'] && $method==='DELETE') {
+            if (isset($this->actor['external_hash'])) {
+                $this->db->query('INSERT INTO revoked_access_tokens(hash,expires_at) VALUES(?,?) ON CONFLICT DO NOTHING',[$this->actor['external_hash'],$this->actor['expires_at']]);
+                return ['revoked'=>true,'provider_refresh_revocation_required'=>true];
+            }
             if (!$this->actor['credential']) { throw new ApiError(409,'revoke_at_identity_provider'); }
             $this->db->query('UPDATE credentials SET revoked=1 WHERE hash=?',[$this->actor['credential']]);
             return ['revoked'=>true];
@@ -75,11 +88,12 @@ final class Application
         if ($p === ['v1','posture'] && $method==='GET') {
             $m=$this->policy->membership($this->actor,'holding');
             if (!in_array('posture',$m['capabilities'],true)) { throw new ApiError(403,'capability_denied'); }
-            return ['tenants'=>$this->db->all("SELECT t.id,t.name,t.status,COUNT(d.id) AS documents,COALESCE(SUM(v.bytes),0) AS bytes FROM tenants t LEFT JOIN documents d ON d.tenant_id=t.id AND d.state!='deleted' LEFT JOIN versions v ON v.tenant_id=d.tenant_id AND v.document_id=d.id AND v.number=d.current_version WHERE t.id!='holding' GROUP BY t.id ORDER BY t.id")];
+            return ['tenants'=>$this->db->all($this->db->driver==='pgsql' ? 'SELECT * FROM svkms_posture()' : "SELECT t.id,t.name,t.status,COUNT(d.id) AS documents,COALESCE(SUM(v.bytes),0) AS bytes FROM tenants t LEFT JOIN documents d ON d.tenant_id=t.id AND d.state!='deleted' LEFT JOIN versions v ON v.tenant_id=d.tenant_id AND v.document_id=d.id AND v.number=d.current_version WHERE t.id!='holding' GROUP BY t.id ORDER BY t.id")];
         }
         if ($p === ['v1','tenants'] && $method==='POST') { return $this->provision($b); }
         if (count($p)===4 && $p[0]==='v1' && $p[1]==='governance' && $p[2]==='tenants' && $method==='PATCH') {
             $this->governance(); self::keys($b,['status']); $target=self::id($p[3]); $status=$b['status']??'';
+            $this->db->context($this->actor['id'],$target);
             if (!in_array($status,['active','suspended'],true)) { throw new ApiError(409,'closure_review_required'); }
             $tenant=$this->db->one('SELECT id,status FROM tenants WHERE id=?',[$target]);
             if (!$tenant || $target==='holding' || $tenant['status']==='closed') { throw new ApiError(404,'tenant_not_available'); }
@@ -152,7 +166,7 @@ final class Application
                 if (!$this->db->one('SELECT id FROM groups WHERE tenant_id=? AND id=?',[$t,$id]) || !$this->db->one("SELECT user_id FROM memberships WHERE tenant_id=? AND user_id=? AND status='active'",[$t,$user])) { throw new ApiError(422,'invalid_group_membership'); }
                 // A manager cannot add themselves to a group that already confers document entitlements.
                 if ($method==='POST' && $user===$this->actor['id']) { throw new ApiError(403,'self_grant_denied'); }
-                if ($method==='POST') { $this->db->query('INSERT OR IGNORE INTO group_members(tenant_id,group_id,user_id) VALUES(?,?,?)',[$t,$id,$user]); }
+                if ($method==='POST') { $this->db->query('INSERT INTO group_members(tenant_id,group_id,user_id) VALUES(?,?,?) ON CONFLICT DO NOTHING',[$t,$id,$user]); }
                 else { $this->db->query('DELETE FROM group_members WHERE tenant_id=? AND group_id=? AND user_id=?',[$t,$id,$user]); }
                 $this->event('group.membership.updated',$id); return ['updated'=>true];
             }
@@ -187,7 +201,7 @@ final class Application
             }
             if ($method==='POST') {
                 $this->permit('create'); self::keys($b,['title','classification','metadata','content_base64','mode']);
-                if (($b['mode']??'managed-local')!=='managed-local') { throw new ApiError(409,'security_mode_unavailable'); }
+                if (($b['mode']??$this->config->managedMode())!==$this->config->managedMode()) { throw new ApiError(409,'security_mode_unavailable'); }
                 $m=$this->policy->membership($this->actor,$t); $classification=$b['classification']??0;
                 if (!is_int($classification) || $classification<0 || $classification>3 || $classification>$m['clearance']) { throw new ApiError(422,'invalid_classification'); }
                 $id=Database::id(); $now=time(); $title=self::text($b,'title',240); $metadata=self::metadata($b['metadata']??[]);
@@ -231,8 +245,7 @@ final class Application
                 $this->permit('download',$doc); $version=self::positive($p[6]);
                 $v=$this->db->one('SELECT * FROM versions WHERE tenant_id=? AND document_id=? AND number=?',[$t,$id,$version]);
                 if (!$v) { throw new ApiError(404,'version_not_found'); }
-                $path=$this->objectPath($v['object_id']); $cipher=@file_get_contents($path);
-                if ($cipher===false) { throw new ApiError(503,'object_unavailable'); }
+                $cipher=$this->objects->get($t,$v['object_id']);
                 $plain=$this->crypto->decrypt($t,Crypto::context($t,$id,$version,(int)$doc['classification']),$cipher,$v['envelope']);
                 if (!hash_equals($v['digest'],hash('sha256',$plain))) { throw new ApiError(503,'integrity_check_failed'); }
                 $result=['content_base64'=>base64_encode($plain),'mime'=>$v['mime'],'version'=>$version,'digest'=>$v['digest']]; sodium_memzero($plain);
@@ -332,7 +345,7 @@ final class Application
         }
         if ($sub==='bookmark' && count($p)===6 && in_array($method,['POST','DELETE'],true)) {
             $this->permit('view',$doc);
-            if ($method==='POST') { $this->db->query('INSERT OR IGNORE INTO bookmarks(tenant_id,document_id,user_id) VALUES(?,?,?)',[$t,$id,$this->actor['id']]); }
+            if ($method==='POST') { $this->db->query('INSERT INTO bookmarks(tenant_id,document_id,user_id) VALUES(?,?,?) ON CONFLICT DO NOTHING',[$t,$id,$this->actor['id']]); }
             else { $this->db->query('DELETE FROM bookmarks WHERE tenant_id=? AND document_id=? AND user_id=?',[$t,$id,$this->actor['id']]); }
             return ['bookmarked'=>$method==='POST'];
         }
@@ -345,28 +358,18 @@ final class Application
         if (!is_string($encoded) || strlen($encoded)>4*ceil(Config::MAX_FILE_BYTES/3)) { throw new ApiError(413,'file_limit_exceeded'); }
         $plain=base64_decode($encoded,true);
         if ($plain===false || strlen($plain)>Config::MAX_FILE_BYTES || $plain==='') { throw new ApiError(422,'invalid_content'); }
-        // Local proof accepts UTF-8 text only. Binary files require a future reviewed scanner pipeline.
-        if (!mb_check_encoding($plain,'UTF-8') || str_contains($plain,"\0") || preg_match('/[\x01-\x08\x0b\x0c\x0e-\x1f]/',$plain)) { throw new ApiError(415,'text_only_local_profile'); }
-        if (str_contains($plain,'EICAR-STANDARD-ANTIVIRUS-TEST-FILE')) { throw new ApiError(422,'test_signature_rejected'); }
+        $mime=FileScanner::validate($plain);
         $bytes=strlen($plain); $tenant=$doc['tenant_id'];
         $quota=$this->db->one('SELECT quota_bytes FROM tenants WHERE id=?',[$tenant])['quota_bytes'];
         $used=$this->db->one('SELECT COALESCE(SUM(bytes),0) AS used FROM versions WHERE tenant_id=?',[$tenant])['used'];
         if ($used+$bytes>$quota) { throw new ApiError(413,'tenant_quota_exceeded'); }
-        $version=(int)$doc['current_version']+1; $object=Database::id(); $path=$this->objectPath($object); $digest=hash('sha256',$plain);
+        $version=(int)$doc['current_version']+1; $object=Database::id(); $digest=hash('sha256',$plain);
         try { $encrypted=$this->crypto->encrypt($tenant,Crypto::context($tenant,$doc['id'],$version,(int)$doc['classification']),$plain); } finally { sodium_memzero($plain); }
-        $handle=fopen($path,'x'); if (!$handle) { throw new ApiError(503,'storage_unavailable'); }
-        $this->newObjects[]=$path; chmod($path,0600);
-        try { if (fwrite($handle,$encrypted['ciphertext'])!==strlen($encrypted['ciphertext'])) { throw new ApiError(503,'storage_unavailable'); } if (!fflush($handle)) { throw new ApiError(503,'storage_unavailable'); } if (function_exists('fsync') && !fsync($handle)) { throw new ApiError(503,'storage_unavailable'); } } finally { fclose($handle); }
-        $this->db->query('INSERT INTO versions(tenant_id,document_id,number,object_id,envelope,bytes,digest,mime,author_id,created_at) VALUES(?,?,?,?,?,?,?,?,?,?)',[$tenant,$doc['id'],$version,$object,$encrypted['envelope'],$bytes,$digest,'text/plain',$this->actor['id'],time()]);
+        $this->objects->put($tenant,$object,$encrypted['ciphertext']);$this->newObjects[]=$object;
+        $this->db->query('INSERT INTO versions(tenant_id,document_id,number,object_id,envelope,bytes,digest,mime,author_id,created_at) VALUES(?,?,?,?,?,?,?,?,?,?)',[$tenant,$doc['id'],$version,$object,$encrypted['envelope'],$bytes,$digest,$mime,$this->actor['id'],time()]);
         $this->db->query("UPDATE documents SET current_version=?,state='draft',updated_at=? WHERE tenant_id=? AND id=?",[$version,time(),$tenant,$doc['id']]);
     }
 
-    private function objectPath(string $id): string
-    {
-        if (!preg_match('/^[a-f0-9]{32}$/D',$id)) { throw new ApiError(503,'invalid_object_reference'); }
-        $dir=$this->config->dataDir . '/objects'; if (!is_dir($dir)) { mkdir($dir,0700,true); }
-        return $dir . '/' . $id . '.bin';
-    }
     private function document(string $id, string $kind='document'): array
     {
         $doc=$this->db->one("SELECT * FROM documents WHERE tenant_id=? AND id=? AND kind=? AND state!='deleted'",[$this->tenant,$id,$kind]);
@@ -382,7 +385,7 @@ final class Application
         $doc['metadata']=json_decode($doc['metadata'],true,16,JSON_THROW_ON_ERROR);
         $doc['permissions']=[];
         foreach (Policy::DOCUMENT_ACTIONS as $action) { $doc['permissions'][$action]=$this->policy->reason($this->actor,$doc['tenant_id'],$action,$doc)===null; }
-        $doc['mode']='managed-local'; return $doc;
+        $doc['mode']=$this->config->managedMode(); return $doc;
     }
     private function permit(string $action, ?array $doc=null): void { $this->policy->require($this->actor,$this->tenant,$action,$doc); }
     private function editable(array $doc): void
@@ -423,6 +426,7 @@ final class Application
         if (!$this->db->one("SELECT id FROM users WHERE id=? AND status='active'",[$owner])) { throw new ApiError(422,'unknown_owner'); }
         if (($b['region']??'')!=='local') { throw new ApiError(422,'region_not_available'); }
         $id=Database::id();
+        $this->db->context($this->actor['id'],$id);
         $this->db->query('INSERT INTO tenants(id,name,parent_id,region,created_at) VALUES(?,?,?,?,?)',[$id,$name,'holding','local',time()]);
         $this->db->query('INSERT INTO roles(tenant_id,id,name,capabilities) VALUES(?,?,?,?)',[$id,'administrator','Subsidiary administrator',json_encode(Policy::CAPABILITIES)]);
         $this->db->query('INSERT INTO memberships(tenant_id,user_id,role_id,clearance) VALUES(?,?,?,?)',[$id,$owner,'administrator',3]);
@@ -437,13 +441,13 @@ final class Application
     }
     private function rateLimit(): void
     {
-        $row=$this->db->one('SELECT requests FROM rate_limits WHERE tenant_id=? AND user_id=? AND window=?',[$this->tenant,$this->actor['id'],intdiv(time(),60)]);
+        $row=$this->db->one('SELECT requests FROM rate_limits WHERE tenant_id=? AND user_id=? AND "window"=?',[$this->tenant,$this->actor['id'],intdiv(time(),60)]);
         if (($row['requests']??0)>=120) { throw new ApiError(429,'tenant_rate_limit'); } $this->countRequest();
     }
     private function countRequest(): void
     {
-        $this->db->query('INSERT INTO rate_limits(tenant_id,user_id,window,requests) VALUES(?,?,?,1) ON CONFLICT(tenant_id,user_id,window) DO UPDATE SET requests=requests+1',[$this->tenant,$this->actor['id'],intdiv(time(),60)]);
-        $this->db->query('DELETE FROM rate_limits WHERE window<?',[intdiv(time(),60)-2]);
+        $this->db->query('INSERT INTO rate_limits(tenant_id,user_id,"window",requests) VALUES(?,?,?,1) ON CONFLICT(tenant_id,user_id,"window") DO UPDATE SET requests=rate_limits.requests+1',[$this->tenant,$this->actor['id'],intdiv(time(),60)]);
+        $this->db->query('DELETE FROM rate_limits WHERE "window"<?',[intdiv(time(),60)-2]);
     }
     public static function id(mixed $id): string
     {

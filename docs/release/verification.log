@@ -1,0 +1,95 @@
+$ make validate
+python3 tools/lint.py
+PHP syntax passed: 41 files; JavaScript syntax passed
+php tests/run.php
+PASS authentication and development credentials
+PASS all ten tenants reject foreign document references and resource surfaces
+PASS holding and subsidiary administration do not grant content access
+PASS view and download are independent; clearance filters search
+PASS explicit deny overrides role grants and revocation is immediate
+PASS encryption uses fresh version keys and authenticates bound context
+PASS workflow binds version and blocks self approval and in-review edits
+PASS holds and retention override every disposition path with dual release
+PASS soft deletion requires separate disposition approval and prevents retrieval
+PASS membership suspension and expiry rechecked on every request
+PASS one identity keeps independent memberships and tenant roles
+PASS privilege escalation, invalid role capabilities and locked floors fail closed
+PASS text upload limits, unsafe profiles, malformed content and quotas
+PASS knowledge revision history comments and bookmarks execute real persistence
+PASS tenant rates are isolated and rejected requests consume quota
+PASS version and audit rows reject mutation and chains verify
+PASS database preservation guards resist direct record mutation and hold edits
+PASS pinned RS256 identity adapter rejects token confusion and unknown subjects
+PASS metadata revisions reject lost updates independently of content versions
+PASS governance provisioning is idempotent and suspension preserves records
+PASS session revocation is effective on subsequent requests
+21 test groups; 1058 assertions passed.
+php tests/plugin_test.php
+WordPress connector harness: 11 assertions passed (live WordPress not covered).
+php tests/crypto_backup_test.php
+Cryptography, worker and isolated recovery: 62 assertions passed.
+php tests/audit_checkpoint_test.php
+Independent audit checkpoint binding: 9 assertions passed.
+php tests/config_test.php
+Deployment configuration/TLS guards: 12 assertions passed.
+node tests/oidc_browser_test.mjs
+Browser PKCE state/issuer/storage checks: 22 assertions passed (DOM-independent unit harness).
+python3 tests/http_test.py
+HTTP transport: 23 assertions passed
+python3 tools/validate_requirements.py
+Registry valid: 346 immutable contracts, 22 modules, 26 personas, 22 ADRs, 13 draft catalogs; source hashes match.
+
+$ python3 tools/integration.py test
+ Container svkms-release-it-postgres-1 Running 
+ Container svkms-release-it-postgres-1 Waiting 
+ Container svkms-release-it-postgres-1 Healthy 
+ Container svkms-release-it-objects-1 Running 
+ Container svkms-release-it-scanner-1 Running 
+ Container svkms-release-it-identity-1 Running 
+ Container svkms-release-it-key-service-1 Running 
+Python(50562) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+Python(50585) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+Schema at version 3.
+Python(50592) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+Seeded 10 subsidiaries, 81 independent identities, 10 encrypted text documents.
+Development tokens (8 hour expiry) written to private data directory.
+Python(50954) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+Python(50969) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+Live PostgreSQL RLS/API: 146 assertions passed.
+Python(51436) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+Bound exact independent issuer/subject to existing identity; no new entitlements granted.
+Python(51437) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+Live introspection/API: 10 assertions passed.
+Python(51619) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+svkms_object_failure status=412 code=PreconditionFailed errno=0
+svkms_object_failure status=404 code=NoSuchKey errno=0
+svkms_object_failure status=0 code=transport errno=7
+Live external keys/S3/ClamAV: 17 assertions passed.
+Python(51801) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+Live root rotation: 2 assertions passed.
+Python(51804) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+ Container svkms-release-it-wordpress-db-1 Running 
+ Container svkms-release-it-wordpress-db-1 Waiting 
+ Container svkms-release-it-wordpress-db-1 Healthy 
+Python(51809) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+ Container svkms-release-it-wordpress-db-1 Running 
+ Container svkms-release-it-wordpress-1 Running 
+ Container svkms-release-it-wordpress-db-1 Waiting 
+ Container svkms-release-it-wordpress-db-1 Healthy 
+Python(51989) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+Python(52179) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+Python(52193) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+Python(52200) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+Python(52271) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+Python(52356) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+Python(52463) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+Isolated PostgreSQL, Keycloak and OpenBao services are ready; secrets remain in ignored private state.
+Live Keycloak PKCE/refresh protocol: 25 assertions passed
+Live managed providers: real OpenBao transit, signed S3 requests and ClamAV INSTREAM exercised; integration fixtures are not a production KMS/HSM or storage certification.
+Live WordPress activation/REST/settings: 13 assertions passed.
+Live WordPress HTTP/deactivation/uninstall: 3 assertions passed
+
+$ python3 tools/secret_scan.py
+[90m9:03AM[0m [32mINF[0m [1mscanned ~2799776 bytes (2.80 MB) in 636ms[0m
+[90m9:03AM[0m [32mINF[0m [1mno leaks found[0m
+Pinned Gitleaks release-worktree scan passed; git history and ignored deployment state were outside scope.

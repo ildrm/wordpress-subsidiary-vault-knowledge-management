@@ -4,12 +4,13 @@
 
 SubsidiaryVault separates organizational document access from WordPress administration. An independently authenticated service controls subsidiary memberships, document permissions, encrypted versions and governance. WordPress supplies a small connector for navigation and connection settings.
 
-**Status: `0.1.0-dev` — incomplete local development implementation. Use synthetic data only.** This repository contains working, tested software, but it does **not** implement the entire 346-requirement enterprise product. Production deployment and high-assurance zero-knowledge repository access are unavailable. [Readiness](docs/release/READINESS.md) and [feature coverage](docs/requirements/feature-coverage.md) describe the exact limits.
+**Status: `0.2.0-rc.1` — unsigned engineering release candidate. Use synthetic data only.** This repository contains working, tested software, but it does **not** implement the entire 346-requirement enterprise product. Production deployment and high-assurance zero-knowledge repository access are unavailable. [Readiness](docs/release/READINESS.md) and [feature coverage](docs/requirements/feature-coverage.md) describe the exact limits.
 
 ## Contents
 
 - [Working capabilities and scope](#working-capabilities-and-scope)
 - [Quick start](#quick-start)
+- [Self-hosted reference stack](#self-hosted-reference-stack)
 - [Architecture and security modes](#architecture-and-security-modes)
 - [Repository structure](#repository-structure)
 - [Using the workspace](#using-the-workspace)
@@ -24,18 +25,19 @@ SubsidiaryVault separates organizational document access from WordPress administ
 
 ## Working capabilities and scope
 
-The local application provides:
+The application provides these working components:
 
 - Ten seeded subsidiaries with independent memberships, eight synthetic identities each and a separate holding governor.
 - Current-membership checks, tenant capabilities, classification clearance and user/group/role document ACLs. Explicit denials win; privileged actions require session MFA. WordPress administrators gain no document rights.
 - Tenant custom roles, static teams, department hierarchies, eligible settings, quotas, idempotent provisioning and audited suspension/reactivation.
-- UTF-8 text documents and knowledge articles, encrypted immutable content versions, separate metadata revisions, permission-filtered title/metadata search, comments and bookmarks.
+- Text documents and knowledge articles, optional scanned PDF/PNG/JPEG/JSON/CSV uploads, encrypted immutable content versions, separate metadata revisions, permission-filtered title/metadata search, comments and bookmarks.
 - Version-bound reviews with separate approvers; immutable record declaration; legal holds and dual-officer release; monotonic retention; separate disposition approval before soft deletion.
-- Local hash-linked audit, transactional outbox and current-authorized local inbox notifications.
+- Hash-linked audit, Ed25519 trusted-prefix checkpoint tooling, transactional outbox and current-authorized local inbox notifications.
+- Optional PostgreSQL forced RLS, real Keycloak OIDC code/PKCE/refresh/revocation/introspection, non-exportable OpenBao transit wrapping and conditional S3 ciphertext objects.
 - An independent browser console, installable WordPress connector, unsigned offline file-encryption utility, encrypted snapshots and isolated restoration.
 - Draft navigation/status translations for 13 languages, Persian/Arabic direction handling, reproducible tests and requirement tracking.
 
-These are partial implementations of broader canonical features. Binary formats, resumable uploads, actual antivirus/quarantine, folders/libraries, rich coauthoring, full workflow design, external sharing/data rooms, cloud integrations, AI, native/mobile clients, full migration tools and specialized enterprise modules remain unfinished. PostgreSQL/RLS, private object storage, KMS/HSM, complete identity federation and independent immutable audit are also not implemented production adapters. See the [gap register](docs/requirements/gap-register.md).
+These are partial implementations of broader canonical features. Folders/libraries, full business formats and resumable capture/quarantine, protected previews, rich coauthoring, complete metadata/workflow/records engines, directory/MFA lifecycle, external sharing/data rooms, AI, native/mobile clients, migrations and specialized modules remain unfinished. Persistent hardened infrastructure, managed coordinated recovery and an independent immutable audit service also remain missing. The [gap register](docs/requirements/gap-register.md) and [production exit criteria](docs/release/production-exit-criteria.md) retain the work; no feature is removed to obtain a release label.
 
 ## Quick start
 
@@ -43,9 +45,9 @@ Prerequisites:
 
 | Tool | Requirement |
 |---|---|
-| PHP CLI | 8.3+ with `pdo_sqlite`, `sodium`, `openssl`, `intl`, `mbstring` and `Phar` |
+| PHP CLI | 8.3+ with `pdo_sqlite`, `sodium`, `openssl`, `intl`, `mbstring`, `fileinfo` and `Phar`; add `pdo_pgsql` and `curl` for the managed reference adapters |
 | Python | 3.10+ for verification/build tools |
-| Node.js | For JavaScript syntax verification; no npm installation is needed |
+| Node.js | For JavaScript syntax/PKCE verification; no npm installation is needed |
 | Make | Optional convenience targets; commands can be run individually |
 
 No Composer or npm dependencies are required. The executed host environment was PHP 8.5.8, Python 3.14.5 and Node.js 26.12.0 on macOS ARM64. Other runtime versions are not claimed as locally tested.
@@ -88,7 +90,21 @@ docker compose -f infrastructure/dev/compose.yaml up --build
 docker compose -f infrastructure/dev/compose.yaml exec vault php tools/vault.php token tenant-01-custodian
 ```
 
-Docker build/runtime was **not tested** here because daemon access was unavailable. This composition uses local SQLite/key volumes and a mutable development image tag; it is not the enterprise deployment architecture.
+The pinned-base development image built and its required PHP extensions passed a container smoke check (PHP 8.5.11). This convenience composition still uses local SQLite/key volumes and a local image tag; it is not the production deployment. The separate actual service reference stack is below.
+
+## Self-hosted reference stack
+
+The selected target is self-hosted. A pinned, disposable reference composition runs actual PostgreSQL, Keycloak, OpenBao, SeaweedFS S3, ClamAV and WordPress/MariaDB/WP-CLI. It exercises the implemented adapters without using company data. Install Docker/Compose v2 and the managed PHP extensions above, then run:
+
+```sh
+make release-verify
+make release-candidate
+python3 tools/integration.py down
+```
+
+The full verification runs local tests, live service protocols and a pinned Gitleaks source scan. On ARM, the ClamAV fixture needs amd64 emulation. Images take time/RAM/disk to pull and start; orchestration waits for the actual scanner before identity tests. Definition refresh returned CDN HTTP 403 in this environment. Tests use bundled signatures only while within the enforced age limit; successful automatic updates and operational update access remain unverified. Generated credentials and random loopback ports live only in ignored private `var/release-integration/`; never distribute it. `down` stops only `svkms-release-it` and retains the synthetic WordPress volume. Fixtures are disposable; they are not durable key/data custody.
+
+This is an integration environment, not the missing persistent production deployment. It uses dev-mode identity/key services, HTTP loopback, temporary storage and broader S3 fixture permissions. Actual OIDC, storage/key/scan and WordPress tests cover separate boundaries rather than a deployed production browser journey. [The complete reference guide](docs/operations/self-hosted-reference.md) explains topology, configuration, identities, grants, key policy, scan freshness, cleanup and unverified controls. `make integration` reruns just the live reference checks.
 
 ## Architecture and security modes
 
@@ -97,25 +113,25 @@ flowchart LR
     WP[WordPress: URL and consent] -->|Open independent console| WEB[Vault console]
     WEB -->|Independent bearer identity| API[PHP core API]
     API --> POLICY[Membership + capabilities + MFA + clearance + ACL]
-    POLICY --> DB[(Private SQLite metadata / audit / outbox)]
+    POLICY --> DB[(SQLite or PostgreSQL metadata / audit / outbox)]
     POLICY --> ENC[Sodium envelope encryption]
-    ENC --> OBJECTS[(Encrypted immutable objects)]
-    ENC --> KEYS[Separate local tenant keys]
+    ENC --> OBJECTS[(Encrypted local or S3 objects)]
+    ENC --> KEYS[Local roots or OpenBao transit]
     DB --> WORKER[Scoped local notifications]
 ```
 
 The WordPress connector stores no vault credentials, documents or decryption keys, performs no automatic remote requests and cannot impersonate vault users. It opens the independently served console in a new tab. WordPress cookies, roles and nonces are not accepted as vault authentication.
 
-Every core operation verifies independent identity and current membership. Resource access also checks tenant ownership, capability, classification, document ACL and explicit denials; relevant operations add MFA, preservation and separation-of-duties checks. SQLite transactions serialize local authorization/state changes, and document updates commit with audit evidence. Content and metadata have separate revision checks. Workers and inbox delivery reauthorize current access.
+Every core operation verifies independent identity and current membership. Resource access also checks tenant ownership, capability, classification, document ACL and explicit denials; relevant operations add MFA, preservation and separation-of-duties checks. SQLite transactions or a conservative global PostgreSQL advisory transaction lock serialize authorization/state changes, and document updates commit with audit evidence. PostgreSQL uses forced RLS with transaction-local principal/tenant context under restricted non-owner roles. RLS is an additional guard; it does not protect against a compromised service choosing arbitrary context. The global lock requires load testing and a justified scalable strategy before capacity promises. Content and metadata have separate revision checks. Workers and inbox delivery reauthorize current access.
 
 | Profile | Current state | Trust and limits |
 |---|---|---|
 | Managed local | Implemented for synthetic UTF-8 text | Service can see authorized plaintext and metadata. Fresh per-version keys and authenticated context; tenant keys are readable by the local service. This is not KMS/HSM-backed protection. |
-| Managed enterprise | Not implemented | Requires approved identity, PostgreSQL/RLS, private objects, KMS/HSM, workload policies, independent audit and operational validation. |
+| Managed external reference | Implemented adapters; not production-approved | Real PostgreSQL/RLS, OIDC introspection, non-exportable transit roots, S3 and ClamAV. The service sees DEKs and authorized plaintext. Persistent seal/HA/IAM/WORM, approved privileged MFA, managed recovery and independent assurance remain. |
 | High-assurance zero-knowledge vault | Unavailable; mode requests rejected | Requires reviewed recipient/device/recovery protocol and independently authenticated, signed client/update distribution. A WordPress-origin decrypting page does not satisfy this boundary. |
 | Offline file utility | Implemented, unsigned development tool | Uses Sodium secretstream with a separately held file key; has no vault enrollment, verified recipient sharing, keychain or signed update integration. It is not the missing high-assurance client. |
 
-Local audit chains and SQLite immutability triggers protect normal application paths; root/database administrators can defeat them. Record/hold guards are not production WORM storage. Previously downloaded plaintext cannot be recalled. No zero-vulnerability, certification, legal-compliance or production-readiness claim is made.
+Audit chains and DB immutability triggers protect normal application paths. Ed25519 checkpoints detect rewrite/truncation of an anchored prefix only when the latest checkpoint/public key are independently trusted; scheduling, immutable sink, freshness and unanchored-window protection remain missing. Root/database administrators can otherwise rewrite the chain. Record/hold guards are not production WORM storage. Previously downloaded plaintext cannot be recalled. No zero-vulnerability, certification, legal-compliance or production-readiness claim is made.
 
 Read the [architecture](docs/architecture/overview.md), [threat model](docs/security/threat-model.md), [cryptographic profile](docs/security/crypto-profile.md), [privacy inventory](docs/privacy/data-inventory.md) and [22 internal decisions](docs/requirements/decision-log.md) before extending security-sensitive behavior.
 
@@ -130,16 +146,17 @@ apps/
 services/core-api/
   src/                        Authentication, policy, encryption, audit, API
   public/router.php           HTTP boundary and explicit console-asset allowlist
-  migrations/                 Ordered SQLite migrations (current schema: 3)
+  migrations/                 SQLite migrations 1–4; PostgreSQL migrations 1–3
 packages/
-  contracts/openapi.json      Reference for 42 paths / 67 implemented operations
+  contracts/openapi.json      Reference for 43 paths / 68 implemented operations
   crypto-test-vectors/        Upstream primitive-vector provenance
   i18n/                      Draft catalogs and WordPress locale mappings
 infrastructure/
-  dev/                        Untested local Docker recipe
+  dev/                        Local Docker recipe and tested pinned PHP base
+  integration/                Pinned actual service fixtures and live tests
   production/                 Explicit production prerequisites and gate
-tests/                        Domain/security, HTTP, connector, crypto/recovery tests
-tools/                        Setup, worker, snapshot/restore, lint, registry, package
+tests/                        Domain/HTTP/crypto/PKCE/PG/provider/WordPress checks
+tools/                        Identity, worker, checkpoints, recovery, verification, packaging
 docs/
   source/                     Six preserved originals, extracted text and hashes
   requirements/               All 346 contracts, status and compatibility matrices
@@ -147,9 +164,9 @@ docs/
   architecture/ security/     Boundaries, references and cryptographic limitations
   privacy/ operations/       Processing inventory and operational/user guides
   implementation/ release/   Persistent progress, executed tests and release gates
-.github/workflows/ci.yml      Proposed correctness matrix; not executed here
+.github/workflows/ci.yml      Pinned correctness + reference jobs; remote runs pending
 var/                         Ignored private runtime data and keys
-dist/                        Ignored reproducible plugin ZIP and checksum
+dist/                        Ignored candidate ZIPs, inventory, manifest and checksums
 ```
 
 ## Using the workspace
@@ -167,7 +184,7 @@ Tenant IDs are `tenant-01` through `tenant-10`. Obtain each user's token with `p
 | `tenant-01-lowclearance` | Classification-denial demonstration |
 | `holding-governor` | Aggregate oversight, provisioning and suspension/reactivation; no subsidiary document access |
 
-Create a document or knowledge article with a title, classification, category and UTF-8 content. Every new content version receives a fresh encrypted object. Metadata changes increment an independent revision. Search considers current-authorized titles and metadata, not file content. Document dialogs expose only effective actions; the server enforces those same checks independently.
+Create a document or knowledge article with a title, classification, category and text, or select a file permitted by the configured upload profile. Every new content version receives a fresh encrypted object. Metadata changes increment an independent revision. Search considers current-authorized titles and metadata, not file content. Document dialogs expose only effective actions; the server enforces those same checks independently.
 
 A review example:
 
@@ -185,13 +202,13 @@ See the [full local/user guide](docs/operations/local-development.md) for detail
 make package
 ```
 
-Install `dist/subsidiaryvault-kms-0.1.0.zip` through WordPress Plugins → Add New → Upload Plugin, or copy `apps/wordpress-plugin/subsidiaryvault-kms` into `wp-content/plugins`. Activate, open **SubsidiaryVault → Connection settings**, configure the independent HTTPS console URL and acknowledge the external-service disclosure.
+Install `dist/subsidiaryvault-kms-0.2.0-rc.1.zip` through WordPress Plugins → Add New → Upload Plugin, or copy `apps/wordpress-plugin/subsidiaryvault-kms` into `wp-content/plugins`. Activate, open **SubsidiaryVault → Connection settings**, configure the independent HTTPS console URL and acknowledge the external-service disclosure.
 
 Only the URL and consent boolean are stored. Settings and connection diagnostics require `manage_options`; navigation requires `read`. The connector uses the Settings API, escaping/sanitization and an explicit REST permission callback. Uninstall removes only its WordPress option, without altering independent vault data.
 
 An explicit disposable-development exception permits HTTP loopback URLs only when both `WP_DEBUG` and `SVKMS_ALLOW_LOCAL_CONSOLE` are true. Credential-bearing URLs, query strings and fragments are rejected. Never paste vault tokens or keys into WordPress.
 
-Compatibility metadata targets WordPress 6.8+ and PHP 8.3+. Local syntax, connector-logic harness and ZIP checks passed; live WordPress activation/uninstall, REST/nonces, multisite, Plugin Check and WPCS have not run. There is no claimed WordPress.org approval or signed updater. Read the [connector guide](docs/operations/wordpress.md) and packaged [readme](apps/wordpress-plugin/subsidiaryvault-kms/readme.txt).
+Compatibility metadata targets WordPress 6.8+ and PHP 8.3+. Syntax, connector harness, ZIP checks and actual WordPress activation/settings/capabilities/REST/deactivation/uninstall passed. Multisite, browser nonce/form automation, Plugin Check and WPCS have not run. There is no claimed WordPress.org approval or signed updater. Read the [connector guide](docs/operations/wordpress.md) and packaged [readme](apps/wordpress-plugin/subsidiaryvault-kms/readme.txt).
 
 ## Configuration and limits
 
@@ -199,17 +216,26 @@ Export environment variables in the invoking process. [.env.example](.env.exampl
 
 | Variable | Default / purpose |
 |---|---|
-| `SV_ENV` | `local`; all other values reject startup |
-| `SV_DATA_DIR` | `<repository>/var/data`; private SQLite, encrypted objects and synthetic credentials |
-| `SV_KEY_DIR` | `<repository>/var/keys`; separate private tenant-key directory |
-| `SV_AUTH_MODE` | `development` or experimental `oidc-rs256` |
-| `SV_OIDC_ISSUER` | Exact independent issuer for the experimental verifier |
-| `SV_OIDC_AUDIENCE` | Exact intended API audience |
-| `SV_OIDC_PUBLIC_KEY` | Path to pinned RSA public-key PEM, never a private key |
+| `SV_ENV` | `local`, `integration` or constrained `staging`; `production` rejects startup |
+| `SV_DATA_DIR`, `SV_KEY_DIR` | Private runtime data and separate local roots; defaults `var/data`, `var/keys` |
+| `SV_DATABASE_DSN` | Defaults private SQLite file; `pgsql:...` selects PostgreSQL |
+| `SV_DATABASE_USER`, `SV_DATABASE_PASSWORD_FILE` | Separate restricted runtime DB identity; never the schema owner/migrator |
+| `SV_AUTH_MODE` | `development`, legacy `oidc-rs256`, or `oidc-introspection` |
+| `SV_OIDC_ISSUER`, `SV_OIDC_AUDIENCE` | Exact independent issuer and API audience |
+| `SV_OIDC_WEB_CLIENT_ID` | Public PKCE browser client |
+| `SV_OIDC_INTROSPECTION_CLIENT_ID`, `SV_OIDC_INTROSPECTION_CLIENT_SECRET_FILE` | Independent confidential API verifier |
+| `SV_OIDC_MFA_ACR`, `SV_OIDC_MFA_MAX_AGE` | Exact approved assurance plus recent authentication; omit ACR to deny privileged MFA |
+| `SV_KEY_PROVIDER`, `SV_KEY_SERVICE_URL`, `SV_KEY_SERVICE_TOKEN_FILE` | Default `local-files`, optional `openbao-transit` with separately provisioned non-exportable tenant roots |
+| `SV_OBJECT_PROVIDER`, `SV_S3_ENDPOINT`, `SV_S3_BUCKET`, `SV_S3_REGION` | Default `local-files`, optional fixed private S3 target |
+| `SV_S3_ACCESS_KEY_FILE`, `SV_S3_SECRET_KEY_FILE` | File-injected object workload credentials |
+| `SV_UPLOAD_PROFILE`, `SV_CLAMD_ADDRESS` | Default `text`, optional `scanned` via a private clamd socket/network |
+| `SV_SCAN_MAX_DATABASE_AGE_SECONDS` | Default 259,200 seconds (72 hours); stale/unknown/inconclusive scanner fails closed |
 
-The RS256 adapter accepts only independently pre-provisioned users. It has no complete browser federation, JWK rotation, provider provisioning, refresh/logout, SAML or SCIM. Provider MFA claims are deliberately not trusted until configured, so step-up operations remain denied through this adapter.
+The complete inventory and startup/credential rules are in [.env.example](.env.example) and the [reference guide](docs/operations/self-hosted-reference.md). Secret `_FILE` values take precedence. HTTPS service endpoints use the system CA trust store; staging PostgreSQL requires `sslmode=verify-full` and staging runs non-root. `SV_ALLOW_INSECURE_TEST_ENDPOINTS=1` is allowed only with local/integration, never staging. No existing SQLite/content/key-envelope migration is automated; changing providers is not a migration procedure.
 
-Local limits: **8 MiB/version**, nonempty UTF-8 text without prohibited control bytes; **12 MiB HTTP JSON envelope**; **100 MiB default tenant quota**, configurable between 1 MiB and 1 GiB; **120 requests/principal/tenant/minute**. Quota accounting includes every retained historical/soft-deleted version. An EICAR marker is rejected, but that is not an antivirus scanner. No binary uploads, resumable uploads or preview conversions are available.
+OIDC code + S256 uses strict state/issuer/expiry and keeps access/rotating refresh tokens in page memory. The API introspects each access token, validates exact issuer/audience/client/subject and existing independent identity, then checks current membership/ACL. Only PKCE verifier/state temporarily use sessionStorage. There is no email/WordPress JIT identity trust. `tools/identity.php` creates/binds explicit identities under a controlled provisioner connection without adding entitlements. SAML/SCIM, session inventory, recovery and an accepted privileged MFA/step-up flow remain unfinished. The pinned-RS256 adapter has no browser federation/MFA mapping.
+
+Limits: **8 MiB/version**, **12 MiB HTTP JSON envelope**, **100 MiB default tenant quota** (configurable 1 MiB–1 GiB), **120 requests/principal/tenant/minute**. Every retained historical/soft-deleted version counts. Local text mode accepts nonempty UTF-8 without prohibited controls; marker rejection there is not antivirus. Scanned mode uses real ClamAV freshness/INSTREAM for detected text/JSON/CSV/PDF/PNG/JPEG only. Office files, archives, resumable uploads, quarantine review and previews/conversions remain unavailable. Raw clamd TCP must be private; it is not an authenticated TLS protocol.
 
 Encryption, explicit-deny precedence, privileged MFA and audit cannot be disabled in tenant settings. AI/external sharing cannot be enabled. Geographic residency, legal schedules, real providers and operational authorities are not inferred from `local`, the developer machine or the source documents.
 
@@ -217,7 +243,7 @@ Encryption, explicit-deny precedence, privileged MFA and audit cannot be disable
 
 The [API guide](docs/operations/api.md) documents authentication, request bodies, errors, revision checks and operation semantics; [OpenAPI JSON](packages/contracts/openapi.json) describes current routes with generic success schemas. A complete typed SDK is not supplied.
 
-Protected calls require an independent bearer header. Public liveness is `/healthz`. Private filesystem paths are never served, and private responses use no-store/noindex/frame/CSP headers. There is no WordPress-cookie authority or CORS grant.
+Protected calls require an independent bearer header. Public liveness is `/healthz` (`release_approved:false`); public `/v1/auth/config` exposes only non-secret sign-in/profile configuration. Private filesystem paths are never served, and private responses use no-store/noindex/frame/CSP headers. There is no WordPress-cookie authority or CORS grant.
 
 ```sh
 php tools/worker.php
@@ -225,7 +251,7 @@ php tools/vault.php audit
 php tools/diagnostics.php
 ```
 
-Each worker invocation processes at most 100 outbox events. Run repeatedly until zero events remain. It writes local inbox notifications only, authorizes recipients against current state and uses deterministic IDs for retries. Inbox reads recheck access after revocation. No external emails, chat messages or webhooks are sent. Diagnostics report runtime/extension/schema information without document contents, tokens, keys or private paths.
+Each worker invocation processes at most 100 outbox events. PostgreSQL needs the separate worker identity and bounded pending-event function grant described in the reference guide. Run repeatedly until zero events remain. It writes local inbox notifications only, authorizes recipients against current state and uses deterministic IDs for retries. Inbox reads recheck access after revocation. No external emails, chat messages or webhooks are sent. Diagnostics report runtime/extension/schema information without document contents, tokens, keys or private paths.
 
 Audit events describe application authorization and service operations. They do not prove a person read a document or finished saving a download. An independent immutable sink, trustworthy timestamps and protected external checkpoints remain required.
 
@@ -249,7 +275,7 @@ php tools/backup.php /private/tmp/svkms-backup.key /private/tmp/svkms-snapshot.s
 php tools/restore.php /private/tmp/svkms-backup.key /private/tmp/svkms-snapshot.svbackup /private/tmp/svkms-isolated-restore
 ```
 
-Backups include a consistent metadata snapshot, referenced encrypted objects and an authenticated integrity manifest. **Tenant encryption keys are omitted and need separate protected backups.** Old sessions are revoked in snapshots and restores. Restore refuses existing destinations and produces an isolated directory. Before any reconnection, current identities, revocations, ACLs, legal holds and retention must be reconciled; that reconciliation is not automated. No immutable/offline provider or RTO/RPO promise is supplied. Follow the [backup/recovery guide](docs/operations/backup-recovery.md).
+Backups include a consistent metadata snapshot, referenced encrypted objects and an authenticated integrity manifest. **Tenant encryption keys are omitted and need separate protected backups.** Old sessions are revoked in snapshots and restores. Restore refuses existing destinations and produces an isolated directory. Before any reconnection, current identities, revocations, ACLs, legal holds and retention must be reconciled; that reconciliation is not automated. This snapshot command explicitly refuses PostgreSQL, S3 or transit configuration; coordinated managed backup/restore/current-policy reconciliation is still missing. No immutable/offline provider or RTO/RPO promise is supplied. Follow the [backup/recovery guide](docs/operations/backup-recovery.md).
 
 ## Languages and accessibility
 
@@ -262,29 +288,43 @@ Rebuild draft catalogs with `python3 tools/build_locales.py`; do not represent k
 ## Verification and packaging
 
 ```sh
-make validate
-make package
+make validate                   # local correctness, syntax and requirement registry
+make release-verify             # also actual services + source secret scan (Docker)
+make release-candidate          # requires current passing code fingerprint
 python3 tools/release_gate.py --development
 ```
 
-The executed validation passed **1,154 automated assertions**:
+Executed component/protocol checks total **1,413 assertions**:
 
-| Suite | Actual result |
+| Scope | Assertions |
 |---|---:|
-| Domain, policy, tenant/security and identity checks | 21 groups / 1,058 assertions |
-| WordPress connector API harness | 11 assertions |
-| Crypto, outbox and isolated recovery | 62 assertions |
-| Real loopback HTTP boundary | 23 assertions |
+| Domain/policy/tenant/security | 1,058 |
+| Connector harness; crypto/worker/local recovery | 11 + 62 |
+| Audit checkpoints; config/TLS guards; browser-independent PKCE units | 9 + 12 + 22 |
+| Real loopback HTTP boundary | 23 |
+| Actual PostgreSQL/RLS | 146 |
+| Actual OIDC API and Keycloak protocol | 10 + 25 |
+| Actual transit/S3/ClamAV and operator root rotation | 17 + 2 |
+| Actual WordPress settings/REST/lifecycle | 13 + 3 |
 
-Syntax checks passed for 23 PHP files and console JavaScript. Registry validation confirms all 346 contracts, expected 22 module counts, source hashes/equality, 26 personas, 22 ADRs and 13 draft catalog keys. Tests use disposable private fixtures. Primitive checks use a public upstream Sodium known-answer vector; that does not certify the application protocol. See [executed results and unperformed checks](docs/implementation/TEST-RESULTS.md).
+Local subtotal is 1,197; reference subtotal 216. PHP syntax (41 files), console JS syntax, all 346 immutable contracts/source hashes/module totals, persona/ADR/catalog checks pass. The pinned Gitleaks worktree scan found no embedded secret; Git history/private ignored state are outside its scope. A pinned PHP development image builds and its required extensions pass. These are not 1,413 completed requirements, a penetration test, a deployed production browser journey or independent cryptographic certification. [Test results](docs/implementation/TEST-RESULTS.md) record precise limitations; [verification JSON](docs/release/verification.json) binds actual exits/timestamps to tested code. GitHub Actions jobs are defined/pinned for PHP 8.3–8.5 and live reference services; remote runs are not claimed.
 
-`dist/subsidiaryvault-kms-0.1.0.zip` is generated with deterministic timestamps and `dist/SHA256SUMS`. The development package gate verifies scope and excludes secret/runtime files. The GitHub Actions definition proposes PHP 8.3–8.5 correctness jobs, but that remote matrix has not executed here and is not a complete security-scan/provenance pipeline.
+Candidate output under `dist/`:
+
+| Artifact | Purpose |
+|---|---|
+| `subsidiaryvault-kms-0.2.0-rc.1.zip` | Installable WordPress connector only; no core backend |
+| `subsidiaryvault-kms-0.2.0-rc.1-source.zip` | Complete candidate source, docs and tests; private runtime state excluded |
+| `component-inventory.json` | Reference image/runtime inventory; not a full transitive/OS SBOM |
+| `release-manifest.json`, `SHA256SUMS` | Source/connector/inventory hashes and `production_approved:false` |
+
+ZIP entries have deterministic timestamps. `release-candidate` refuses stale/failing code evidence; checksums establish local integrity, not an authenticated signing authority. Artifacts/provenance are **unsigned**, unpublished and not approved for real data. Full SAST/SCA/image/DAST, signed delivery, complete SBOM and update/rollback acceptance remain unfinished.
 
 ```sh
 python3 tools/release_gate.py
 ```
 
-This command **intentionally exits 1** and denies production release. Passing local tests does not satisfy missing engineering, independent assessments or accountable human approval.
+This command **intentionally exits 1** and denies production. The [production exit criteria](docs/release/production-exit-criteria.md) list missing software, persistent deployment/recovery and independent assessments/operational approvals. Do not bypass it or use staging to claim production readiness.
 
 ## Requirements, sources and remaining work
 
@@ -294,8 +334,8 @@ Current complete-contract status:
 
 | Status | Requirements |
 |---|---:|
-| `IN_PROGRESS` — working components, incomplete full acceptance | 109 |
-| `NOT_STARTED` | 234 |
+| `IN_PROGRESS` — working components, incomplete full acceptance | 116 |
+| `NOT_STARTED` | 227 |
 | `BLOCKED` — outside dependency plus disclosed unfinished work | 3 |
 | `VERIFIED` / `IMPLEMENTED_UNVERIFIED` / `DEFERRED` | 0 / 0 / 0 |
 
@@ -333,13 +373,13 @@ Project records:
 - [Gap register](docs/requirements/gap-register.md), [risk register](docs/requirements/risk-register.md) and [internal ADRs](docs/requirements/decision-log.md)
 - [Persistent progress and resume point](docs/implementation/PROGRESS.md), [release gates](docs/release/READINESS.md) and [production prerequisites](infrastructure/production/README.md)
 
-The next core work is complete independent identity provisioning/login/session/step-up integration and managed production adapters, followed by folder-scoped lifecycle, scanner/quarantine, metadata schemas and broader workflow/records functionality. High-assurance client development requires a public protocol, verified recipient/device identity, signing/update custody and qualified external review. Enterprise expansion must implement the remaining unchanged contracts rather than add placeholder controls.
+The next core work is accepted privileged identity lifecycle/step-up, persistent least-privilege managed infrastructure and coordinated managed recovery, followed by folder-scoped lifecycle, quarantine, metadata schemas and broader workflow/records functionality. Actual managed reference adapters already exist; they do not close those broader contracts. High-assurance client development requires a public protocol, verified recipient/device identity, signing/update custody and qualified external review. Enterprise expansion must implement the remaining unchanged contracts rather than add placeholder controls.
 
-No real cloud account, provider, legal jurisdiction, domain, signing authority, trademark clearance, privacy approval or production deployment has been assumed. Independent human security, cryptographic, legal/privacy, records, accessibility, UAT and disaster-recovery evidence is still required.
+Reference service software is selected and pinned; no real cloud account, customer service agreement, legal jurisdiction, production domain/signing authority, trademark clearance, privacy approval or deployment has been assumed. Independent human security, cryptographic, legal/privacy, records, accessibility, UAT and disaster-recovery evidence is still required.
 
 ## Operations, contribution, support and license
 
-Operational documentation: [local/user guide](docs/operations/local-development.md), [API guide](docs/operations/api.md), [WordPress](docs/operations/wordpress.md), [backup/recovery](docs/operations/backup-recovery.md), [incident/support runbook](docs/operations/incident-response.md) and [processing inventory](docs/privacy/data-inventory.md).
+Operational documentation: [self-hosted reference](docs/operations/self-hosted-reference.md), [local/user guide](docs/operations/local-development.md), [API guide](docs/operations/api.md), [WordPress](docs/operations/wordpress.md), [backup/recovery](docs/operations/backup-recovery.md), [incident/support runbook](docs/operations/incident-response.md) and [processing inventory](docs/privacy/data-inventory.md).
 
 Troubleshooting:
 
@@ -351,6 +391,8 @@ Troubleshooting:
 | `version_conflict` / `metadata_revision_conflict` | Reload current metadata/version before retrying; do not overwrite another change. |
 | `preservation_required` / disposition conflict | Respect holds, record locks, retention and separate approvals; never bypass them to remove an error. |
 | `key_unavailable` / integrity error | Stop the affected operation, preserve evidence and follow recovery; do not generate replacement keys over originals. |
+| `scanner_database_stale` / scan unavailable | Update actual definitions/check the private scanner; do not disable scanning or silently accept files. |
+| `key_service_unavailable` / `object_store_unavailable` | Restore the configured service/credentials; there is no local fallback. Preserve ciphertext and metadata. |
 | Empty inbox | Run the bounded worker to drain events, and confirm current document access. |
 | Bind failure / port in use | Verify loopback socket permission or choose another local port in the serve command. |
 

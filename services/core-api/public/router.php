@@ -11,9 +11,11 @@ header('X-Frame-Options: DENY');
 header('Referrer-Policy: no-referrer');
 header('Permissions-Policy: camera=(), microphone=(), geolocation=()');
 header('X-Robots-Tag: noindex, nofollow, noarchive');
-header("Content-Security-Policy: default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'self'; frame-ancestors 'none'; object-src 'none'");
+$identityOrigin='';
+if(getenv('SV_AUTH_MODE')==='oidc-introspection'){try{$identityOrigin=' '.\SubsidiaryVault\HttpClient::origin(getenv('SV_OIDC_ISSUER')?:'');}catch(Throwable){}}
+header("Content-Security-Policy: default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'self'$identityOrigin; img-src 'self' data:; base-uri 'none'; form-action 'self'; frame-ancestors 'none'; object-src 'none'");
 $path=parse_url($_SERVER['REQUEST_URI']??'/',PHP_URL_PATH);
-$assets=['/'=>['index.html','text/html; charset=utf-8'],'/app.js'=>['app.js','application/javascript; charset=utf-8'],'/style.css'=>['style.css','text/css; charset=utf-8'],'/locales.json'=>['locales.json','application/json; charset=utf-8']];
+$assets=['/'=>['index.html','text/html; charset=utf-8'],'/auth/callback'=>['index.html','text/html; charset=utf-8'],'/app.js'=>['app.js','application/javascript; charset=utf-8'],'/oidc.js'=>['oidc.js','application/javascript; charset=utf-8'],'/style.css'=>['style.css','text/css; charset=utf-8'],'/locales.json'=>['locales.json','application/json; charset=utf-8']];
 if(($_SERVER['REQUEST_METHOD']??'GET')==='GET' && isset($assets[$path])) {
     [$file,$type]=$assets[$path];header('Content-Type: ' . $type);readfile(dirname(__DIR__,3) . '/apps/admin-web/' . $file);exit;
 }

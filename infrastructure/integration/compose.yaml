@@ -1,0 +1,87 @@
+name: svkms-release-it
+services:
+  postgres:
+    image: postgres@sha256:77f585114c32fbca283dc835b0596f4e52b51b4c6662d7810b2f4084f60a1873
+    environment:
+      POSTGRES_DB: svkms
+      POSTGRES_PASSWORD: ${IT_DB_SECRET:?}
+      PGDATA: /var/lib/postgresql/data
+    ports: ["127.0.0.1:${IT_PG_PORT:?}:5432"]
+    tmpfs: [/var/lib/postgresql/data]
+    healthcheck:
+      test: [CMD-SHELL, "pg_isready -U postgres -d svkms"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+  identity:
+    image: quay.io/keycloak/keycloak@sha256:9409c59bdfb65dbffa20b11e6f18b8abb9281d480c7ca402f51ed3d5977e6007
+    command: [start-dev]
+    environment:
+      KC_BOOTSTRAP_ADMIN_USERNAME: integration-admin
+      KC_BOOTSTRAP_ADMIN_PASSWORD: ${IT_IDENTITY_SECRET:?}
+    ports: ["127.0.0.1:${IT_IDENTITY_PORT:?}:8080"]
+  key-service:
+    image: quay.io/openbao/openbao@sha256:595c83b42614a4d2b044608e4593c05b019c5db25bc9c185d8fff3ac96c03ddd
+    command: [server, -dev, -dev-listen-address=0.0.0.0:8200]
+    environment:
+      BAO_DEV_ROOT_TOKEN_ID: ${IT_BAO_SECRET:?}
+      BAO_DISABLE_MLOCK: "true"
+    ports: ["127.0.0.1:${IT_BAO_PORT:?}:8200"]
+    cap_add: [IPC_LOCK]
+  objects:
+    image: chrislusf/seaweedfs@sha256:4e61d15fd35994cb1e43e1e553dff106794841fd9a99ade2fc8c8bfce4d7872d
+    command: [server, -ip=objects, -ip.bind=0.0.0.0, -dir=/data, -s3, -s3.port=8333, -s3.config=/etc/seaweedfs/s3.json, -master.volumeSizeLimitMB=16, -volume.max=128, -volume.minFreeSpace=1, -master.telemetry=false]
+    ports: ["127.0.0.1:${IT_S3_PORT:?}:8333"]
+    volumes:
+      - ../../var/release-integration/s3.json:/etc/seaweedfs/s3.json:ro
+    tmpfs: [/data:size=256m]
+  scanner:
+    image: clamav/clamav@sha256:e19130cdebaeacc71fa46eab3ed6f69941f2f22aa5e08d55e9197f8edf43ce5e
+    platform: linux/amd64
+    ports: ["127.0.0.1:${IT_CLAMD_PORT:?}:3310"]
+    volumes:
+      - ../../var/release-integration/clamd.conf:/etc/clamav/clamd.conf:ro
+    healthcheck:
+      test: [CMD-SHELL, "echo PING | nc -w 3 127.0.0.1 3310 | grep -qx PONG"]
+      interval: 5s
+      timeout: 4s
+      start_period: 90s
+      retries: 6
+  wordpress-db:
+    image: mariadb@sha256:250e1609e93c0e6aecf64bfbab2d84d5e89d2481540fe77447ff6c855c3b1873
+    environment:
+      MARIADB_ROOT_PASSWORD: ${IT_WP_ROOT_SECRET:?}
+      MARIADB_DATABASE: wordpress
+      MARIADB_USER: wordpress
+      MARIADB_PASSWORD: ${IT_WP_SECRET:?}
+    tmpfs: [/var/lib/mysql]
+    healthcheck:
+      test: [CMD, healthcheck.sh, --connect, --innodb_initialized]
+      interval: 2s
+      timeout: 5s
+      retries: 40
+  wordpress:
+    image: wordpress@sha256:81a34254acaa6ff3b9a67268c2745e9a041c4094cbe5ccd35b75ed3bbdc033b5
+    depends_on:
+      wordpress-db:
+        condition: service_healthy
+    ports: ["127.0.0.1:${IT_WP_PORT:?}:80"]
+    environment: &wordpress_env
+      WORDPRESS_DB_HOST: wordpress-db
+      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: ${IT_WP_SECRET:?}
+    volumes:
+      - wordpress_files:/var/www/html
+      - ../../apps/wordpress-plugin/subsidiaryvault-kms:/var/www/html/wp-content/plugins/subsidiaryvault-kms:ro
+  wordpress-cli:
+    image: wordpress@sha256:36243da432a0f0a3b56dc3240ecee9b159108d71305e7c064d987a20a465bfde
+    profiles: [tools]
+    user: "33:33"
+    environment: *wordpress_env
+    volumes:
+      - wordpress_files:/var/www/html
+      - ../../apps/wordpress-plugin/subsidiaryvault-kms:/var/www/html/wp-content/plugins/subsidiaryvault-kms:ro
+      - ../../tests/wordpress_live.php:/opt/svkms-wordpress-test.php:ro
+volumes:
+  wordpress_files:

@@ -1,0 +1,34 @@
+CREATE TABLE schema_migrations (version BIGINT PRIMARY KEY);
+
+CREATE TABLE tenants (id TEXT PRIMARY KEY, name TEXT NOT NULL, parent_id TEXT REFERENCES tenants(id), status TEXT NOT NULL DEFAULT 'active' CHECK(status IN ('active','suspended','closed')), region TEXT NOT NULL, settings TEXT NOT NULL DEFAULT '{}', quota_bytes BIGINT NOT NULL DEFAULT 104857600, created_at BIGINT NOT NULL);
+CREATE TABLE users (id TEXT PRIMARY KEY, name TEXT NOT NULL, status TEXT NOT NULL DEFAULT 'active', locale TEXT NOT NULL DEFAULT 'en');
+CREATE TABLE roles (tenant_id TEXT NOT NULL REFERENCES tenants(id), id TEXT NOT NULL, name TEXT NOT NULL, capabilities TEXT NOT NULL, version BIGINT NOT NULL DEFAULT 1, PRIMARY KEY(tenant_id,id));
+CREATE TABLE memberships (tenant_id TEXT NOT NULL, user_id TEXT NOT NULL REFERENCES users(id), role_id TEXT NOT NULL, status TEXT NOT NULL DEFAULT 'active', clearance BIGINT NOT NULL DEFAULT 0, expires_at BIGINT, PRIMARY KEY(tenant_id,user_id), FOREIGN KEY(tenant_id,role_id) REFERENCES roles(tenant_id,id));
+CREATE TABLE credentials (hash TEXT PRIMARY KEY, user_id TEXT NOT NULL REFERENCES users(id), expires_at BIGINT NOT NULL, revoked BIGINT NOT NULL DEFAULT 0, mfa BIGINT NOT NULL DEFAULT 0);
+CREATE TABLE groups (tenant_id TEXT NOT NULL REFERENCES tenants(id), id TEXT NOT NULL, name TEXT NOT NULL, PRIMARY KEY(tenant_id,id));
+CREATE TABLE group_members (tenant_id TEXT NOT NULL, group_id TEXT NOT NULL, user_id TEXT NOT NULL, PRIMARY KEY(tenant_id,group_id,user_id), FOREIGN KEY(tenant_id,group_id) REFERENCES groups(tenant_id,id), FOREIGN KEY(tenant_id,user_id) REFERENCES memberships(tenant_id,user_id));
+CREATE TABLE departments (tenant_id TEXT NOT NULL REFERENCES tenants(id), id TEXT NOT NULL, name TEXT NOT NULL, parent_id TEXT, PRIMARY KEY(tenant_id,id), FOREIGN KEY(tenant_id,parent_id) REFERENCES departments(tenant_id,id));
+CREATE TABLE documents (tenant_id TEXT NOT NULL REFERENCES tenants(id), id TEXT NOT NULL, title TEXT NOT NULL, kind TEXT NOT NULL DEFAULT 'document', owner_id TEXT NOT NULL REFERENCES users(id), classification BIGINT NOT NULL DEFAULT 0, metadata TEXT NOT NULL DEFAULT '{}', state TEXT NOT NULL DEFAULT 'draft' CHECK(state IN ('draft','in_review','approved','rejected','deleted')), current_version BIGINT NOT NULL DEFAULT 0, is_record BIGINT NOT NULL DEFAULT 0, retain_until BIGINT NOT NULL DEFAULT 0, created_at BIGINT NOT NULL, updated_at BIGINT NOT NULL, PRIMARY KEY(tenant_id,id));
+CREATE TABLE versions (tenant_id TEXT NOT NULL, document_id TEXT NOT NULL, number BIGINT NOT NULL, object_id TEXT NOT NULL UNIQUE, envelope TEXT NOT NULL, bytes BIGINT NOT NULL, digest TEXT NOT NULL, mime TEXT NOT NULL, author_id TEXT NOT NULL REFERENCES users(id), created_at BIGINT NOT NULL, PRIMARY KEY(tenant_id,document_id,number), FOREIGN KEY(tenant_id,document_id) REFERENCES documents(tenant_id,id));
+CREATE TABLE acl (tenant_id TEXT NOT NULL, document_id TEXT NOT NULL, subject_type TEXT NOT NULL CHECK(subject_type IN ('user','group','role')), subject_id TEXT NOT NULL, action TEXT NOT NULL, effect TEXT NOT NULL CHECK(effect IN ('allow','deny')), expires_at BIGINT, PRIMARY KEY(tenant_id,document_id,subject_type,subject_id,action), FOREIGN KEY(tenant_id,document_id) REFERENCES documents(tenant_id,id));
+CREATE TABLE holds (tenant_id TEXT NOT NULL, document_id TEXT NOT NULL, id TEXT NOT NULL, reason TEXT NOT NULL, created_by TEXT NOT NULL REFERENCES users(id), released_by TEXT REFERENCES users(id), created_at BIGINT NOT NULL, released_at BIGINT, PRIMARY KEY(tenant_id,id), FOREIGN KEY(tenant_id,document_id) REFERENCES documents(tenant_id,id));
+CREATE TABLE workflows (tenant_id TEXT NOT NULL, document_id TEXT NOT NULL, id TEXT NOT NULL, version BIGINT NOT NULL, requested_by TEXT NOT NULL REFERENCES users(id), state TEXT NOT NULL DEFAULT 'pending', decided_by TEXT REFERENCES users(id), decided_at BIGINT, created_at BIGINT NOT NULL, PRIMARY KEY(tenant_id,id), FOREIGN KEY(tenant_id,document_id,version) REFERENCES versions(tenant_id,document_id,number));
+CREATE UNIQUE INDEX one_pending_workflow ON workflows(tenant_id,document_id) WHERE state='pending';
+CREATE TABLE comments (tenant_id TEXT NOT NULL, document_id TEXT NOT NULL, id TEXT NOT NULL, version BIGINT NOT NULL, author_id TEXT NOT NULL REFERENCES users(id), body TEXT NOT NULL, created_at BIGINT NOT NULL, PRIMARY KEY(tenant_id,id), FOREIGN KEY(tenant_id,document_id,version) REFERENCES versions(tenant_id,document_id,number));
+CREATE TABLE dispositions (tenant_id TEXT NOT NULL, document_id TEXT NOT NULL, id TEXT NOT NULL, version BIGINT NOT NULL, requested_by TEXT NOT NULL REFERENCES users(id), approved_by TEXT REFERENCES users(id), approved_at BIGINT, created_at BIGINT NOT NULL, PRIMARY KEY(tenant_id,id), FOREIGN KEY(tenant_id,document_id,version) REFERENCES versions(tenant_id,document_id,number));
+CREATE TABLE audit (sequence BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY, tenant_id TEXT NOT NULL REFERENCES tenants(id), actor_id TEXT NOT NULL, action TEXT NOT NULL, resource_id TEXT NOT NULL, outcome TEXT NOT NULL, reason TEXT NOT NULL, at BIGINT NOT NULL, request_id TEXT NOT NULL, previous_hash TEXT NOT NULL, hash TEXT NOT NULL);
+CREATE INDEX audit_tenant ON audit(tenant_id,sequence);
+CREATE INDEX documents_tenant ON documents(tenant_id,state,updated_at);
+CREATE TABLE outbox (id TEXT PRIMARY KEY, tenant_id TEXT NOT NULL REFERENCES tenants(id), event TEXT NOT NULL, resource_id TEXT NOT NULL, created_at BIGINT NOT NULL, delivered_at BIGINT);
+CREATE TABLE notifications (tenant_id TEXT NOT NULL, user_id TEXT NOT NULL, id TEXT NOT NULL, event TEXT NOT NULL, resource_id TEXT NOT NULL, read_at BIGINT, created_at BIGINT NOT NULL, PRIMARY KEY(tenant_id,id), FOREIGN KEY(tenant_id,user_id) REFERENCES memberships(tenant_id,user_id));
+CREATE TABLE rate_limits (tenant_id TEXT NOT NULL REFERENCES tenants(id), user_id TEXT NOT NULL, "window" BIGINT NOT NULL, requests BIGINT NOT NULL, PRIMARY KEY(tenant_id,user_id,"window"));
+CREATE TABLE bookmarks (tenant_id TEXT NOT NULL, document_id TEXT NOT NULL, user_id TEXT NOT NULL, PRIMARY KEY(tenant_id,document_id,user_id), FOREIGN KEY(tenant_id,document_id) REFERENCES documents(tenant_id,id), FOREIGN KEY(tenant_id,user_id) REFERENCES memberships(tenant_id,user_id));
+ALTER TABLE workflows ADD COLUMN assurance TEXT;
+ALTER TABLE workflows ADD COLUMN version_digest TEXT;
+ALTER TABLE workflows ADD COLUMN decision_comment TEXT;
+ALTER TABLE workflows ADD COLUMN policy_version INTEGER;
+ALTER TABLE documents ADD COLUMN metadata_revision BIGINT NOT NULL DEFAULT 1;
+CREATE TABLE provisioning_requests (id TEXT PRIMARY KEY, actor_id TEXT NOT NULL REFERENCES users(id), request_hash TEXT NOT NULL, tenant_id TEXT NOT NULL UNIQUE REFERENCES tenants(id), created_at BIGINT NOT NULL);
+
+
+INSERT INTO schema_migrations VALUES(1);

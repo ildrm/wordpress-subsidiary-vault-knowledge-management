@@ -10,6 +10,7 @@ final class Auth
     {
         if (!preg_match('/^Bearer ([A-Za-z0-9._~-]{20,8192})$/D', $header, $m)) { throw new ApiError(401, 'authentication_required'); }
         $token = $m[1];
+        if ($this->config->authMode === 'oidc-introspection') { return (new Oidc($this->db,$this->config))->authenticate($token); }
         if ($this->config->authMode === 'oidc-rs256') { return $this->jwt($token); }
         $credential = $this->db->one('SELECT c.*,u.status FROM credentials c JOIN users u ON u.id=c.user_id WHERE c.hash=?', [hash('sha256', $token)]);
         if (!$credential || $credential['revoked'] || $credential['expires_at'] <= time() || $credential['status'] !== 'active') { throw new ApiError(401, 'invalid_session'); }

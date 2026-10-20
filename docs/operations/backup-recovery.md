@@ -19,3 +19,7 @@ Restore refuses existing destinations, authenticates the whole encrypted stream 
 The test suite restores all ten synthetic documents, validates audit chains, confirms sessions are revoked and decrypts a sample with the separately held original tenant key. Missing keys fail closed. That local automated exercise is not a production DR drill or evidence of agreed geographic resilience.
 
 For key loss, stop affected decrypting workflows; preserve ciphertext and evidence; determine the affected tenant and exact key generation; involve the designated human custodians; restore only an authenticated original key from approved custody. Never generate a replacement at an existing key path and claim it recovers old content. No production key recovery ceremony is implemented.
+
+## External managed stack
+
+The local snapshot utility rejects PostgreSQL, S3 or OpenBao configuration. A coordinated managed backup/restore implementation is still required: consistent database/object references, retained wrapping-key versions and key-service state, independent identity configuration, current permission/hold reconciliation and independently immutable/offline copies. The disposable reference services are not backups. Do not run the SQLite restore tool as a production managed restore or reconnect a historical identity/ACL snapshot without reconciliation.

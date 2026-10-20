@@ -6,7 +6,9 @@ use SubsidiaryVault\{Config,Database};
 use SubsidiaryVault\LocalClient\FileCipher;
 umask(0077);
 if(count($argv)!==3){fwrite(STDERR,"Usage: php tools/backup.php BACKUP_ENCRYPTION_KEY OUTPUT.svbackup\nTenant encryption keys are excluded and must be backed up separately under distinct custody.\n");exit(2);}
-$config=new Config();$db=new Database($config->dataDir . '/vault.sqlite');
+$config=new Config();
+if(str_starts_with($config->database,'pgsql:')||getenv('SV_OBJECT_PROVIDER')==='s3'||getenv('SV_KEY_PROVIDER')==='openbao-transit'){throw new RuntimeException('local_snapshot_only: managed providers require coordinated PostgreSQL/object/key-service recovery');}
+$db=new Database($config->database);
 $work=sys_get_temp_dir() . '/svkms-backup-' . Database::id();mkdir($work,0700);
 try{
     $snapshot=$work . '/vault.sqlite';

@@ -2,7 +2,7 @@
 /**
  * Plugin Name: SubsidiaryVault KMS – Enterprise Document & Knowledge Management
  * Description: Low-privilege navigation and configuration for an independently authenticated SubsidiaryVault service.
- * Version: 0.1.0
+ * Version: 0.2.0-rc.1
  * Requires at least: 6.8
  * Requires PHP: 8.3
  * License: GPL-2.0-or-later
@@ -59,7 +59,7 @@ final class Connector
             'permission_callback'=>static fn(): bool=>current_user_can('manage_options'),
             'callback'=>static function(): \WP_REST_Response {
                 $settings=get_option(self::OPTION,[]);
-                $response=new \WP_REST_Response(['configured'=>!empty($settings['console_url']),'consented'=>!empty($settings['consent']),'document_credentials_stored'=>false,'version'=>'0.1.0']);
+                $response=new \WP_REST_Response(['configured'=>!empty($settings['console_url']),'consented'=>!empty($settings['consent']),'document_credentials_stored'=>false,'version'=>'0.2.0-rc.1']);
                 $response->header('Cache-Control','no-store'); return $response;
             },
         ]);
